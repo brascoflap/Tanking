@@ -146,7 +146,7 @@
 
   <div class="card" id="winnaar-kaart">
     <p class="winner-title">Vandaag tank je het goedkoopst bij</p>
-    <div class="station-name" id="w-naam">Laden...</div>
+    <div class="station-name"><span id="w-naam">Laden...</span> <span class="badge" id="w-badge" hidden></span></div>
     <div class="station-adres" id="w-adres"></div>
     <div class="price" id="w-prijs">€0,00<span>/L</span></div>
     <div class="savings" id="w-besparing"></div>
@@ -243,6 +243,10 @@ function toon(data) {
   const besparingVolleTank = besparingPerLiter * volume;
 
   document.getElementById('w-naam').textContent = winnaar.naam;
+  const wBadge = document.getElementById('w-badge');
+  wBadge.textContent = winnaar.bron === 'live' ? 'live' : 'handmatig';
+  wBadge.className = `badge ${winnaar.bron}`;
+  wBadge.hidden = false;
   document.getElementById('w-adres').textContent = winnaar.adres;
   document.getElementById('w-prijs').innerHTML = `${euro(winnaar.prijs)}<span>/L</span>`;
   document.getElementById('w-besparing').textContent =
