@@ -5,8 +5,10 @@ Voor papa: elke dag het goedkoopste tankstation in Deventer, met een knop naar G
 ## Wat erin zit
 
 1. `scrape.py` — haalt 's ochtends automatisch de echte prijzen van Tango en TinQ op (tankstationprijzen.nl). De rest (Shell, BP, Tamoil, Total) staat in `stations_handmatig.json` — die prijzen pas je zelf af en toe aan, daar is geen gratis live bron voor.
-2. `docs/` — de website zelf. Dit is wat papa ziet.
-3. `.github/workflows/update.yml` — laat GitHub 's ochtends automatisch het script draaien en de site verversen. Gratis, geen server nodig.
+2. `nieuws.py` — haalt een paar koppen op van AutoWeek, Autoblog en De Stentor Deventer (onafhankelijke bronnen, geen NOS).
+3. `weer.py` — haalt het actuele weer op van het dichtstbijzijnde meetstation (Heino, via Buienradar).
+4. `docs/` — de website zelf. Dit is wat papa ziet.
+5. `.github/workflows/update.yml` — laat GitHub 's ochtends automatisch alle scripts draaien en de site verversen. Gratis, geen server nodig.
 
 ## Live zetten (eenmalig, 5 minuten)
 
