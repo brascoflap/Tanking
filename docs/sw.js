@@ -1,5 +1,8 @@
-const CACHE = 'tankkompas-v1';
-const BASISBESTANDEN = ['./', './index.html', './manifest.json'];
+const CACHE = 'tankkompas-v2';
+const BASISBESTANDEN = [
+  './', './index.html', './manifest.json',
+  './icon-192.png', './icon-512.png', './apple-touch-icon.png', './favicon-32.png'
+];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -9,7 +12,11 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('activate', (event) => {
-  event.waitUntil(self.clients.claim());
+  event.waitUntil(
+    caches.keys()
+      .then((keys) => Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k))))
+      .then(() => self.clients.claim())
+  );
 });
 
 self.addEventListener('fetch', (event) => {
