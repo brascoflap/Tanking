@@ -1,0 +1,6 @@
+[
+  { "naam": "Shell Deventer", "adres": "Zutphenseweg, Deventer", "prijs": 2.409 },
+  { "naam": "BP Koerhuis", "adres": "Raalterweg, Deventer", "prijs": 2.399 },
+  { "naam": "Tamoil Deventer", "adres": "Spanjaardsdijk, Deventer", "prijs": 2.389 },
+  { "naam": "TotalEnergies Deventer", "adres": "Zutphenseweg, Deventer", "prijs": 2.419 }
+]

@@ -1,0 +1,41 @@
+{
+  "bijgewerkt": "2026-09-04T16:37:57.844313+00:00",
+  "stations": [
+    {
+      "naam": "Tango Deventer",
+      "adres": "Piet Van Donkplein 3, Deventer",
+      "prijs": 1.899,
+      "bron": "live"
+    },
+    {
+      "naam": "TinQ Deventer - Diepenveenseweg",
+      "adres": "Diepenveenseweg 1a, Deventer",
+      "prijs": 2.069,
+      "bron": "live"
+    },
+    {
+      "naam": "Tamoil Deventer",
+      "adres": "Spanjaardsdijk, Deventer",
+      "prijs": 2.389,
+      "bron": "handmatig"
+    },
+    {
+      "naam": "BP Koerhuis",
+      "adres": "Raalterweg, Deventer",
+      "prijs": 2.399,
+      "bron": "handmatig"
+    },
+    {
+      "naam": "Shell Deventer",
+      "adres": "Zutphenseweg, Deventer",
+      "prijs": 2.409,
+      "bron": "handmatig"
+    },
+    {
+      "naam": "TotalEnergies Deventer",
+      "adres": "Zutphenseweg, Deventer",
+      "prijs": 2.419,
+      "bron": "handmatig"
+    }
+  ]
+}

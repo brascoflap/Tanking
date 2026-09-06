@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>TankKompas Deventer</title>
+<meta name="theme-color" content="#24272C">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛽</text></svg>">
+<style>
+  :root {
+    --bg-main: #24272C;
+    --bg-card: #2E3238;
+    --bg-card-2: #363A42;
+    --border: #3D4148;
+    --text-main: #F4F1EA;
+    --text-sub: #A8A59C;
+    --text-muted: #7A7870;
+    --accent-gold: #F2B705;
+    --accent-green: #6B9080;
+    --accent-warn: #E0A24F;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: -apple-system, "Segoe UI", Roboto, system-ui, sans-serif;
+    margin: 0;
+    padding: 24px 16px 60px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .app { width: 100%; max-width: 480px; }
+
+  header { text-align: center; margin-bottom: 20px; }
+  header .label {
+    font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--text-muted); font-weight: 600;
+  }
+  header .datum { font-size: 1rem; color: var(--text-sub); margin-top: 4px; }
+
+  .card {
+    background-color: var(--bg-card);
+    border-radius: 28px;
+    padding: 36px 28px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    margin-bottom: 20px;
+  }
+
+  .winner-title { font-size: 1rem; color: var(--text-sub); letter-spacing: 1px; text-transform: uppercase; margin: 0 0 10px; }
+  .station-name { font-size: 2rem; font-weight: 800; line-height: 1.15; margin: 0 0 4px; }
+  .station-adres { font-size: 1.05rem; color: var(--text-sub); margin-bottom: 22px; }
+  .price { font-size: 4rem; font-weight: 800; color: var(--accent-gold); line-height: 1; margin-bottom: 6px; }
+  .price span { font-size: 1.5rem; color: var(--text-sub); font-weight: 600; }
+
+  .savings {
+    background-color: rgba(107, 144, 128, 0.15);
+    color: var(--accent-green);
+    padding: 16px; border-radius: 16px;
+    font-weight: 700; font-size: 1.15rem; margin-bottom: 28px;
+  }
+
+  .btn-maps {
+    background-color: var(--accent-gold);
+    color: #24272C;
+    border: none; text-decoration: none;
+    padding: 22px; border-radius: 20px;
+    font-size: 1.3rem; font-weight: 800;
+    width: 100%; cursor: pointer;
+    display: flex; align-items: center; justify-content: center; gap: 12px;
+    transition: transform .1s;
+  }
+  .btn-maps:active { transform: scale(0.97); }
+
+  .btn-getankt {
+    margin-top: 14px;
+    background: transparent;
+    color: var(--text-sub);
+    border: 2px solid var(--border);
+    padding: 16px;
+    border-radius: 16px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    width: 100%;
+    cursor: pointer;
+  }
+  .btn-getankt:active { transform: scale(0.98); }
+
+  .potje {
+    background-color: var(--bg-card);
+    border-radius: 24px;
+    padding: 22px 24px;
+    margin-bottom: 20px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .potje .tekst { color: var(--text-sub); font-size: 1rem; }
+  .potje .bedrag { color: var(--accent-gold); font-size: 1.6rem; font-weight: 800; }
+
+  .lijst { background-color: var(--bg-card); border-radius: 24px; padding: 10px 24px; margin-bottom: 20px; }
+  .lijst h2 { font-size: 0.9rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin: 16px 0 8px; font-weight: 700; }
+  .rij { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--border); }
+  .rij:last-child { border-bottom: none; }
+  .rij .naam { font-size: 1.05rem; }
+  .rij .adres-klein { font-size: 0.85rem; color: var(--text-muted); }
+  .rij .prijs-klein { font-size: 1.1rem; font-weight: 700; color: var(--text-sub); }
+  .badge { font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; margin-left: 6px; vertical-align: middle; }
+  .badge.live { background: rgba(107,144,128,0.2); color: var(--accent-green); }
+  .badge.handmatig { background: rgba(224,162,79,0.18); color: var(--accent-warn); }
+
+  details.instellingen { background-color: var(--bg-card); border-radius: 24px; padding: 4px 24px 20px; margin-bottom: 20px; }
+  summary { padding: 18px 0; font-weight: 700; cursor: pointer; color: var(--text-sub); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "＋"; font-size: 1.3rem; color: var(--text-muted); }
+  details[open] summary::after { content: "－"; }
+
+  .instelling-rij { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-top: 1px solid var(--border); }
+  .instelling-rij span { font-size: 1rem; color: var(--text-sub); }
+
+  .switch { position: relative; width: 50px; height: 28px; flex-shrink: 0; }
+  .switch input { opacity: 0; width: 0; height: 0; }
+  .slider { position: absolute; cursor: pointer; inset: 0; background-color: var(--border); border-radius: 28px; transition: .2s; }
+  .slider:before { position: absolute; content: ""; height: 22px; width: 22px; left: 3px; bottom: 3px; background-color: var(--text-main); border-radius: 50%; transition: .2s; }
+  input:checked + .slider { background-color: var(--accent-green); }
+  input:checked + .slider:before { transform: translateX(22px); }
+
+  input[type=number] {
+    background: var(--bg-card-2); border: 1px solid var(--border); color: var(--text-main);
+    border-radius: 10px; padding: 8px 10px; font-size: 1rem; width: 80px; text-align: right;
+  }
+
+  .voetnoot { text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 4px; line-height: 1.5; }
+  .voetnoot a { color: var(--text-sub); }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <header>
+    <div class="label">TankKompas</div>
+    <div class="datum" id="datum"></div>
+  </header>
+
+  <div class="card" id="winnaar-kaart">
+    <p class="winner-title">Vandaag tank je het goedkoopst bij</p>
+    <div class="station-name" id="w-naam">Laden...</div>
+    <div class="station-adres" id="w-adres"></div>
+    <div class="price" id="w-prijs">€0,00<span>/L</span></div>
+    <div class="savings" id="w-besparing"></div>
+    <a class="btn-maps" id="w-maps-link" target="_blank" rel="noopener">📍 Start route in Maps</a>
+    <button class="btn-getankt" id="btn-getankt">⛽ Ik heb hier getankt</button>
+  </div>
+
+  <div class="potje">
+    <span class="tekst">💰 Deze maand bespaard</span>
+    <span class="bedrag" id="potje-bedrag">€0,00</span>
+  </div>
+
+  <div class="lijst">
+    <h2>Andere tankstations</h2>
+    <div id="andere-stations"></div>
+  </div>
+
+  <details class="instellingen">
+    <summary>Instellingen</summary>
+
+    <div class="instelling-rij">
+      <span>🔔 Dinsdag-herinnering (09:30)</span>
+      <label class="switch">
+        <input type="checkbox" id="toggle-herinnering">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div class="instelling-rij">
+      <span>Gemiddeld tankvolume (L)</span>
+      <input type="number" id="input-volume" value="40" min="1" max="200">
+    </div>
+    <div class="instelling-rij">
+      <span>Test de melding</span>
+      <button class="btn-getankt" id="btn-test-melding" style="width:auto; padding:10px 16px; margin:0;">Test 🔔</button>
+    </div>
+  </details>
+
+  <p class="voetnoot" id="bijgewerkt-tekst"></p>
+</div>
+
+<script>
+const MAANDPOT_KEY = 'tankkompas_maandpot';
+const VOLUME_KEY = 'tankkompas_volume';
+const HERINNERING_KEY = 'tankkompas_herinnering';
+const LAATSTE_MELDING_KEY = 'tankkompas_laatste_melding_datum';
+
+function huidigeMaandKey() {
+  const d = new Date();
+  return `${d.getFullYear()}-${d.getMonth()}`;
+}
+
+function laadPotje() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(MAANDPOT_KEY) || 'null');
+    if (raw && raw.maand === huidigeMaandKey()) return raw.bedrag;
+  } catch (e) {}
+  return 0;
+}
+
+function schrijfPotje(bedrag) {
+  localStorage.setItem(MAANDPOT_KEY, JSON.stringify({ maand: huidigeMaandKey(), bedrag }));
+  document.getElementById('potje-bedrag').textContent = `€${bedrag.toFixed(2).replace('.', ',')}`;
+}
+
+function euro(n) {
+  return `€${n.toFixed(3).replace('.', ',')}`;
+}
+
+async function laadData() {
+  const res = await fetch('data.json', { cache: 'no-store' });
+  return res.json();
+}
+
+function mapsLink(station) {
+  const q = encodeURIComponent(`${station.naam} ${station.adres}`);
+  return `https://www.google.com/maps/search/?api=1&query=${q}`;
+}
+
+function toon(data) {
+  const stations = data.stations || [];
+  if (!stations.length) {
+    document.getElementById('w-naam').textContent = 'Geen prijzen gevonden';
+    return;
+  }
+  const winnaar = stations[0];
+  const volume = parseFloat(localStorage.getItem(VOLUME_KEY)) || 40;
+
+  // Referentieprijs = gemiddelde van de andere stations (of adviesprijs-achtig gemiddelde)
+  const overig = stations.slice(1);
+  const gemiddelde = overig.length
+    ? overig.reduce((s, x) => s + x.prijs, 0) / overig.length
+    : winnaar.prijs;
+  const besparingPerLiter = Math.max(0, gemiddelde - winnaar.prijs);
+  const besparingVolleTank = besparingPerLiter * volume;
+
+  document.getElementById('w-naam').textContent = winnaar.naam;
+  document.getElementById('w-adres').textContent = winnaar.adres;
+  document.getElementById('w-prijs').innerHTML = `${euro(winnaar.prijs)}<span>/L</span>`;
+  document.getElementById('w-besparing').textContent =
+    besparingVolleTank > 0.05
+      ? `💰 Je bespaart €${besparingVolleTank.toFixed(2).replace('.', ',')} op een volle tank`
+      : `Vandaag zit iedereen dicht bij elkaar`;
+  document.getElementById('w-maps-link').href = mapsLink(winnaar);
+
+  document.getElementById('btn-getankt').onclick = () => {
+    const huidig = laadPotje();
+    schrijfPotje(huidig + besparingVolleTank);
+    document.getElementById('btn-getankt').textContent = '✅ Genoteerd!';
+    setTimeout(() => { document.getElementById('btn-getankt').textContent = '⛽ Ik heb hier getankt'; }, 2000);
+  };
+
+  const lijstEl = document.getElementById('andere-stations');
+  lijstEl.innerHTML = '';
+  overig.forEach(s => {
+    const rij = document.createElement('div');
+    rij.className = 'rij';
+    rij.innerHTML = `
+      <div>
+        <div class="naam">${s.naam} <span class="badge ${s.bron}">${s.bron === 'live' ? 'live' : 'handmatig'}</span></div>
+        <div class="adres-klein">${s.adres}</div>
+      </div>
+      <div class="prijs-klein">${euro(s.prijs)}</div>
+    `;
+    lijstEl.appendChild(rij);
+  });
+
+  if (data.bijgewerkt) {
+    const d = new Date(data.bijgewerkt);
+    document.getElementById('bijgewerkt-tekst').textContent =
+      `Prijzen bijgewerkt op ${d.toLocaleDateString('nl-NL')} om ${d.toLocaleTimeString('nl-NL', {hour:'2-digit', minute:'2-digit'})}`;
+  }
+}
+
+function initInstellingen() {
+  const volumeInput = document.getElementById('input-volume');
+  volumeInput.value = localStorage.getItem(VOLUME_KEY) || 40;
+  volumeInput.addEventListener('change', () => {
+    localStorage.setItem(VOLUME_KEY, volumeInput.value);
+    laadData().then(toon);
+  });
+
+  const toggle = document.getElementById('toggle-herinnering');
+  toggle.checked = localStorage.getItem(HERINNERING_KEY) === 'aan';
+  toggle.addEventListener('change', async () => {
+    if (toggle.checked) {
+      if (Notification.permission !== 'granted') {
+        const perm = await Notification.requestPermission();
+        if (perm !== 'granted') { toggle.checked = false; return; }
+      }
+      localStorage.setItem(HERINNERING_KEY, 'aan');
+    } else {
+      localStorage.setItem(HERINNERING_KEY, 'uit');
+    }
+  });
+
+  document.getElementById('btn-test-melding').onclick = async () => {
+    if (Notification.permission !== 'granted') {
+      await Notification.requestPermission();
+    }
+    if (Notification.permission === 'granted') {
+      new Notification('⛽ TankKompas', { body: 'Zo ziet een melding eruit. Werkt!' });
+    } else {
+      alert('Meldingen staan uit voor deze pagina. Zet ze aan in de browserinstellingen.');
+    }
+  };
+}
+
+function checkHerinnering(data) {
+  if (localStorage.getItem(HERINNERING_KEY) !== 'aan') return;
+  if (Notification.permission !== 'granted') return;
+  const nu = new Date();
+  const isDinsdag = nu.getDay() === 2;
+  const vanaf0930 = nu.getHours() > 9 || (nu.getHours() === 9 && nu.getMinutes() >= 30);
+  const vandaagKey = nu.toDateString();
+  if (isDinsdag && vanaf0930 && localStorage.getItem(LAATSTE_MELDING_KEY) !== vandaagKey) {
+    const winnaar = (data.stations || [])[0];
+    if (winnaar) {
+      new Notification('☕ Goedemorgen! Slim tanken vandaag.', {
+        body: `${winnaar.naam} is nu het goedkoopst: ${euro(winnaar.prijs)}/L.`
+      });
+      localStorage.setItem(LAATSTE_MELDING_KEY, vandaagKey);
+    }
+  }
+}
+
+document.getElementById('datum').textContent = new Date().toLocaleDateString('nl-NL', {
+  weekday: 'long', day: 'numeric', month: 'long'
+});
+
+schrijfPotje(laadPotje());
+initInstellingen();
+laadData().then(data => { toon(data); checkHerinnering(data); }).catch(() => {
+  document.getElementById('w-naam').textContent = 'Kon prijzen niet laden';
+});
+
+// Elke minuut opnieuw checken zolang de pagina open staat (voor de dinsdag-herinnering)
+setInterval(() => { laadData().then(checkHerinnering); }, 60000);
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').catch(() => {});
+}
+</script>
+</body>
+</html>

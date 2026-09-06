@@ -1,0 +1,50 @@
+name: Prijzen bijwerken
+
+on:
+  schedule:
+    # Elke ochtend om 06:30 Nederlandse tijd (04:30 UTC in de zomer, 05:30 in de winter)
+    - cron: '30 4 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Prijzen scrapen
+        run: python3 scrape.py
+
+      - name: Wijzigingen committen
+        run: |
+          git config user.name "TankKompas bot"
+          git config user.email "bot@tankkompas.local"
+          git add docs/data.json
+          git diff --cached --quiet || git commit -m "Prijzen bijgewerkt: $(date -u +%Y-%m-%d)"
+          git push
+
+  deploy:
+    needs: update-data
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - id: deployment
+        uses: actions/deploy-pages@v4
