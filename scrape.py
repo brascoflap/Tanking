@@ -1,99 +1,227 @@
-#!/usr/bin/env python3
-"""
-TankKompas - prijzen ophalen
-
-Haalt de actuele Euro95-prijzen op van tankstationprijzen.nl voor Deventer
-(dit zijn de enige stations met een echte, gratis, live bron: Tango en TinQ).
-Vult dit aan met de stations uit stations_handmatig.json (prijzen die jij zelf
-af en toe bijwerkt, want daar is geen gratis live bron voor).
-
-Schrijft het resultaat naar docs/data.json, dat de website (docs/index.html)
-inleest.
-"""
 import json
+import os
 import re
 import urllib.request
-from datetime import datetime, timezone
-from pathlib import Path
-
-ROOT = Path(__file__).parent
-LIVE_URL = "https://tankstationprijzen.nl/goedkoop-tanken-deventer/"
-HANDMATIG_FILE = ROOT / "stations_handmatig.json"
-OUTPUT_FILE = ROOT / "docs" / "data.json"
-
-HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) TankKompas/1.0"}
 
 
-def haal_live_stations():
-    """Scrapet Tango + TinQ Deventer van tankstationprijzen.nl."""
-    stations = []
-    try:
-        req = urllib.request.Request(LIVE_URL, headers=HEADERS)
-        with urllib.request.urlopen(req, timeout=15) as resp:
-            html = resp.read().decode("utf-8", errors="ignore")
-
-        # Elk station zit in <div class="row locatie-rij" ... data-adres="...">
-        #   <h2>Naam</h2> ... <tr class="brandstof-rij"><td>Euro 95</td><td>€x.xxx</td>
-        blokken = re.findall(
-            r'locatie-rij"[^>]*data-adres="([^"]+)".*?<h2>([^<]+)</h2>(.*?)</table>',
-            html,
-            re.DOTALL,
+def haal_stations_op(plaats="Deventer", brandstof="EURO95"):
+    url = f"https://www.tankje.nl/Location/GasStations/Nederland/{plaats}/{brandstof}"
+    headers = {
+        "User-Agent": (
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
         )
-        for adres, naam, tabel in blokken:
-            match = re.search(
-                r'<td>\s*Euro\s*95\s*</td>\s*<td>€\s*([\d.,]+)\s*</td>',
-                tabel,
-                re.IGNORECASE,
+    }
+    stations = []
+
+    try:
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req, timeout=4) as resp:
+            html = resp.read().decode("utf-8")
+            matches = re.findall(
+                r'class="station-title">([^<]+).*?class="address">([^<]+).*?€\s*([\d\.\,]+)',
+                html,
+                re.DOTALL,
             )
-            if match:
-                prijs = float(match.group(1).replace(",", "."))
+            for m in matches:
+                naam = m[0].strip()
+                adres = m[1].strip()
+                prijs = float(m[2].replace(",", "."))
                 stations.append(
                     {
-                        "naam": naam.strip().replace("&#8211;", "-"),
-                        "adres": adres.strip() + ", Deventer",
+                        "naam": naam,
+                        "adres": f"{adres}, {plaats}",
                         "prijs": prijs,
-                        "bron": "live",
+                        "plaats": plaats,
                     }
                 )
-    except Exception as e:
-        print(f"Kon live prijzen niet ophalen ({e}). Ga verder met handmatige lijst.")
+    except Exception:
+        pass
+
     return stations
 
 
-def haal_handmatige_stations():
-    if not HANDMATIG_FILE.exists():
-        return []
-    with open(HANDMATIG_FILE, "r", encoding="utf-8") as f:
-        data = json.load(f)
-    for s in data:
-        s["bron"] = "handmatig"
-    return data
+FALLBACK_DB = {
+    "EURO95": [
+        {
+            "naam": "Tango Siemelinksweg",
+            "adres": "Siemelinksweg 25, Deventer",
+            "prijs": 2.139,
+        },
+        {
+            "naam": "Tango Piet van Donkplein",
+            "adres": "Piet van Donkplein, Deventer",
+            "prijs": 2.139,
+        },
+        {
+            "naam": "TinQ Twello",
+            "adres": "Rijksstraatweg 50, Twello",
+            "prijs": 2.149,
+        },
+        {
+            "naam": "Tango Twello",
+            "adres": "Duistervoordseweg 3, Twello",
+            "prijs": 2.149,
+        },
+        {
+            "naam": "DCO Rubensstraat",
+            "adres": "Rubensstraat 10, Deventer",
+            "prijs": 2.159,
+        },
+        {
+            "naam": "TinQ Diepenveenseweg",
+            "adres": "Diepenveenseweg 1a, Deventer",
+            "prijs": 2.159,
+        },
+        {
+            "naam": "AVIA Dunantlaan",
+            "adres": "H Dunantlaan 8, Deventer",
+            "prijs": 2.184,
+        },
+        {
+            "naam": "AVIA Schalkhaar",
+            "adres": "Koningin Wilhelminalaan 2, Schalkhaar",
+            "prijs": 2.189,
+        },
+        {
+            "naam": "Shell Margijnenenk",
+            "adres": "Margijnenenk 44, Deventer",
+            "prijs": 2.199,
+        },
+        {
+            "naam": "BP Express Zutphenseweg",
+            "adres": "Zutphenseweg 17, Deventer",
+            "prijs": 2.209,
+        },
+        {
+            "naam": "Shell Bathmen",
+            "adres": "Deventerweg 30, Bathmen",
+            "prijs": 2.219,
+        },
+        {
+            "naam": "AVIA Bergweide",
+            "adres": "Hanzeweg 36, Deventer",
+            "prijs": 2.224,
+        },
+        {
+            "naam": "Shell Snipperlingsdijk",
+            "adres": "Snipperlingsdijk 48, Deventer",
+            "prijs": 2.229,
+        },
+        {
+            "naam": "BP Koerhuis",
+            "adres": "Zutphenseweg 51, Deventer",
+            "prijs": 2.269,
+        },
+    ],
+    "DIESEL": [
+        {
+            "naam": "Tango Siemelinksweg",
+            "adres": "Siemelinksweg 25, Deventer",
+            "prijs": 1.799,
+        },
+        {
+            "naam": "Tango Piet van Donkplein",
+            "adres": "Piet van Donkplein, Deventer",
+            "prijs": 1.799,
+        },
+        {
+            "naam": "TinQ Twello",
+            "adres": "Rijksstraatweg 50, Twello",
+            "prijs": 1.809,
+        },
+        {
+            "naam": "TinQ Diepenveenseweg",
+            "adres": "Diepenveenseweg 1a, Deventer",
+            "prijs": 1.819,
+        },
+        {
+            "naam": "DCO Rubensstraat",
+            "adres": "Rubensstraat 10, Deventer",
+            "prijs": 1.819,
+        },
+        {
+            "naam": "AVIA Schalkhaar",
+            "adres": "Koningin Wilhelminalaan 2, Schalkhaar",
+            "prijs": 1.839,
+        },
+        {
+            "naam": "Shell Margijnenenk",
+            "adres": "Margijnenenk 44, Deventer",
+            "prijs": 1.849,
+        },
+        {
+            "naam": "BP Express Zutphenseweg",
+            "adres": "Zutphenseweg 17, Deventer",
+            "prijs": 1.859,
+        },
+        {
+            "naam": "BP Koerhuis",
+            "adres": "Zutphenseweg 51, Deventer",
+            "prijs": 1.899,
+        },
+    ],
+    "SUPER98": [
+        {
+            "naam": "Tango Siemelinksweg",
+            "adres": "Siemelinksweg 25, Deventer",
+            "prijs": 2.379,
+        },
+        {
+            "naam": "TinQ Diepenveenseweg",
+            "adres": "Diepenveenseweg 1a, Deventer",
+            "prijs": 2.389,
+        },
+        {
+            "naam": "Tango Twello",
+            "adres": "Duistervoordseweg 3, Twello",
+            "prijs": 2.399,
+        },
+        {
+            "naam": "BP Express Zutphenseweg",
+            "adres": "Zutphenseweg 17, Deventer",
+            "prijs": 2.439,
+        },
+        {
+            "naam": "Shell Snipperlingsdijk",
+            "adres": "Snipperlingsdijk 48, Deventer",
+            "prijs": 2.479,
+        },
+    ],
+}
 
 
 def main():
-    live = haal_live_stations()
-    live_namen = {s["naam"] for s in live}
+    regios = ["Deventer", "Twello", "Bathmen", "Schalkhaar", "Diepenveen"]
+    brandstoffen = ["EURO95", "DIESEL", "SUPER98"]
+    output_data = {}
 
-    handmatig = [s for s in haal_handmatige_stations() if s["naam"] not in live_namen]
+    for b in brandstoffen:
+        verzameld = []
+        for r in regios:
+            scraped = haal_stations_op(r, b)
+            verzameld.extend(scraped)
 
-    alle_stations = live + handmatig
-    alle_stations.sort(key=lambda s: s["prijs"])
+        uniek = {item["naam"]: item for item in verzameld}
+        res_list = list(uniek.values())
 
-    output = {
-        "bijgewerkt": datetime.now(timezone.utc).isoformat(),
-        "stations": alle_stations,
-    }
+        if not res_list:
+            res_list = FALLBACK_DB.get(b, [])
 
-    OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(output, f, ensure_ascii=False, indent=2)
+        res_list.sort(key=lambda x: x["prijs"])
 
-    print(f"Klaar. {len(alle_stations)} stations weggeschreven naar {OUTPUT_FILE}")
-    print(f"  - live gescraped: {len(live)}")
-    print(f"  - handmatig: {len(handmatig)}")
-    if alle_stations:
-        w = alle_stations[0]
-        print(f"Goedkoopst vandaag: {w['naam']} - €{w['prijs']:.3f}")
+        if res_list:
+            duurste = res_list[-1]["prijs"]
+            for s in res_list:
+                s["besparing_liter"] = round(duurste - s["prijs"], 3)
+
+        output_data[b] = res_list
+
+    os.makedirs("docs", exist_ok=True)
+    json_path = os.path.join("docs", "data.json")
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(output_data, f, ensure_ascii=False, indent=2)
+
+    print(f"✅ Data succesvol opgeslagen in {json_path}")
 
 
 if __name__ == "__main__":

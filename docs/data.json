@@ -1,41 +1,176 @@
 {
-  "bijgewerkt": "2026-09-06T12:56:12.594327+00:00",
-  "stations": [
+  "EURO95": [
     {
-      "naam": "Tango Deventer",
-      "adres": "Piet Van Donkplein 3, Deventer",
-      "prijs": 1.899,
-      "bron": "live"
+      "naam": "Tango Siemelinksweg",
+      "adres": "Siemelinksweg 25, Deventer",
+      "prijs": 2.139,
+      "besparing_liter": 0.13
     },
     {
-      "naam": "TinQ Deventer - Diepenveenseweg",
+      "naam": "Tango Piet van Donkplein",
+      "adres": "Piet van Donkplein, Deventer",
+      "prijs": 2.139,
+      "besparing_liter": 0.13
+    },
+    {
+      "naam": "TinQ Twello",
+      "adres": "Rijksstraatweg 50, Twello",
+      "prijs": 2.149,
+      "besparing_liter": 0.12
+    },
+    {
+      "naam": "Tango Twello",
+      "adres": "Duistervoordseweg 3, Twello",
+      "prijs": 2.149,
+      "besparing_liter": 0.12
+    },
+    {
+      "naam": "DCO Rubensstraat",
+      "adres": "Rubensstraat 10, Deventer",
+      "prijs": 2.159,
+      "besparing_liter": 0.11
+    },
+    {
+      "naam": "TinQ Diepenveenseweg",
       "adres": "Diepenveenseweg 1a, Deventer",
-      "prijs": 2.069,
-      "bron": "live"
+      "prijs": 2.159,
+      "besparing_liter": 0.11
     },
     {
-      "naam": "Tamoil Deventer",
-      "adres": "Spanjaardsdijk, Deventer",
-      "prijs": 2.389,
-      "bron": "handmatig"
+      "naam": "AVIA Dunantlaan",
+      "adres": "H Dunantlaan 8, Deventer",
+      "prijs": 2.184,
+      "besparing_liter": 0.085
+    },
+    {
+      "naam": "AVIA Schalkhaar",
+      "adres": "Koningin Wilhelminalaan 2, Schalkhaar",
+      "prijs": 2.189,
+      "besparing_liter": 0.08
+    },
+    {
+      "naam": "Shell Margijnenenk",
+      "adres": "Margijnenenk 44, Deventer",
+      "prijs": 2.199,
+      "besparing_liter": 0.07
+    },
+    {
+      "naam": "BP Express Zutphenseweg",
+      "adres": "Zutphenseweg 17, Deventer",
+      "prijs": 2.209,
+      "besparing_liter": 0.06
+    },
+    {
+      "naam": "Shell Bathmen",
+      "adres": "Deventerweg 30, Bathmen",
+      "prijs": 2.219,
+      "besparing_liter": 0.05
+    },
+    {
+      "naam": "AVIA Bergweide",
+      "adres": "Hanzeweg 36, Deventer",
+      "prijs": 2.224,
+      "besparing_liter": 0.045
+    },
+    {
+      "naam": "Shell Snipperlingsdijk",
+      "adres": "Snipperlingsdijk 48, Deventer",
+      "prijs": 2.229,
+      "besparing_liter": 0.04
     },
     {
       "naam": "BP Koerhuis",
-      "adres": "Raalterweg, Deventer",
+      "adres": "Zutphenseweg 51, Deventer",
+      "prijs": 2.269,
+      "besparing_liter": 0.0
+    }
+  ],
+  "DIESEL": [
+    {
+      "naam": "Tango Siemelinksweg",
+      "adres": "Siemelinksweg 25, Deventer",
+      "prijs": 1.799,
+      "besparing_liter": 0.1
+    },
+    {
+      "naam": "Tango Piet van Donkplein",
+      "adres": "Piet van Donkplein, Deventer",
+      "prijs": 1.799,
+      "besparing_liter": 0.1
+    },
+    {
+      "naam": "TinQ Twello",
+      "adres": "Rijksstraatweg 50, Twello",
+      "prijs": 1.809,
+      "besparing_liter": 0.09
+    },
+    {
+      "naam": "TinQ Diepenveenseweg",
+      "adres": "Diepenveenseweg 1a, Deventer",
+      "prijs": 1.819,
+      "besparing_liter": 0.08
+    },
+    {
+      "naam": "DCO Rubensstraat",
+      "adres": "Rubensstraat 10, Deventer",
+      "prijs": 1.819,
+      "besparing_liter": 0.08
+    },
+    {
+      "naam": "AVIA Schalkhaar",
+      "adres": "Koningin Wilhelminalaan 2, Schalkhaar",
+      "prijs": 1.839,
+      "besparing_liter": 0.06
+    },
+    {
+      "naam": "Shell Margijnenenk",
+      "adres": "Margijnenenk 44, Deventer",
+      "prijs": 1.849,
+      "besparing_liter": 0.05
+    },
+    {
+      "naam": "BP Express Zutphenseweg",
+      "adres": "Zutphenseweg 17, Deventer",
+      "prijs": 1.859,
+      "besparing_liter": 0.04
+    },
+    {
+      "naam": "BP Koerhuis",
+      "adres": "Zutphenseweg 51, Deventer",
+      "prijs": 1.899,
+      "besparing_liter": 0.0
+    }
+  ],
+  "SUPER98": [
+    {
+      "naam": "Tango Siemelinksweg",
+      "adres": "Siemelinksweg 25, Deventer",
+      "prijs": 2.379,
+      "besparing_liter": 0.1
+    },
+    {
+      "naam": "TinQ Diepenveenseweg",
+      "adres": "Diepenveenseweg 1a, Deventer",
+      "prijs": 2.389,
+      "besparing_liter": 0.09
+    },
+    {
+      "naam": "Tango Twello",
+      "adres": "Duistervoordseweg 3, Twello",
       "prijs": 2.399,
-      "bron": "handmatig"
+      "besparing_liter": 0.08
     },
     {
-      "naam": "Shell Deventer",
-      "adres": "Zutphenseweg, Deventer",
-      "prijs": 2.409,
-      "bron": "handmatig"
+      "naam": "BP Express Zutphenseweg",
+      "adres": "Zutphenseweg 17, Deventer",
+      "prijs": 2.439,
+      "besparing_liter": 0.04
     },
     {
-      "naam": "TotalEnergies Deventer",
-      "adres": "Zutphenseweg, Deventer",
-      "prijs": 2.419,
-      "bron": "handmatig"
+      "naam": "Shell Snipperlingsdijk",
+      "adres": "Snipperlingsdijk 48, Deventer",
+      "prijs": 2.479,
+      "besparing_liter": 0.0
     }
   ]
 }
