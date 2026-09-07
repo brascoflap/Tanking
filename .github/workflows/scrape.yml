@@ -1,0 +1,31 @@
+name: Automatische Brandstof Update
+
+on:
+  schedule:
+    # Draait 4x per dag (om 00:00, 06:00, 12:00 en 18:00 UTC)
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Code ophalen
+        uses: actions/checkout@v4
+
+      - name: Python instellen
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Scraper uitvoeren
+        run: python scrape.py
+
+      - name: Wijzigingen opslaan en pushen
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-update brandstofprijzen"
+          file_pattern: "docs/data.json"
