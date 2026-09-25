@@ -1,9 +1,9 @@
 {
   "temperatuur": 16,
   "gevoelstemperatuur": 16,
-  "omschrijving": "Mix van opklaringen en middelbare of lage bewolking",
-  "icoon": "https://cdn.buienradar.nl/resources/images/icons/weather/96x96/B.png",
+  "omschrijving": "Vrijwel onbewolkt (zonnig/helder)",
+  "icoon": "https://cdn.buienradar.nl/resources/images/icons/weather/96x96/A.png",
   "windkracht_bft": 2,
-  "winddichting": "NW",
-  "tijdstip": "2026-09-24T11:10:00"
+  "winddichting": "Z",
+  "tijdstip": "2026-09-25T11:30:00"
 }
