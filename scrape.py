@@ -1,41 +1,74 @@
 import json
 import os
-import re
-import urllib.request
+import subprocess
+from datetime import datetime, timezone
+
+
+BRON_API = "https://www.oliehandel.nl/rest/V1/oliehandel/fuelstations/nearby"
+BRON_PAGINA = "https://www.oliehandel.nl/tankstations"
+REGIO_COORDINATEN = {
+    "Deventer": (52.250000, 6.160000),
+    "Twello": (52.236000, 6.102000),
+    "Bathmen": (52.250000, 6.287000),
+    "Schalkhaar": (52.255000, 6.194000),
+    "Diepenveen": (52.295000, 6.142000),
+}
+BRANDSTOF_API_KEY = {
+    "EURO95": "euro95",
+    "DIESEL": "diesel",
+    "SUPER98": "super98",
+}
 
 
 def haal_stations_op(plaats="Deventer", brandstof="EURO95"):
-    url = f"https://www.tankje.nl/Location/GasStations/Nederland/{plaats}/{brandstof}"
-    headers = {
-        "User-Agent": (
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
-        )
-    }
     stations = []
+    coords = REGIO_COORDINATEN.get(plaats)
+    fuel_key = BRANDSTOF_API_KEY.get(brandstof)
+    if not coords or not fuel_key:
+        return stations
+
+    url = (
+        f"{BRON_API}?lat={coords[0]:.6f}&lng={coords[1]:.6f}"
+        "&radius=15&limit=30"
+    )
 
     try:
-        req = urllib.request.Request(url, headers=headers)
-        with urllib.request.urlopen(req, timeout=4) as resp:
-            html = resp.read().decode("utf-8")
-            matches = re.findall(
-                r'class="station-title">([^<]+).*?class="address">([^<]+).*?€\s*([\d\.\,]+)',
-                html,
-                re.DOTALL,
+        # Systeem-curl gebruikt op macOS en GitHub dezelfde vertrouwde HTTPS-keten.
+        result = subprocess.run(
+            [
+                "curl", "--fail", "--silent", "--show-error", "--location",
+                "--max-time", "15", "--user-agent", "TankKompas/1.0", url,
+            ],
+            capture_output=True,
+            text=True,
+            timeout=15,
+            check=True,
+        )
+        payload = json.loads(result.stdout)
+        records = payload[3] if isinstance(payload, list) and len(payload) >= 4 else []
+        for record in records:
+            prijs_info = (record.get("prices") or {}).get(fuel_key) or {}
+            if prijs_info.get("tier") != "actual" or prijs_info.get("is_stale"):
+                continue
+            naam = str(record.get("name", "")).strip()
+            adres = str(record.get("address", "")).strip()
+            prijs = prijs_info.get("value")
+            if not naam or not adres or not isinstance(prijs, (int, float)):
+                continue
+            stations.append(
+                {
+                    "naam": naam,
+                    "adres": adres,
+                    "prijs": round(float(prijs), 3),
+                    "plaats": plaats,
+                    "bron": "live",
+                    "bron_detail": prijs_info.get("source", "oliehandel"),
+                    "bron_gecontroleerd_op": prijs_info.get("fetched_at"),
+                    "bron_url": record.get("external_link") or BRON_PAGINA,
+                }
             )
-            for m in matches:
-                naam = m[0].strip()
-                adres = m[1].strip()
-                prijs = float(m[2].replace(",", "."))
-                stations.append(
-                    {
-                        "naam": naam,
-                        "adres": f"{adres}, {plaats}",
-                        "prijs": prijs,
-                        "plaats": plaats,
-                    }
-                )
-    except Exception:
-        pass
+    except (OSError, subprocess.SubprocessError, ValueError, TypeError, json.JSONDecodeError):
+        return []
 
     return stations
 
@@ -194,20 +227,55 @@ def main():
     regios = ["Deventer", "Twello", "Bathmen", "Schalkhaar", "Diepenveen"]
     brandstoffen = ["EURO95", "DIESEL", "SUPER98"]
     output_data = {}
+    output_data["aanbiedingen"] = {b: [] for b in brandstoffen}
+    gecontroleerd_op = datetime.now(timezone.utc).isoformat()
+    status_per_brandstof = {}
 
     for b in brandstoffen:
         verzameld = []
+        geslaagde_regios = 0
         for r in regios:
             scraped = haal_stations_op(r, b)
+            if scraped:
+                geslaagde_regios += 1
             verzameld.extend(scraped)
 
-        uniek = {item["naam"]: item for item in verzameld}
+        # Ketens gebruiken soms alleen de merknaam; behoud daarom elk station
+        # afzonderlijk op basis van naam en adres.
+        uniek = {
+            f'{item["naam"]}|{item["adres"]}': item
+            for item in verzameld
+        }
         res_list = list(uniek.values())
 
         if not res_list:
-            res_list = FALLBACK_DB.get(b, [])
+            res_list = [
+                {**item, "bron": "handmatig"}
+                for item in FALLBACK_DB.get(b, [])
+            ]
+            status = "handmatig"
+        elif geslaagde_regios == len(regios):
+            status = "live"
+        else:
+            status = "partial"
 
         res_list.sort(key=lambda x: x["prijs"])
+
+        # Bij een gedeeltelijke live bron blijven extra regionale opties zichtbaar.
+        # Ze worden bewust niet als actuele prijs gebruikt: de prijs blijft n.n.b.
+        live_keys = {f'{item["naam"]}|{item["adres"]}' for item in res_list}
+        suggesties = []
+        if len(res_list) < 6:
+            for item in FALLBACK_DB.get(b, []):
+                key = f'{item["naam"]}|{item["adres"]}'
+                if key not in live_keys:
+                    suggesties.append({
+                        "naam": item["naam"],
+                        "adres": item["adres"],
+                        "prijs": None,
+                        "bron": "suggestie",
+                        "tip": "regionale optie · prijs controleren",
+                    })
 
         if res_list:
             duurste = res_list[-1]["prijs"]
@@ -215,6 +283,22 @@ def main():
                 s["besparing_liter"] = round(duurste - s["prijs"], 3)
 
         output_data[b] = res_list
+        output_data.setdefault("suggesties", {})[b] = suggesties
+        status_per_brandstof[b] = {
+            "status": status,
+            "live_stations": sum(1 for item in res_list if item.get("bron") == "live"),
+            "regios_met_data": geslaagde_regios,
+            "regios_totaal": len(regios),
+            "bron": BRON_PAGINA,
+            "gecontroleerd_op": gecontroleerd_op,
+        }
+
+    output_data["bijgewerkt"] = gecontroleerd_op
+    output_data["_meta"] = {
+        "merk": "FHJ Brasser · Brasco Holding",
+        "bron": BRON_PAGINA,
+        "brandstoffen": status_per_brandstof,
+    }
 
     os.makedirs("docs", exist_ok=True)
     json_path = os.path.join("docs", "data.json")

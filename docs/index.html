@@ -4,57 +4,97 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>TankKompas Deventer</title>
-<meta name="theme-color" content="#24272C">
+<meta name="description" content="TankKompas Deventer — slim en rustig tanken, door FHJ Brasser · Brasco Holding.">
+<meta name="author" content="FHJ Brasser · Brasco Holding">
+<meta name="theme-color" content="#2E3943">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; upgrade-insecure-requests">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
   :root {
-    --bg-main: #24272C;
-    --bg-card: #2E3238;
-    --bg-card-2: #363A42;
-    --border: #3D4148;
-    --text-main: #F4F1EA;
-    --text-sub: #A8A59C;
-    --text-muted: #7A7870;
-    --accent-gold: #F2B705;
-    --accent-green: #6B9080;
-    --accent-warn: #E0A24F;
+    --bg-main: #2E3943;
+    --bg-card: rgba(239, 235, 224, .15);
+    --bg-card-2: rgba(226, 234, 236, .15);
+    --border: rgba(231, 238, 238, .26);
+    --text-main: #E7ECEB;
+    --text-sub: #C3CED0;
+    --text-muted: #9EADB2;
+    --accent-gold: #DDA62A;
+    --accent-green: #4E8F84;
+    --accent-warn: #C98545;
+    --accent-blue: #5A7FAE;
+    --accent-coral: #C96F70;
+  }
+  body[data-theme="dark"] {
+    --bg-main: #202833;
+    --bg-card: #2B3542;
+    --bg-card-2: #354252;
+    --border: #465568;
+    --text-main: #F1F4F7;
+    --text-sub: #C0CBD7;
+    --text-muted: #91A0B0;
+    --accent-gold: #E7B957;
+    --accent-green: #78B4A7;
+    --accent-warn: #D9A06B;
+    --accent-blue: #8EAFD5;
+    --accent-coral: #D98C8D;
   }
   * { box-sizing: border-box; }
   body {
-    background-color: var(--bg-main);
+    background: radial-gradient(circle at 8% 0%, #625D43 0, transparent 25%), radial-gradient(circle at 100% 18%, #355B5A 0, transparent 27%), var(--bg-main);
     color: var(--text-main);
     font-family: -apple-system, "Segoe UI", Roboto, system-ui, sans-serif;
     margin: 0;
-    padding: 24px 16px 60px;
+    padding: 28px 16px 60px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+  body[data-theme="dark"] { background: #202833; }
+  body[data-theme="dark"] .card { background: linear-gradient(145deg, #354252, #2B3542 65%, #304A4A); border-color: #6C6040; }
+  body[data-theme="dark"] .potje { background: linear-gradient(135deg, #304A4A, #2B3542); border-color: #4D716A; }
+  body[data-theme="dark"] .registratie { background: linear-gradient(135deg, #2B3542, #34445A); border-color: #506B8A; }
   .app { width: 100%; max-width: 480px; }
+  .merkstempel { color: var(--text-muted); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; }
+  .watermerk { position: fixed; right: 12px; bottom: 10px; z-index: 0; color: var(--text-muted); opacity: .22; font-size: .66rem; letter-spacing: .09em; pointer-events: none; transform: rotate(-8deg); }
+  .naar-boven { position: fixed; right: 18px; bottom: 18px; z-index: 75; width: 44px; height: 44px; border: 1px solid rgba(221, 166, 42, .62); border-radius: 14px; background: rgba(44, 61, 70, .92); color: var(--accent-gold); box-shadow: 0 8px 22px rgba(12, 20, 27, .24); cursor: pointer; font-size: 1.35rem; line-height: 1; opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity .2s ease, transform .2s ease, background .2s ease; }
+  .naar-boven.zichtbaar { opacity: 1; transform: translateY(0); pointer-events: auto; }
+  .naar-boven:hover, .naar-boven:focus-visible { background: rgba(61, 81, 89, .98); outline: 2px solid rgba(221, 166, 42, .35); outline-offset: 2px; }
+  @media (max-width: 600px) { .naar-boven { right: 14px; bottom: 14px; } }
+  .app, .pdf-bon { position: relative; z-index: 1; }
 
-  header { text-align: center; margin-bottom: 20px; }
+  header { text-align: center; margin-bottom: 22px; }
   header .label {
     font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase;
-    color: var(--text-muted); font-weight: 600;
+    color: var(--accent-blue); font-weight: 800;
   }
   header .datum { font-size: 1rem; color: var(--text-sub); margin-top: 4px; }
+  .header-info-row { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 5px; }
+  .header-info-row .weer { margin: 0; }
+  .settings-top { display: inline-grid; place-items: center; width: 38px; height: 38px; border: 1px solid rgba(231, 238, 238, .30); border-radius: 12px; background: rgba(226, 234, 236, .12); color: var(--text-sub); cursor: pointer; font-size: 1.1rem; }
+  .settings-top:hover, .settings-top:focus-visible { color: var(--accent-gold); border-color: var(--accent-gold); outline: 2px solid rgba(221, 166, 42, .25); outline-offset: 2px; }
+  .tankkompas-bar { display: flex; align-items: center; justify-content: center; gap: 9px; margin-top: 12px; padding: 10px 14px 9px; border-top: 4px solid var(--accent-gold); border-bottom: 1px solid rgba(221, 166, 42, .30); color: var(--accent-gold); font-size: .95rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+  .tankkompas-logo { display: inline-grid; place-items: center; width: 24px; height: 24px; border: 1px solid var(--accent-gold); border-radius: 8px; color: var(--accent-gold); font-size: .82rem; }
 
   .card {
-    background: linear-gradient(165deg, var(--bg-card-2), var(--bg-card) 55%);
-    border-top: 3px solid var(--accent-gold);
+    background: linear-gradient(145deg, rgba(239, 235, 224, .18), rgba(214, 225, 220, .13));
+    border: 1px solid rgba(234, 217, 165, .42);
+    border-top: 5px solid var(--accent-gold);
     border-radius: 28px;
     padding: 32px 28px;
     text-align: center;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    box-shadow: 0 18px 42px rgba(53, 92, 125, 0.14);
+    backdrop-filter: blur(18px);
     margin-bottom: 20px;
   }
 
   .weer {
     display: flex; align-items: center; justify-content: center; gap: 10px;
-    color: var(--text-sub); font-size: 0.95rem; margin-top: 8px;
+    background: rgba(77, 150, 255, 0.09); border-radius: 999px; padding: 7px 12px;
+    color: var(--text-sub); font-size: 0.95rem; margin: 10px auto 0; width: fit-content;
   }
   .weer img { width: 28px; height: 28px; display: block; }
   .weer .weer-temp { color: var(--text-main); font-weight: 700; }
@@ -62,19 +102,19 @@
   .winner-title { font-size: 1rem; color: var(--text-sub); letter-spacing: 1px; text-transform: uppercase; margin: 0 0 10px; }
   .station-name { font-size: 2rem; font-weight: 800; line-height: 1.15; margin: 0 0 4px; }
   .station-adres { font-size: 1.05rem; color: var(--text-sub); margin-bottom: 22px; }
-  .price { font-size: 4rem; font-weight: 800; color: var(--accent-gold); line-height: 1; margin-bottom: 6px; }
+  .price { font-size: 4rem; font-weight: 800; color: var(--accent-gold); line-height: 1; margin-bottom: 6px; text-shadow: 0 0 1px #F4F0E6, 0 0 6px rgba(244, 240, 230, .62); }
   .price span { font-size: 1.5rem; color: var(--text-sub); font-weight: 600; }
 
   .savings {
-    background-color: rgba(107, 144, 128, 0.15);
+    background: #DDF4F0;
     color: var(--accent-green);
     padding: 16px; border-radius: 16px;
     font-weight: 700; font-size: 1.15rem; margin-bottom: 28px;
   }
 
   .btn-maps {
-    background-color: var(--accent-gold);
-    color: #24272C;
+    background: linear-gradient(135deg, #EBC56B, #DDA62A);
+    color: #19324D;
     border: none; text-decoration: none;
     padding: 15px; border-radius: 16px;
     font-size: 1.1rem; font-weight: 800;
@@ -99,32 +139,46 @@
   .btn-getankt:active { transform: scale(0.98); }
 
   .potje {
-    background-color: var(--bg-card);
+    background: linear-gradient(135deg, rgba(200, 223, 217, .15), rgba(216, 214, 207, .15));
+    border: 1px solid rgba(199, 233, 226, .28);
     border-radius: 24px;
-    padding: 22px 24px;
-    margin-bottom: 20px;
+    padding: 10px 14px;
+    margin: 14px 0 18px;
     display: flex; align-items: center; justify-content: space-between;
   }
-  .potje .tekst { color: var(--text-sub); font-size: 1rem; }
-  .potje .bedrag { color: var(--accent-gold); font-size: 1.6rem; font-weight: 800; }
+  .potje .tekst { color: var(--text-sub); font-size: .82rem; }
+  .potje .bedrag { color: var(--accent-gold); font-size: 1.08rem; font-weight: 800; text-shadow: 0 0 1px #F4F0E6, 0 0 5px rgba(244, 240, 230, .58); }
 
-  .lijst { background-color: var(--bg-card); border-radius: 24px; padding: 10px 24px; margin-bottom: 20px; }
+  .lijst { background-color: var(--bg-card); border: 1px solid var(--border); border-radius: 24px; padding: 10px 24px; margin-bottom: 20px; box-shadow: 0 8px 24px rgba(12, 20, 27, 0.16); backdrop-filter: blur(18px); }
   .lijst h2 { font-size: 0.9rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin: 16px 0 8px; font-weight: 700; }
   .rij { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--border); }
   .rij:last-child { border-bottom: none; }
   .rij .naam { font-size: 1.05rem; }
   .rij .adres-klein { font-size: 0.85rem; color: var(--text-muted); }
+  .rij .tip-klein { font-size: 0.74rem; color: var(--accent-green); margin-top: 3px; }
   .rij .prijs-klein { font-size: 1.1rem; font-weight: 700; color: var(--text-sub); }
+  .rij.suggestie { opacity: .86; }
+  .rij.suggestie .tip-klein { color: var(--text-muted); }
+  .favoriet-knop { border: 0; background: transparent; color: var(--text-muted); padding: 1px 4px; margin-left: 4px; cursor: pointer; font-size: 1rem; }
+  .favoriet-knop.actief { color: var(--accent-gold); }
+  .aanbieding-label { display: inline-block; margin-top: 4px; color: var(--accent-warn); font-size: .76rem; font-weight: 700; }
   .badge { font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; margin-left: 6px; vertical-align: middle; }
-  .badge.live { background: rgba(107,144,128,0.2); color: var(--accent-green); }
-  .badge.handmatig { background: rgba(224,162,79,0.18); color: var(--accent-warn); }
+  .badge.live { background: #DDF4F0; color: #197A70; }
+  .badge.handmatig { background: #FFF0D5; color: #A85D12; }
 
   .nieuws-item { display: block; padding: 14px 0; border-bottom: 1px solid var(--border); text-decoration: none; color: var(--text-main); }
   .nieuws-item:last-child { border-bottom: none; }
   .nieuws-item .nieuws-bron { font-size: 0.75rem; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; }
+  .nieuws-categorie { display: inline-block; margin-left: 6px; color: var(--text-muted); font-size: .68rem; letter-spacing: .02em; text-transform: none; font-weight: 600; }
   .nieuws-item .nieuws-titel { font-size: 1rem; line-height: 1.4; margin-top: 4px; }
+  .nieuws-item-rij { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+  .nieuws-open { flex: 1; min-width: 0; color: inherit; text-decoration: none; }
+  .nieuws-open:hover .nieuws-titel { color: var(--accent-gold); }
+  .nieuws-save, .nieuws-remove { flex: 0 0 auto; border: 1px solid var(--border); border-radius: 10px; padding: 7px 9px; background: var(--bg-card-2); color: var(--text-sub); cursor: pointer; font: inherit; font-size: .8rem; }
+  .nieuws-save:hover, .nieuws-save[aria-pressed="true"], .nieuws-remove:hover { color: var(--accent-gold); border-color: var(--accent-gold); }
+  .opgeslagen-leeg { color: var(--text-muted); font-size: .9rem; line-height: 1.5; }
 
-  details.instellingen { background-color: var(--bg-card); border-radius: 24px; padding: 4px 24px 20px; margin-bottom: 20px; }
+  details.instellingen { background-color: var(--bg-card); border: 1px solid var(--border); border-radius: 24px; padding: 4px 24px 20px; margin-bottom: 20px; box-shadow: 0 8px 24px rgba(12, 20, 27, 0.16); backdrop-filter: blur(18px); }
   summary { padding: 18px 0; font-weight: 700; cursor: pointer; color: var(--text-sub); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center; }
   summary::-webkit-details-marker { display: none; }
   summary::after { content: "＋"; font-size: 1.3rem; color: var(--text-muted); }
@@ -147,39 +201,199 @@
 
   .voetnoot { text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 4px; line-height: 1.5; }
   .voetnoot a { color: var(--text-sub); }
+  .verversen { display: flex; gap: 10px; justify-content: center; align-items: center; margin: 16px 0; }
+  .verversen button { width: auto; margin: 0; padding: 10px 16px; }
+  .ververs-status { color: var(--text-muted); font-size: 0.82rem; }
+  .info-panel { position: relative; background: var(--bg-card); border-radius: 18px; padding: 0 18px 14px; margin-top: 18px; backdrop-filter: blur(18px); }
+  .info-panel summary { color: var(--text-sub); font-size: 0.95rem; padding: 14px 0; }
+  .info-panel ul { color: var(--text-sub); margin: 0; padding-left: 20px; line-height: 1.6; font-size: 0.86rem; }
+  .info-panel li + li { margin-top: 5px; }
+  .registratie { background: linear-gradient(135deg, rgba(216, 214, 207, .15), rgba(201, 215, 225, .15)); border: 1px solid rgba(174, 191, 204, .30); border-radius: 24px; padding: 4px 24px 20px; margin-bottom: 20px; box-shadow: 0 8px 24px rgba(12, 20, 27, 0.16); backdrop-filter: blur(18px); }
+  .registratie summary { color: var(--text-sub); }
+  .registratie-rij { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; padding: 11px 0; border-top: 1px solid var(--border); }
+  .registratie-rij label { color: var(--text-sub); font-size: .95rem; }
+  .registratie-rij input, .registratie-rij select { width: 130px; background: var(--bg-card-2); border: 1px solid var(--border); color: var(--text-main); border-radius: 10px; padding: 9px 10px; font-size: 1rem; }
+  .km-veld { display: flex; align-items: center; gap: 7px; }
+  .undo-knop { width: auto; min-width: 36px; padding: 8px 9px; margin: 0; font-size: 1rem; }
+  .registratie-acties { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+  .registratie-acties button { width: auto; margin: 0; }
+  .schatting { color: var(--accent-green); line-height: 1.5; margin: 14px 0 0; }
+  .pdf-bon { display: none; }
+  .menu-tab {
+    position: fixed; left: max(calc(50% - 240px), 0px); top: 42%; z-index: 70;
+    background: #344554; color: #E5E8E8; border: 1px solid #657477;
+    border-left: none; border-radius: 0 14px 14px 0; padding: 14px 8px;
+    cursor: pointer; box-shadow: 0 8px 22px rgba(27, 39, 49, .24);
+  }
+  .menu-tab span { writing-mode: vertical-rl; transform: rotate(180deg); font-size: .72rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+  .menu-backdrop { position: fixed; inset: 0; z-index: 79; background: rgba(29, 38, 43, .38); opacity: 0; pointer-events: none; transition: opacity .2s ease; }
+  .menu-backdrop.open { opacity: 1; pointer-events: auto; }
+  .side-menu {
+    position: fixed; left: max(calc(50% - 240px), 0px); top: 0; bottom: 0; z-index: 80; width: min(300px, 86vw);
+    padding: 28px 20px; background: #2D3945; color: #E5E8E8;
+    border-right: 1px solid #52636A; box-shadow: 12px 0 30px rgba(26, 34, 40, .25);
+    transform: translateX(-105%); transition: transform .25s ease; overflow-y: auto;
+  }
+  .side-menu.open { transform: translateX(0); }
+  .side-menu-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 26px; }
+  .side-menu-head h2 { margin: 0; color: #E7B957; font-size: 1.2rem; text-shadow: 0 0 1px #F4F0E6, 0 0 6px rgba(244, 240, 230, .66); }
+  .side-menu-close { background: transparent; border: 0; color: #C7D0D2; font-size: 1.5rem; cursor: pointer; }
+  .side-menu-brand { color: #AEBCC0; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 18px; }
+  .side-menu-section { border-top: 1px solid #52636A; padding-top: 15px; margin-top: 18px; }
+  .side-menu-section h3 { color: #E7B957; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; margin: 0 0 10px; text-shadow: 0 0 1px #F4F0E6, 0 0 5px rgba(244, 240, 230, .58); }
+  .side-menu-button { display: block; width: 100%; text-align: left; background: #354551; color: #E5E8E8; border: 1px solid #5A6A70; border-radius: 12px; padding: 12px; margin: 5px 0; cursor: pointer; font: inherit; text-decoration: none; }
+  .side-menu-button:hover, .side-menu-button:focus-visible { background: #405460; outline: 2px solid #DDA62A; }
+  .gps-status { color: #BFD5CF; font-size: .82rem; line-height: 1.4; margin: 8px 2px 0; }
+  .instellingen summary::after { display: none; }
+  .app-shell { width: 100%; max-width: 480px; position: relative; }
+  @media (max-width: 700px) {
+    body { padding: 0 0 40px; }
+    .app-shell { width: min(100%, 480px); padding: 0 11px 20px; border: 1px solid rgba(221, 166, 42, .42); border-top: 0; border-radius: 0 0 26px 26px; background: rgba(29, 39, 47, .22); box-shadow: 0 16px 44px rgba(12, 20, 27, .24); overflow: visible; }
+    .app { max-width: none; }
+    html { scroll-snap-type: y proximity; scroll-padding-top: 14px; scroll-behavior: smooth; }
+    .app > header,
+    .app > #winnaar-kaart,
+    .app > #registratie,
+    .app > #potje,
+    .app > #stations-lijst,
+    .app > #nieuws-blok,
+    .app > #opgeslagen-artikelen,
+    .app > #instellingen,
+    .app > .verversen,
+    .app > .info-panel {
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      scroll-margin-top: 14px;
+    }
+    .app > header,
+    .app > #winnaar-kaart,
+    .app > #potje {
+      min-height: min(76svh, 620px);
+    }
+    .menu-tab { position: fixed; left: 0; top: 42%; border-left: 1px solid #657477; border-radius: 0 12px 12px 0; }
+    .menu-backdrop { position: fixed; inset: 0; }
+    .side-menu { position: fixed; left: 0; top: 0; bottom: 0; min-height: 100vh; }
+  }
+  @media print {
+    body { background: #F5F1E8; color: #243447; padding: 0; }
+    body > * { display: none !important; }
+    .pdf-bon { display: block !important; color: #243447; font: 12pt/1.5 -apple-system, sans-serif; padding: 20mm; }
+    .pdf-bon h1 { margin-top: 0; }
+    .pdf-bon table { border-collapse: collapse; width: 100%; margin-top: 18px; }
+    .pdf-bon td { border-bottom: 1px solid #bbb; padding: 7px 0; vertical-align: top; }
+    .pdf-bon td:first-child { font-weight: 700; width: 42%; }
+  }
 </style>
 </head>
 <body>
+<div class="watermerk" aria-hidden="true">FHJ Brasser · Brasco Holding</div>
+<div class="app-shell">
+<button class="menu-tab" id="open-zijmenu" type="button" aria-label="Zijmenu openen"><span>Menu</span></button>
+<div class="menu-backdrop" id="menu-backdrop"></div>
+<aside class="side-menu" id="side-menu" aria-label="TankKompas zijmenu" aria-hidden="true">
+  <div class="side-menu-head">
+    <h2>TankKompas</h2>
+    <button class="side-menu-close" id="close-zijmenu" type="button" aria-label="Zijmenu sluiten">×</button>
+  </div>
+  <div class="side-menu-brand">FHJ Brasser · Brasco Holding</div>
+  <div class="side-menu-section">
+    <h3>Snel naar</h3>
+    <button class="side-menu-button" type="button" data-menu-target="registratie">⛽ Tankbeurt registreren</button>
+    <button class="side-menu-button" type="button" data-menu-target="andere-stations">⭐ Favoriete / andere stations</button>
+    <button class="side-menu-button" type="button" data-menu-target="opgeslagen-artikelen">📰 Mijn opgeslagen artikelen</button>
+    <button class="side-menu-button" type="button" data-menu-target="instellingen">📍 Regio en instellingen</button>
+    <button class="side-menu-button" type="button" data-menu-target="potje">📊 Tankgeschiedenis en besparing</button>
+    <a class="side-menu-button" href="spelletjes.html">🎲 Spelletjes onderweg</a>
+  </div>
+  <div class="side-menu-section">
+    <h3>Onderweg</h3>
+    <button class="side-menu-button" id="gps-toggle" type="button">🛰️ GPS-locatie gebruiken</button>
+    <p class="gps-status" id="gps-status">GPS staat uit. De app gebruikt standaard de ingestelde regio.</p>
+  </div>
+</aside>
 <div class="app">
 
   <header>
-    <div class="label">TankKompas</div>
-    <div class="datum" id="datum"></div>
-    <div class="weer" id="weer-blok" hidden>
-      <img id="weer-icoon" src="" alt="">
-      <span class="weer-temp" id="weer-temp"></span>
-      <span id="weer-omschrijving"></span>
+    <div class="merkstempel">FHJ Brasser · Brasco Holding</div>
+    <div class="header-info-row">
+      <div class="datum" id="datum"></div>
+      <div class="weer" id="weer-blok" hidden>
+        <img id="weer-icoon" src="" alt="">
+        <span class="weer-temp" id="weer-temp"></span>
+        <span id="weer-omschrijving"></span>
+      </div>
+      <button class="settings-top" id="open-instellingen-top" type="button" aria-label="Instellingen openen" title="Instellingen openen">⚙</button>
     </div>
+    <div class="tankkompas-bar"><span class="tankkompas-logo" aria-hidden="true">✦</span><span>TankKompas</span></div>
   </header>
 
   <div class="card" id="winnaar-kaart">
     <p class="winner-title">Vandaag tank je het goedkoopst bij</p>
-    <div class="station-name"><span id="w-naam">Laden...</span> <span class="badge" id="w-badge" hidden></span></div>
+    <div class="station-name"><span id="w-naam">Laden...</span> <span class="badge" id="w-badge" hidden></span> <button class="favoriet-knop" id="w-favoriet" type="button" aria-label="Als favoriet markeren" title="Als favoriet markeren">☆</button></div>
     <div class="station-adres" id="w-adres"></div>
     <div class="price" id="w-prijs">€0,00<span>/L</span></div>
+    <div class="potje" id="potje">
+      <span class="tekst">Deze maand bespaard</span>
+      <span class="bedrag" id="potje-bedrag">€0,00</span>
+    </div>
     <div class="savings" id="w-besparing"></div>
     <a class="btn-maps" id="w-maps-link" target="_blank" rel="noopener">📍 Start route in Maps</a>
     <button class="btn-getankt" id="btn-getankt">⛽ Ik heb hier getankt</button>
   </div>
 
-  <div class="potje">
-    <span class="tekst">💰 Deze maand bespaard</span>
-    <span class="bedrag" id="potje-bedrag">€0,00</span>
-  </div>
+  <details class="registratie" id="registratie">
+    <summary>🚗 Kilometerstand en werkgeversbon</summary>
+    <div class="registratie-rij">
+      <label for="input-kilometerstand">Huidige kilometerstand</label>
+      <div class="km-veld">
+        <input type="number" id="input-kilometerstand" min="0" step="1" inputmode="numeric" placeholder="bijv. 125000">
+        <button class="btn-getankt undo-knop" id="btn-undo-km" type="button" title="Vorige kilometerstand herstellen" aria-label="Vorige kilometerstand herstellen">↶</button>
+      </div>
+    </div>
+    <div class="registratie-rij">
+      <label for="input-brandstof">Brandstof voor deze tankbeurt</label>
+      <select id="input-brandstof" style="background:var(--bg-card-2);border:1px solid var(--border);color:var(--text-main);border-radius:10px;padding:8px 10px;font-size:1rem;">
+        <option value="EURO95">Euro 95</option>
+        <option value="DIESEL">Diesel</option>
+        <option value="SUPER98">Super 98</option>
+      </select>
+    </div>
+    <div class="registratie-rij">
+      <label for="input-laatste-volle-tank">Km-stand bij laatste volle tank</label>
+      <input type="number" id="input-laatste-volle-tank" min="0" step="1" inputmode="numeric" placeholder="optioneel">
+    </div>
+    <div class="registratie-rij">
+      <label for="input-verbruik">Gemiddeld verbruik (L/100 km)</label>
+      <input type="number" id="input-verbruik" min="1" max="40" step="0.1" inputmode="decimal" value="7">
+    </div>
+    <div class="registratie-rij">
+      <label for="input-tankinhoud">Tankinhoud (L)</label>
+      <input type="number" id="input-tankinhoud" min="1" max="200" step="0.1" inputmode="decimal" value="50">
+    </div>
+    <div class="registratie-rij">
+      <label for="input-getankte-liters">Getankte liters voor PDF</label>
+      <input type="number" id="input-getankte-liters" min="0" max="300" step="0.01" inputmode="decimal" placeholder="optioneel">
+    </div>
+    <div class="registratie-rij">
+      <label for="input-werkgever">Werkgever / opdrachtgever</label>
+      <input type="text" id="input-werkgever" maxlength="120" placeholder="optioneel">
+    </div>
+    <div class="registratie-rij">
+      <label for="input-werknemer">Werknemer</label>
+      <input type="text" id="input-werknemer" maxlength="120" placeholder="optioneel">
+    </div>
+    <p class="schatting" id="actieradius-schatting">Vul de kilometerstand en km-stand bij de laatste volle tank in voor een schatting.</p>
+    <div class="registratie-acties">
+      <button class="btn-getankt" id="btn-volle-tank" type="button">Volle tank vastleggen</button>
+      <button class="btn-getankt" id="btn-pdf-bon" type="button">Werkgeversbon → PDF</button>
+    </div>
+  </details>
 
-  <div class="lijst">
-    <h2>Andere tankstations</h2>
+  <div class="lijst" id="stations-lijst">
+    <h2>Tankstations in Deventer en omgeving</h2>
     <div id="andere-stations"></div>
+    <h2 id="suggesties-kop" hidden>Meer regionale opties</h2>
+    <div id="suggestie-stations"></div>
   </div>
 
   <div class="lijst" id="nieuws-blok" hidden>
@@ -187,8 +401,14 @@
     <div id="nieuws-items"></div>
   </div>
 
-  <details class="instellingen">
-    <summary>Instellingen</summary>
+  <div class="lijst" id="opgeslagen-artikelen" hidden>
+    <h2>Mijn opgeslagen artikelen</h2>
+    <p class="opgeslagen-leeg" id="opgeslagen-leeg">Nog geen artikelen opgeslagen.</p>
+    <div id="opgeslagen-items"></div>
+  </div>
+
+  <details class="instellingen" id="instellingen">
+    <summary>⚙ Instellingen</summary>
 
     <div class="instelling-rij">
       <span>🔔 Dinsdag-herinnering (09:30)</span>
@@ -202,19 +422,78 @@
       <input type="number" id="input-volume" value="40" min="1" max="200">
     </div>
     <div class="instelling-rij">
+      <span>Thema</span>
+      <select id="input-thema" style="background:var(--bg-card-2);border:1px solid var(--border);color:var(--text-main);border-radius:10px;padding:8px 10px;font-size:1rem;">
+        <option value="light">Licht</option>
+        <option value="dark">Donker</option>
+      </select>
+    </div>
+    <div class="instelling-rij">
       <span>Test de melding</span>
       <button class="btn-getankt" id="btn-test-melding" style="width:auto; padding:10px 16px; margin:0;">Test 🔔</button>
     </div>
   </details>
 
+  <div class="verversen">
+    <button class="btn-getankt" id="btn-verversen" type="button">↻ Prijzen vernieuwen</button>
+    <span class="ververs-status" id="ververs-status" role="status"></span>
+  </div>
   <p class="voetnoot" id="bijgewerkt-tekst"></p>
+  <p class="voetnoot">Bron: <a href="https://www.oliehandel.nl/tankstations" target="_blank" rel="noopener noreferrer">Oliehandel.nl</a> · alleen actuele pompprijzen</p>
+  <p class="voetnoot merkstempel">FHJ Brasser · Brasco Holding · TankKompas Deventer</p>
+
+  <details class="info-panel">
+    <summary>ⓘ Functies en uitleg</summary>
+    <ul>
+      <li><strong>Goedkoopste station:</strong> toont het goedkoopste gevonden station voor de gekozen brandstof.</li>
+      <li><strong>Google Maps:</strong> opent een routezoekopdracht met station en adres.</li>
+      <li><strong>Besparing:</strong> berekent het verschil met het gemiddelde van de overige stations voor jouw tankvolume.</li>
+      <li><strong>Maandpot:</strong> bewaart de geregistreerde besparing lokaal op dit apparaat en begint elke maand opnieuw.</li>
+      <li><strong>Brandstof:</strong> kies Euro 95, Diesel of Super 98; de keuze wordt lokaal onthouden.</li>
+      <li><strong>Thema:</strong> kies tussen een lichte en donkere rustige weergave.</li>
+      <li><strong>Nieuws en weer:</strong> worden uit de bijgewerkte JSON-bestanden geladen en blijven verborgen als er geen data is.</li>
+      <li><strong>Opgeslagen artikelen:</strong> sla een nieuwsartikel op met ☆ Opslaan; je vindt het terug via Menu → Mijn opgeslagen artikelen. De lijst blijft lokaal op deze browser.</li>
+      <li><strong>Dinsdagherinnering:</strong> vraagt toestemming voor browsermeldingen en toont vanaf dinsdag 09:30 eenmaal een melding.</li>
+      <li><strong>Vernieuwen:</strong> haalt de actuele bestanden opnieuw op zonder browsercache.</li>
+      <li><strong>Installeren:</strong> de webapp kan als PWA aan het startscherm of bureaublad worden toegevoegd.</li>
+      <li><strong>Offline:</strong> de vaste appbestanden worden lokaal gecachet; prijsdata wordt bewust opnieuw van het netwerk gevraagd.</li>
+    </ul>
+  </details>
 </div>
+
+</div>
+
+<section class="pdf-bon" id="pdf-bon" aria-hidden="true">
+  <p class="merkstempel">FHJ Brasser · Brasco Holding</p>
+  <h1>Tank- en kilometerregistratie</h1>
+  <p>Overzicht voor eigen administratie en bespreking met werkgever/opdrachtgever.</p>
+  <table>
+    <tbody id="pdf-bon-regels"></tbody>
+  </table>
+  <p style="margin-top:28px">Handtekening werknemer: ________________________________</p>
+  <p>Handtekening werkgever/opdrachtgever: ____________________</p>
+</section>
+
+<button class="naar-boven" id="naar-boven" type="button" aria-label="Terug naar boven" title="Terug naar boven" hidden>↑</button>
 
 <script>
 const MAANDPOT_KEY = 'tankkompas_maandpot';
 const VOLUME_KEY = 'tankkompas_volume';
+const BRANDSTOF_KEY = 'tankkompas_brandstof';
+const THEME_KEY = 'tankkompas_thema';
+const KM_KEY = 'tankkompas_kilometerstand';
+const KM_UNDO_KEY = 'tankkompas_kilometerstand_undo';
+const LAST_FULL_KM_KEY = 'tankkompas_laatste_volle_tank_km';
+const CONSUMPTION_KEY = 'tankkompas_verbruik';
+const TANK_CAPACITY_KEY = 'tankkompas_tankinhoud';
+const RECEIPT_LITERS_KEY = 'tankkompas_getankte_liters';
+const EMPLOYER_KEY = 'tankkompas_werkgever';
+const EMPLOYEE_KEY = 'tankkompas_werknemer';
 const HERINNERING_KEY = 'tankkompas_herinnering';
 const LAATSTE_MELDING_KEY = 'tankkompas_laatste_melding_datum';
+const SAVED_ARTICLES_KEY = 'tankkompas_opgeslagen_artikelen';
+const FAVORIETE_STATIONS_KEY = 'tankkompas_favoriete_stations';
+let gehaktbalAanbiedingen = [];
 
 function huidigeMaandKey() {
   const d = new Date();
@@ -238,9 +517,151 @@ function euro(n) {
   return `€${n.toFixed(3).replace('.', ',')}`;
 }
 
+function getNumber(id, fallback = 0) {
+  const value = Number.parseFloat(document.getElementById(id).value);
+  return Number.isFinite(value) ? value : fallback;
+}
+
+function schrijfRegistratie() {
+  const kmInput = document.getElementById('input-kilometerstand');
+  const vorige = localStorage.getItem(KM_KEY);
+  if (kmInput.value !== '' && vorige !== null && kmInput.value !== vorige) {
+    localStorage.setItem(KM_UNDO_KEY, vorige);
+  }
+  if (kmInput.value !== '') localStorage.setItem(KM_KEY, kmInput.value);
+  localStorage.setItem(LAST_FULL_KM_KEY, document.getElementById('input-laatste-volle-tank').value);
+  localStorage.setItem(CONSUMPTION_KEY, document.getElementById('input-verbruik').value);
+  localStorage.setItem(TANK_CAPACITY_KEY, document.getElementById('input-tankinhoud').value);
+  localStorage.setItem(RECEIPT_LITERS_KEY, document.getElementById('input-getankte-liters').value);
+  localStorage.setItem(EMPLOYER_KEY, document.getElementById('input-werkgever').value);
+  localStorage.setItem(EMPLOYEE_KEY, document.getElementById('input-werknemer').value);
+  toonActieradius();
+}
+
+function initThema() {
+  const input = document.getElementById('input-thema');
+  const thema = localStorage.getItem(THEME_KEY) || 'light';
+  document.body.dataset.theme = thema;
+  input.value = thema;
+  input.addEventListener('change', () => {
+    document.body.dataset.theme = input.value;
+    localStorage.setItem(THEME_KEY, input.value);
+  });
+}
+
+function laadRegistratie() {
+  document.getElementById('input-kilometerstand').value = localStorage.getItem(KM_KEY) || '';
+  document.getElementById('input-laatste-volle-tank').value = localStorage.getItem(LAST_FULL_KM_KEY) || '';
+  document.getElementById('input-verbruik').value = localStorage.getItem(CONSUMPTION_KEY) || 7;
+  document.getElementById('input-tankinhoud').value = localStorage.getItem(TANK_CAPACITY_KEY) || 50;
+  document.getElementById('input-getankte-liters').value = localStorage.getItem(RECEIPT_LITERS_KEY) || '';
+  document.getElementById('input-werkgever').value = localStorage.getItem(EMPLOYER_KEY) || '';
+  document.getElementById('input-werknemer').value = localStorage.getItem(EMPLOYEE_KEY) || '';
+  ['input-kilometerstand','input-laatste-volle-tank','input-verbruik','input-tankinhoud','input-getankte-liters','input-werkgever','input-werknemer']
+    .forEach((id) => document.getElementById(id).addEventListener('change', schrijfRegistratie));
+  document.getElementById('btn-undo-km').addEventListener('click', () => {
+    const vorige = localStorage.getItem(KM_UNDO_KEY);
+    if (vorige === null) return;
+    const huidig = document.getElementById('input-kilometerstand').value;
+    document.getElementById('input-kilometerstand').value = vorige;
+    localStorage.setItem(KM_KEY, vorige);
+    localStorage.setItem(KM_UNDO_KEY, huidig);
+    toonActieradius();
+  });
+  document.getElementById('btn-volle-tank').addEventListener('click', () => {
+    const km = document.getElementById('input-kilometerstand').value;
+    if (km !== '') {
+      document.getElementById('input-laatste-volle-tank').value = km;
+      schrijfRegistratie();
+    }
+  });
+  document.getElementById('btn-pdf-bon').addEventListener('click', maakPdfBon);
+  toonActieradius();
+}
+
+function toonActieradius() {
+  const huidig = getNumber('input-kilometerstand');
+  const laatste = getNumber('input-laatste-volle-tank');
+  const verbruik = getNumber('input-verbruik');
+  const inhoud = getNumber('input-tankinhoud');
+  const el = document.getElementById('actieradius-schatting');
+  if (!huidig || !laatste || !verbruik || !inhoud || huidig < laatste) {
+    el.textContent = 'Vul de kilometerstand en km-stand bij de laatste volle tank in voor een schatting.';
+    return;
+  }
+  const gereden = huidig - laatste;
+  const gebruikt = gereden * verbruik / 100;
+  const resterend = Math.max(0, inhoud - gebruikt);
+  const bereik = resterend / verbruik * 100;
+  el.textContent = `Geschat resterend bereik: ${Math.round(bereik)} km (${resterend.toFixed(1).replace('.', ',')} L). Gereden sinds volle tank: ${Math.round(gereden)} km.`;
+}
+
+function maakPdfBon() {
+  const data = normaliseerData(window.__tankkompasData || {});
+  const station = data.stations[0];
+  const regels = [
+    ['Datum', new Date().toLocaleString('nl-NL')],
+    ['Werkgever / opdrachtgever', document.getElementById('input-werkgever').value || 'Niet ingevuld'],
+    ['Werknemer', document.getElementById('input-werknemer').value || 'Niet ingevuld'],
+    ['Kilometerstand', document.getElementById('input-kilometerstand').value || 'Niet ingevuld'],
+    ['Brandstof', document.getElementById('input-brandstof').value],
+    ['Tankstation', station ? `${station.naam}, ${station.adres}` : 'Niet beschikbaar'],
+    ['Getankte liters', document.getElementById('input-getankte-liters').value || 'Niet ingevuld'],
+    ['Gevonden literprijs', station ? euro(station.prijs) : 'Niet beschikbaar']
+  ];
+  document.getElementById('pdf-bon-regels').innerHTML = regels.map(([label, value]) => `<tr><td>${label}</td><td>${String(value).replace(/[&<>]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}</td></tr>`).join('');
+  window.print();
+}
+
 async function laadData() {
-  const res = await fetch('data.json', { cache: 'no-store' });
-  return res.json();
+  const res = await fetch(`data.json?ververs=${Date.now()}`, { cache: 'no-store' });
+  if (!res.ok) throw new Error(`data.json: HTTP ${res.status}`);
+  const raw = await res.json();
+  window.__tankkompasData = raw;
+  return raw;
+}
+
+function normaliseerData(raw) {
+  if (Array.isArray(raw.stations)) return raw;
+  const brandstof = localStorage.getItem(BRANDSTOF_KEY) || 'EURO95';
+  const stations = Array.isArray(raw[brandstof]) ? raw[brandstof] : [];
+  return {
+    stations: stations.map((station) => ({ ...station, bron: station.bron || 'handmatig' })),
+    suggesties: Array.isArray(raw.suggesties?.[brandstof]) ? raw.suggesties[brandstof] : [],
+    aanbiedingen: Array.isArray(raw.aanbiedingen?.[brandstof]) ? raw.aanbiedingen[brandstof] : [],
+    bijgewerkt: raw.bijgewerkt || null,
+    brandstof,
+    meta: raw._meta || null
+  };
+}
+
+function stationSleutel(station) { return `${station.naam}|${station.adres}`; }
+function laadFavorieteStations() {
+  try { const value = JSON.parse(localStorage.getItem(FAVORIETE_STATIONS_KEY) || '[]'); return Array.isArray(value) ? value : []; } catch (e) { return []; }
+}
+function stationIsFavoriet(station) { return laadFavorieteStations().includes(stationSleutel(station)); }
+function wisselFavoriet(station) {
+  const sleutel = stationSleutel(station);
+  const favorieten = laadFavorieteStations();
+  const volgende = favorieten.includes(sleutel) ? favorieten.filter((item) => item !== sleutel) : [...favorieten, sleutel];
+  localStorage.setItem(FAVORIETE_STATIONS_KEY, JSON.stringify(volgende));
+}
+function configureerFavorietKnop(button, station) {
+  if (!button) return;
+  const update = () => {
+    const actief = stationIsFavoriet(station);
+    button.classList.toggle('actief', actief);
+    button.textContent = actief ? '★' : '☆';
+    button.title = actief ? 'Favoriet verwijderen' : 'Als favoriet markeren';
+    button.setAttribute('aria-label', button.title);
+  };
+  button.onclick = () => { wisselFavoriet(station); update(); };
+  update();
+}
+function gehaktbalAanbiedingVoor(station) {
+  const aanbod = gehaktbalAanbiedingen.find((item) => item.station === stationSleutel(station));
+  if (!aanbod || aanbod.status !== 'aanbieding') return '';
+  return aanbod.label || 'Gehaktbal in aanbieding';
 }
 
 function mapsLink(station) {
@@ -248,7 +669,68 @@ function mapsLink(station) {
   return `https://www.google.com/maps/search/?api=1&query=${q}`;
 }
 
+function stationTip(station, index) {
+  const tekst = `${station.naam || ''} ${station.adres || ''}`.toLowerCase();
+  if (index === 0) return 'goedkoopste van deze lijst';
+  if (index === 1) return 'bijna goedkoopste';
+  if (tekst.includes('deventer')) return 'regio Deventer';
+  if (tekst.includes('a1') || tekst.includes('a50') || tekst.includes('rijksweg')) return 'handig onderweg';
+  if (index < 4) return 'vaste regionale optie';
+  return 'regio-optie';
+}
+
+function maakStationRij(station, index, suggestie = false) {
+  const rij = document.createElement('div');
+  rij.className = `rij${suggestie ? ' suggestie' : ''}`;
+  const details = document.createElement('div');
+  const naam = document.createElement('div');
+  naam.className = 'naam';
+  naam.append(document.createTextNode(`${station.naam} `));
+  const badge = document.createElement('span');
+  badge.className = `badge ${station.bron === 'live' ? 'live' : 'handmatig'}`;
+  badge.textContent = station.bron === 'live' ? 'live' : 'suggestie';
+  naam.appendChild(badge);
+  const favoriet = document.createElement('button');
+  favoriet.type = 'button';
+  favoriet.className = `favoriet-knop${stationIsFavoriet(station) ? ' actief' : ''}`;
+  favoriet.textContent = stationIsFavoriet(station) ? '★' : '☆';
+  favoriet.title = stationIsFavoriet(station) ? 'Favoriet verwijderen' : 'Als favoriet markeren';
+  favoriet.setAttribute('aria-label', favoriet.title);
+  configureerFavorietKnop(favoriet, station);
+  naam.appendChild(favoriet);
+  const adres = document.createElement('div');
+  adres.className = 'adres-klein';
+  adres.textContent = station.adres;
+  const tip = document.createElement('div');
+  tip.className = 'tip-klein';
+  tip.textContent = station.tip || (suggestie ? 'regionale optie · prijs controleren' : stationTip(station, index));
+  details.append(naam, adres, tip);
+  const gehaktbal = gehaktbalAanbiedingVoor(station);
+  if (gehaktbal && stationIsFavoriet(station)) {
+    const label = document.createElement('div');
+    label.className = 'aanbieding-label';
+    label.textContent = `🥪 ${gehaktbal}`;
+    details.appendChild(label);
+  }
+  const prijs = document.createElement('div');
+  prijs.className = 'prijs-klein';
+  prijs.textContent = Number.isFinite(station.prijs) ? euro(station.prijs) : 'prijs n.n.b.';
+  rij.append(details, prijs);
+  return rij;
+}
+
+function veiligeExterneLink(value) {
+  try {
+    const url = new URL(value, window.location.href);
+    return /^https?:$/.test(url.protocol) ? url.href : null;
+  } catch (e) {
+    return null;
+  }
+}
+
 function toon(data) {
+  data = normaliseerData(data);
+  gehaktbalAanbiedingen = data.aanbiedingen || [];
   const stations = data.stations || [];
   if (!stations.length) {
     document.getElementById('w-naam').textContent = 'Geen prijzen gevonden';
@@ -258,7 +740,7 @@ function toon(data) {
   const volume = parseFloat(localStorage.getItem(VOLUME_KEY)) || 40;
 
   // Referentieprijs = gemiddelde van de andere stations (of adviesprijs-achtig gemiddelde)
-  const overig = stations.slice(1);
+  const overig = stations.slice(1, 13);
   const gemiddelde = overig.length
     ? overig.reduce((s, x) => s + x.prijs, 0) / overig.length
     : winnaar.prijs;
@@ -271,6 +753,7 @@ function toon(data) {
   wBadge.className = `badge ${winnaar.bron}`;
   wBadge.hidden = false;
   document.getElementById('w-adres').textContent = winnaar.adres;
+  configureerFavorietKnop(document.getElementById('w-favoriet'), winnaar);
   document.getElementById('w-prijs').innerHTML = `${euro(winnaar.prijs)}<span>/L</span>`;
   document.getElementById('w-besparing').textContent =
     besparingVolleTank > 0.05
@@ -286,24 +769,26 @@ function toon(data) {
   };
 
   const lijstEl = document.getElementById('andere-stations');
-  lijstEl.innerHTML = '';
-  overig.forEach(s => {
-    const rij = document.createElement('div');
-    rij.className = 'rij';
-    rij.innerHTML = `
-      <div>
-        <div class="naam">${s.naam} <span class="badge ${s.bron}">${s.bron === 'live' ? 'live' : 'handmatig'}</span></div>
-        <div class="adres-klein">${s.adres}</div>
-      </div>
-      <div class="prijs-klein">${euro(s.prijs)}</div>
-    `;
-    lijstEl.appendChild(rij);
-  });
+  lijstEl.replaceChildren();
+  overig.forEach((s, index) => lijstEl.appendChild(maakStationRij(s, index + 1)));
+  const suggestiesEl = document.getElementById('suggestie-stations');
+  const suggestiesKop = document.getElementById('suggesties-kop');
+  suggestiesEl.replaceChildren();
+  const suggesties = Array.isArray(data.suggesties) ? data.suggesties : [];
+  suggestiesKop.hidden = !suggesties.length;
+  suggesties.forEach((s, index) => suggestiesEl.appendChild(maakStationRij(s, index, true)));
 
   if (data.bijgewerkt) {
     const d = new Date(data.bijgewerkt);
+    const status = data.meta?.brandstoffen?.[data.brandstof]?.status ||
+      (stations.some((station) => station.bron === 'live') ? 'live' : 'handmatig');
+    const statusTekst = status === 'live'
+      ? 'live gecontroleerd'
+      : status === 'partial'
+        ? 'gedeeltelijk live gecontroleerd'
+        : 'handmatige fallback';
     document.getElementById('bijgewerkt-tekst').textContent =
-      `Prijzen bijgewerkt op ${d.toLocaleDateString('nl-NL')} om ${d.toLocaleTimeString('nl-NL', {hour:'2-digit', minute:'2-digit'})}`;
+      `${statusTekst} op ${d.toLocaleDateString('nl-NL')} om ${d.toLocaleTimeString('nl-NL', {hour:'2-digit', minute:'2-digit'})}`;
   }
 }
 
@@ -313,6 +798,15 @@ function initInstellingen() {
   volumeInput.addEventListener('change', () => {
     localStorage.setItem(VOLUME_KEY, volumeInput.value);
     laadData().then(toon);
+  });
+
+  const brandstofInput = document.getElementById('input-brandstof');
+  brandstofInput.value = localStorage.getItem(BRANDSTOF_KEY) || 'EURO95';
+  brandstofInput.addEventListener('change', () => {
+    localStorage.setItem(BRANDSTOF_KEY, brandstofInput.value);
+    laadData().then(toon).catch(() => {
+      document.getElementById('w-naam').textContent = 'Kon prijzen niet laden';
+    });
   });
 
   const toggle = document.getElementById('toggle-herinnering');
@@ -342,6 +836,7 @@ function initInstellingen() {
 }
 
 function checkHerinnering(data) {
+  data = normaliseerData(data);
   if (localStorage.getItem(HERINNERING_KEY) !== 'aan') return;
   if (Notification.permission !== 'granted') return;
   const nu = new Date();
@@ -359,36 +854,150 @@ function checkHerinnering(data) {
   }
 }
 
+async function verversAlles() {
+  const status = document.getElementById('ververs-status');
+  status.textContent = 'Bezig…';
+  try {
+    const data = await laadData();
+    toon(data);
+    await laadNieuws();
+    await laadWeer();
+    status.textContent = `Bijgewerkt om ${new Date().toLocaleTimeString('nl-NL', {hour:'2-digit', minute:'2-digit'})}`;
+  } catch (e) {
+    status.textContent = 'Vernieuwen mislukt';
+  }
+}
+
+function laadOpgeslagenArtikelen() {
+  try {
+    const items = JSON.parse(localStorage.getItem(SAVED_ARTICLES_KEY) || '[]');
+    return Array.isArray(items) ? items : [];
+  } catch (e) {
+    return [];
+  }
+}
+
+function schrijfOpgeslagenArtikelen(items) {
+  localStorage.setItem(SAVED_ARTICLES_KEY, JSON.stringify(items.slice(0, 100)));
+}
+
+function artikelId(item) {
+  return `${item.link}|${item.titel}`;
+}
+
+function artikelIsOpgeslagen(item) {
+  return laadOpgeslagenArtikelen().some(opgeslagen => opgeslagen.id === artikelId(item));
+}
+
+function renderOpgeslagenArtikelen() {
+  const lijstEl = document.getElementById('opgeslagen-items');
+  const leegEl = document.getElementById('opgeslagen-leeg');
+  if (!lijstEl || !leegEl) return;
+  const items = laadOpgeslagenArtikelen().filter(item => veiligeExterneLink(item.link));
+  lijstEl.replaceChildren();
+  leegEl.hidden = items.length > 0;
+  items.forEach(item => {
+    const article = document.createElement('article');
+    article.className = 'nieuws-item';
+    const rij = document.createElement('div');
+    rij.className = 'nieuws-item-rij';
+    const link = document.createElement('a');
+    link.className = 'nieuws-open';
+    link.href = veiligeExterneLink(item.link);
+    link.target = '_blank';
+    link.rel = 'noopener';
+    const bronEl = document.createElement('div');
+    bronEl.className = 'nieuws-bron';
+    bronEl.textContent = item.bron || 'Nieuws';
+    if (item.categorie) {
+      const categorieEl = document.createElement('span');
+      categorieEl.className = 'nieuws-categorie';
+      categorieEl.textContent = `· ${item.categorie}`;
+      bronEl.appendChild(categorieEl);
+    }
+    const titelEl = document.createElement('div');
+    titelEl.className = 'nieuws-titel';
+    titelEl.textContent = item.titel || 'Opgeslagen artikel';
+    link.append(bronEl, titelEl);
+    const remove = document.createElement('button');
+    remove.type = 'button';
+    remove.className = 'nieuws-remove';
+    remove.textContent = '× Verwijder';
+    remove.title = 'Artikel verwijderen uit opgeslagen artikelen';
+    remove.addEventListener('click', () => {
+      schrijfOpgeslagenArtikelen(laadOpgeslagenArtikelen().filter(opgeslagen => opgeslagen.id !== item.id));
+      renderOpgeslagenArtikelen();
+      renderNieuws(window.tankkompasNieuwsItems || []);
+    });
+    rij.append(link, remove);
+    article.appendChild(rij);
+    lijstEl.appendChild(article);
+  });
+}
+
+function toggleOpgeslagenArtikel(item) {
+  const id = artikelId(item);
+  const items = laadOpgeslagenArtikelen();
+  const bestaat = items.some(opgeslagen => opgeslagen.id === id);
+  const nieuw = bestaat
+    ? items.filter(opgeslagen => opgeslagen.id !== id)
+    : [{ id, bron: item.bron || 'Nieuws', titel: item.titel || 'Opgeslagen artikel', link: veiligeExterneLink(item.link), opgeslagenOp: new Date().toISOString() }, ...items];
+  schrijfOpgeslagenArtikelen(nieuw);
+  renderNieuws(window.tankkompasNieuwsItems || []);
+  renderOpgeslagenArtikelen();
+}
+
+function renderNieuws(items) {
+  const blok = document.getElementById('nieuws-blok');
+  const lijstEl = document.getElementById('nieuws-items');
+  if (!blok || !lijstEl) return;
+  window.tankkompasNieuwsItems = items;
+  lijstEl.replaceChildren();
+  items.forEach(item => {
+    const link = veiligeExterneLink(item.link);
+    if (!link) return;
+    const article = document.createElement('article');
+    article.className = 'nieuws-item';
+    const rij = document.createElement('div');
+    rij.className = 'nieuws-item-rij';
+    const openLink = document.createElement('a');
+    openLink.className = 'nieuws-open';
+    openLink.href = link;
+    openLink.target = '_blank';
+    openLink.rel = 'noopener';
+    const bronEl = document.createElement('div');
+    bronEl.className = 'nieuws-bron';
+    bronEl.textContent = item.bron || 'Nieuws';
+    if (item.categorie) {
+      const categorieEl = document.createElement('span');
+      categorieEl.className = 'nieuws-categorie';
+      categorieEl.textContent = `· ${item.categorie}`;
+      bronEl.appendChild(categorieEl);
+    }
+    const titelEl = document.createElement('div');
+    titelEl.className = 'nieuws-titel';
+    titelEl.textContent = item.titel || 'Nieuwsartikel';
+    openLink.append(bronEl, titelEl);
+    const save = document.createElement('button');
+    const opgeslagen = artikelIsOpgeslagen(item);
+    save.type = 'button';
+    save.className = 'nieuws-save';
+    save.setAttribute('aria-pressed', String(opgeslagen));
+    save.textContent = opgeslagen ? '★ Opgeslagen' : '☆ Opslaan';
+    save.title = opgeslagen ? 'Artikel uit opgeslagen artikelen verwijderen' : 'Artikel opslaan';
+    save.addEventListener('click', () => toggleOpgeslagenArtikel(item));
+    rij.append(openLink, save);
+    article.appendChild(rij);
+    lijstEl.appendChild(article);
+  });
+  blok.hidden = lijstEl.children.length === 0;
+}
+
 async function laadNieuws() {
   try {
     const res = await fetch('news.json', { cache: 'no-store' });
     const data = await res.json();
-    const items = data.items || [];
-    if (!items.length) return;
-
-    const blok = document.getElementById('nieuws-blok');
-    const lijstEl = document.getElementById('nieuws-items');
-    lijstEl.innerHTML = '';
-    items.forEach(item => {
-      const a = document.createElement('a');
-      a.className = 'nieuws-item';
-      a.href = item.link;
-      a.target = '_blank';
-      a.rel = 'noopener';
-
-      const bronEl = document.createElement('div');
-      bronEl.className = 'nieuws-bron';
-      bronEl.textContent = item.bron;
-
-      const titelEl = document.createElement('div');
-      titelEl.className = 'nieuws-titel';
-      titelEl.textContent = item.titel;
-
-      a.appendChild(bronEl);
-      a.appendChild(titelEl);
-      lijstEl.appendChild(a);
-    });
-    blok.hidden = false;
+    renderNieuws(data.items || []);
   } catch (e) {
     // Geen nieuws beschikbaar? Dan laten we het blok gewoon verborgen.
   }
@@ -409,23 +1018,92 @@ async function laadWeer() {
   }
 }
 
+function sluitZijmenu() {
+  document.getElementById('side-menu').classList.remove('open');
+  document.getElementById('menu-backdrop').classList.remove('open');
+  document.getElementById('side-menu').setAttribute('aria-hidden', 'true');
+}
+
+function openZijmenu() {
+  document.getElementById('side-menu').classList.add('open');
+  document.getElementById('menu-backdrop').classList.add('open');
+  document.getElementById('side-menu').setAttribute('aria-hidden', 'false');
+}
+
+function initZijmenu() {
+  document.getElementById('open-zijmenu').addEventListener('click', openZijmenu);
+  document.getElementById('close-zijmenu').addEventListener('click', sluitZijmenu);
+  document.getElementById('menu-backdrop').addEventListener('click', sluitZijmenu);
+  document.querySelectorAll('[data-menu-target]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const doel = document.getElementById(button.dataset.menuTarget);
+      if (!doel) return;
+      if (doel.matches('details')) doel.open = true;
+      if ('hidden' in doel) doel.hidden = false;
+      sluitZijmenu();
+      doel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+  document.getElementById('gps-toggle').addEventListener('click', () => {
+    const status = document.getElementById('gps-status');
+    if (!navigator.geolocation) {
+      status.textContent = 'GPS wordt niet ondersteund door deze browser.';
+      return;
+    }
+    status.textContent = 'GPS-locatie wordt opgevraagd…';
+    navigator.geolocation.getCurrentPosition(
+      (positie) => {
+        status.textContent = `Locatie actief (${positie.coords.latitude.toFixed(3)}, ${positie.coords.longitude.toFixed(3)}). Prijzen blijven uit de gecontroleerde bron komen.`;
+      },
+      () => { status.textContent = 'GPS niet beschikbaar of geweigerd. De ingestelde regio blijft actief.'; },
+      { enableHighAccuracy: false, timeout: 8000, maximumAge: 300000 }
+    );
+  });
+}
+
+document.getElementById('open-instellingen-top').addEventListener('click', () => {
+  const instellingen = document.getElementById('instellingen');
+  instellingen.open = true;
+  instellingen.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
 document.getElementById('datum').textContent = new Date().toLocaleDateString('nl-NL', {
   weekday: 'long', day: 'numeric', month: 'long'
 });
 
 schrijfPotje(laadPotje());
 initInstellingen();
+initThema();
+laadRegistratie();
+initZijmenu();
+renderOpgeslagenArtikelen();
 laadNieuws();
 laadWeer();
+document.getElementById('btn-verversen').addEventListener('click', verversAlles);
+const naarBoven = document.getElementById('naar-boven');
+let scrollTimer;
+function werkTerugNaarBovenBij() {
+  const zichtbaar = window.scrollY > 420;
+  naarBoven.hidden = !zichtbaar;
+  naarBoven.classList.toggle('zichtbaar', zichtbaar);
+  clearTimeout(scrollTimer);
+  scrollTimer = setTimeout(() => {
+    if (window.scrollY <= 420) naarBoven.hidden = true;
+  }, 220);
+}
+window.addEventListener('scroll', werkTerugNaarBovenBij, { passive: true });
+document.addEventListener('scroll', werkTerugNaarBovenBij, { passive: true, capture: true });
+werkTerugNaarBovenBij();
+naarBoven.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 laadData().then(data => { toon(data); checkHerinnering(data); }).catch(() => {
   document.getElementById('w-naam').textContent = 'Kon prijzen niet laden';
 });
 
 // Elke minuut opnieuw checken zolang de pagina open staat (voor de dinsdag-herinnering)
-setInterval(() => { laadData().then(checkHerinnering); }, 60000);
+setInterval(() => { laadData().then(checkHerinnering).catch(() => {}); }, 60000);
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js').catch(() => {});
+  navigator.serviceWorker.register('sw.js?v=5').catch(() => {});
 }
 </script>
 </body>

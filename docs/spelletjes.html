@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spelletjes onderweg · TankKompas</title>
+<style>
+  :root { --bg:#2E3943; --card:#354551; --card2:#405460; --text:#E7ECEB; --muted:#B7C4C6; --gold:#DDA62A; --green:#78B4A7; --line:#5A6A70; }
+  * { box-sizing:border-box; }
+  body { margin:0; min-height:100vh; padding:22px 14px 48px; color:var(--text); background:radial-gradient(circle at 8% 0%,#625D43 0,transparent 25%),radial-gradient(circle at 100% 18%,#355B5A 0,transparent 27%),var(--bg); font:16px/1.45 -apple-system,"Segoe UI",sans-serif; }
+  main { width:min(100%,560px); margin:auto; }
+  a { color:var(--gold); }
+  .top { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:18px; }
+  .back { color:var(--text); text-decoration:none; border:1px solid var(--line); border-radius:12px; padding:8px 11px; background:rgba(53,69,81,.8); }
+  h1 { margin:0; color:var(--gold); font-size:1.6rem; } h2 { margin:0 0 5px; font-size:1.1rem; } p { color:var(--muted); margin:4px 0 14px; }
+  .intro,.spel { background:rgba(53,69,81,.84); border:1px solid var(--line); border-radius:20px; padding:18px; margin-bottom:16px; box-shadow:0 10px 24px rgba(12,20,27,.2); }
+  .levels { display:flex; gap:7px; flex-wrap:wrap; margin:10px 0 14px; }
+  button { border:1px solid var(--line); border-radius:10px; padding:9px 12px; color:var(--text); background:var(--card2); font:inherit; cursor:pointer; }
+  button:hover,button:focus-visible { border-color:var(--gold); outline:2px solid rgba(221,166,42,.25); outline-offset:2px; }
+  button.actief { background:var(--gold); color:#293842; border-color:var(--gold); font-weight:700; }
+  .spelbord { min-height:54px; }
+  .sudoku { display:grid; grid-template-columns:repeat(9,1fr); width:min(100%,360px); margin:12px auto; border:2px solid var(--gold); }
+  .sudoku input { width:100%; aspect-ratio:1; border:1px solid var(--line); background:#2D3B46; color:var(--text); text-align:center; font-size:1.1rem; }
+  .sudoku input.vast { color:var(--gold); font-weight:800; background:#405460; }
+  .sudoku input:nth-child(3n) { border-right:2px solid var(--gold); }.sudoku input:nth-child(n+19):nth-child(-n+27),.sudoku input:nth-child(n+46):nth-child(-n+54) { border-bottom:2px solid var(--gold); }
+  .mine { display:grid; gap:4px; width:min(100%,360px); margin:12px auto; }
+  .mine button { min-width:0; aspect-ratio:1; padding:0; font-size:1rem; background:#2D3B46; }.mine button.open { background:#55706D; }.mine button.flag { color:var(--gold); }
+  .word { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin:14px 0; }.word input { flex:1 1 170px; min-width:0; background:#2D3B46; border:1px solid var(--line); border-radius:10px; padding:10px; color:var(--text); font:inherit; }
+  .status { color:var(--green); min-height:24px; font-weight:650; }.hint { color:var(--muted); font-size:.9rem; }
+  .suggestie { border-left:4px solid var(--green); padding-left:12px; margin-top:14px; }
+  @media (max-width:420px) { h1{font-size:1.35rem}.intro,.spel{padding:15px}.sudoku input{font-size:.95rem} }
+</style>
+</head>
+<body>
+<main>
+  <div class="top"><a class="back" href="index.html">← TankKompas</a><span aria-hidden="true">🎲</span></div>
+  <section class="intro"><h1>Spelletjes onderweg</h1><p>Voor in de file of op de parkeerplaats. Kies per spel een niveau. Alles werkt lokaal in deze browser.</p></section>
+
+  <section class="spel" id="sudoku-spel"><h2>Sudoku</h2><p>Vul de lege vakjes met cijfers 1 t/m 9.</p><div class="levels" data-levels="sudoku"><button data-level="makkelijk">Makkelijk</button><button data-level="normaal" class="actief">Normaal</button><button data-level="moeilijk">Moeilijk</button></div><div class="spelbord" id="sudoku-bord"></div><button id="sudoku-nieuw">Nieuwe sudoku</button> <button id="sudoku-check">Controleren</button><div class="status" id="sudoku-status" role="status"></div></section>
+
+  <section class="spel" id="mijnenveld-spel"><h2>Mijnenveld</h2><p>Open veilige vakjes. Zet vlagmodus aan als je een mijn vermoedt.</p><div class="levels" data-levels="mijnenveld"><button data-level="makkelijk" class="actief">Makkelijk</button><button data-level="normaal">Normaal</button><button data-level="moeilijk">Moeilijk</button></div><button id="mijn-vlag">⚑ Vlagmodus uit</button> <button id="mijn-nieuw">Nieuw veld</button><div class="spelbord" id="mijn-bord"></div><div class="status" id="mijn-status" role="status"></div></section>
+
+  <section class="spel" id="woord-spel"><h2>Woordpuzzel</h2><p>Maak het woord compleet. Een korte afleiding met een hint.</p><div class="levels" data-levels="woord"><button data-level="makkelijk" class="actief">Makkelijk</button><button data-level="normaal">Normaal</button><button data-level="moeilijk">Moeilijk</button></div><div class="hint" id="woord-hint"></div><div class="word"><input id="woord-invoer" autocomplete="off" placeholder="Jouw antwoord"><button id="woord-check">Controleren</button><button id="woord-nieuw">Nieuw woord</button></div><div class="status" id="woord-status" role="status"></div></section>
+
+  <section class="spel suggestie"><h2>Extra suggestie: Memory</h2><p>Rustig spel voor als je even geparkeerd staat. Dit kan als volgende uitbreiding met dezelfde niveaus: 6, 12 of 20 kaartjes.</p></section>
+</main>
+<script>
+const niveaus = { makkelijk: 0, normaal: 1, moeilijk: 2 };
+const $ = (id) => document.getElementById(id);
+
+const sudokuOplossing = [5,3,4,6,7,8,9,1,2,6,7,2,1,9,5,3,4,8,1,9,8,3,4,2,5,6,7,8,5,9,7,6,1,4,2,3,4,2,6,8,5,3,7,9,1,7,1,3,9,2,4,8,5,6,9,6,1,5,3,7,2,8,4,2,8,7,4,1,9,6,3,5,3,4,5,2,8,6,1,7,9];
+let sudokuMask = [], sudokuNiveau = 1;
+function maakSudoku() { const gaten = [35,47,58][sudokuNiveau]; sudokuMask = sudokuOplossing.map(() => true); let i = 0; while (i < gaten) { const plek = Math.floor(Math.random()*81); if (sudokuMask[plek]) { sudokuMask[plek]=false; i++; } } const bord=$('sudoku-bord'); bord.className='sudoku'; bord.replaceChildren(); sudokuOplossing.forEach((n,i)=>{ const input=document.createElement('input'); input.maxLength=1; input.inputMode='numeric'; input.dataset.oplossing=n; if(sudokuMask[i]){input.value=n;input.disabled=true;input.className='vast';} bord.append(input); }); $('sudoku-status').textContent=''; }
+function checkSudoku(){ const inputs=[...$('sudoku-bord').querySelectorAll('input')]; const goed=inputs.every(i=>Number(i.value)===Number(i.dataset.oplossing)); $('sudoku-status').textContent=goed?'Goed gedaan — sudoku opgelost!':'Nog niet goed. Controleer de lege vakjes.'; }
+
+let mijnNiveau=0, mijnVlag=false, mijnMijnen=new Set(), mijnOpen=new Set();
+function maakMijnen(){ const maten=[[8,8,10],[10,10,18],[12,12,30]][mijnNiveau]; const [rijen,kolommen,aantal]=maten; mijnMijnen=new Set(); mijnOpen=new Set(); while(mijnMijnen.size<aantal)mijnMijnen.add(Math.floor(Math.random()*(rijen*kolommen))); const bord=$('mijn-bord'); bord.className='mine'; bord.style.gridTemplateColumns=`repeat(${kolommen},1fr)`; bord.replaceChildren(); for(let i=0;i<rijen*kolommen;i++){const b=document.createElement('button');b.dataset.plek=i;b.addEventListener('click',()=>klikMijn(b,rijen,kolommen));bord.append(b);} $('mijn-status').textContent='';}
+function klikMijn(b,rijen,kolommen){ const i=Number(b.dataset.plek); if(mijnOpen.has(i))return; if(mijnVlag){b.textContent=b.textContent?'':'⚑';b.classList.toggle('flag');return;} if(mijnMijnen.has(i)){b.textContent='💥';b.classList.add('open');$('mijn-status').textContent='Dat was een mijn. Begin een nieuw veld.'; mijnOpen.add(i); return;} mijnOpen.add(i); b.classList.add('open'); const buren=[-1,1,-kolommen,kolommen,-kolommen-1,-kolommen+1,kolommen-1,kolommen+1].filter(x=>i+x>=0&&i+x<rijen*kolommen); const aantal=buren.filter(x=>mijnMijnen.has(i+x)).length; b.textContent=aantal||'·'; if(mijnOpen.size===rijen*kolommen-mijnMijnen.size)$('mijn-status').textContent='Veld vrijgemaakt — netjes!';}
+
+const woorden={makkelijk:[['TANKEN','Je doet dit bij een pomp.'],['FILE','Veel autos achter elkaar.']],normaal:[['PARKEERPLAATS','Hier kun je veilig stoppen.'],['DEVENTER','De regio van TankKompas.']],moeilijk:[['KILOMETERSTAND','Die vul je bovenaan in de app in.'],['VERKEERSINFORMATIE','Handig voordat je weer verder rijdt.']]}; let woordNiveau='makkelijk', woordActief;
+function nieuwWoord(){ const lijst=woorden[woordNiveau]; woordActief=lijst[Math.floor(Math.random()*lijst.length)]; $('woord-hint').textContent='Hint: '+woordActief[1]; $('woord-invoer').value=''; $('woord-status').textContent=''; }
+function checkWoord(){ const antwoord=$('woord-invoer').value.trim().toUpperCase(); $('woord-status').textContent=antwoord===woordActief[0]?'Goed! Dat woord klopt.':'Nog niet. Probeer het nog eens.'; }
+document.querySelectorAll('[data-levels] button').forEach(btn=>btn.addEventListener('click',()=>{ const soort=btn.parentElement.dataset.levels; btn.parentElement.querySelectorAll('button').forEach(x=>x.classList.remove('actief'));btn.classList.add('actief'); const niveau=niveaus[btn.dataset.level]; if(soort==='sudoku'){sudokuNiveau=niveau;maakSudoku();} if(soort==='mijnenveld'){mijnNiveau=niveau;maakMijnen();} if(soort==='woord'){woordNiveau=btn.dataset.level;nieuwWoord();} }));
+$('sudoku-nieuw').onclick=maakSudoku; $('sudoku-check').onclick=checkSudoku; $('mijn-nieuw').onclick=maakMijnen; $('mijn-vlag').onclick=()=>{mijnVlag=!mijnVlag;$('mijn-vlag').textContent=mijnVlag?'⚑ Vlagmodus aan':'⚑ Vlagmodus uit';}; $('woord-nieuw').onclick=nieuwWoord; $('woord-check').onclick=checkWoord; $('woord-invoer').addEventListener('keydown',e=>{if(e.key==='Enter')checkWoord();});
+maakSudoku(); maakMijnen(); nieuwWoord();
+</script>
+</body>
+</html>

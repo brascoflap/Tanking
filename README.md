@@ -2,10 +2,16 @@
 
 Voor papa: elke dag het goedkoopste tankstation in Deventer, met een knop naar Google Maps.
 
+Vaste merkregel: **FHJ Brasser · Brasco Holding**. Deze naam staat als zichtbare merkstempel, subtiel watermerk, printstempel en metadata in de app.
+
+## Beveiliging
+
+De statische app bevat een browser-CSP, beperkte referrer, geen secrets in de repository en veilige verwerking van station- en nieuwsdata. Prijsdata blijft read-only voor de browser; gebruikersgegevens voor registratie blijven lokaal in `localStorage`. Een statische GitHub Pages-app kan geen server-side geheimen of absolute bescherming tegen client-side wijzigingen bieden.
+
 ## Wat erin zit
 
-1. `scrape.py` — haalt 's ochtends automatisch de echte prijzen van Tango en TinQ op (tankstationprijzen.nl). De rest (Shell, BP, Tamoil, Total) staat in `stations_handmatig.json` — die prijzen pas je zelf af en toe aan, daar is geen gratis live bron voor.
-2. `nieuws.py` — haalt een paar koppen op van AutoWeek, Autoblog en De Stentor Deventer (onafhankelijke bronnen, geen NOS).
+1. `scrape.py` — haalt automatisch actuele pompprijzen op via de Oliehandel.nl-API, per regio en brandstof. Landgemiddelden en stale prijzen worden bewust uitgesloten. De bronstatus wordt per brandstof opgeslagen als `live`, `partial` of `handmatig`; alleen bij een volledig mislukte bron wordt de fallback gebruikt.
+2. `nieuws.py` — haalt gemengde koppen op uit auto/mobiliteit, regio, alternatief/duiding, ICT/cybersecurity en entertainment/televisie. Iedere kop krijgt een categorie en de bronnen worden afgewisseld.
 3. `weer.py` — haalt het actuele weer op van het dichtstbijzijnde meetstation (Heino, via Buienradar).
 4. `docs/` — de website zelf. Dit is wat papa ziet.
 5. `.github/workflows/update.yml` — laat GitHub 's ochtends automatisch alle scripts draaien en de site verversen. Gratis, geen server nodig.
