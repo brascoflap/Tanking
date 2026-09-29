@@ -1,18 +1,64 @@
 {
   "items": [
-    {"bron": "AutoWeek", "categorie": "Auto", "titel": "Onderstel, aandrijflijn en multimedia vallen in de smaak bij berijders van nieuwe BMW iX3", "link": "https://www.autoweek.nl/autotests/artikel/onderstel-aandrijflijn-en-multimedia-vallen-in-de-smaak-bij-berijders-van-nieuwe-bmw-ix3/"},
-    {"bron": "Autoblog", "categorie": "Auto en mobiliteit", "titel": "Hoe deze zilveren Audi A2 de duurste én zeldzaamste van Marktplaats is", "link": "https://www.autoblog.nl/nieuws/audi-a2-color-storm-op-marktplaats-is-bijzonder-zeldzaam-en-duur"},
-    {"bron": "De Stentor Deventer", "categorie": "Regio", "titel": "Lekker weg in eigen land: bezoek binnenkort een wijngaard in de buurt van Deventer", "link": "https://www.destentor.nl/deventer/wijngaard-open-dag-deventer~af87b8db/"},
-    {"bron": "MOZOM", "categorie": "Alternatief en duiding", "titel": "Een cijfer, 33 vindplaatsen: hoe de meldingenpiek een mediagolf werd", "link": "https://mozom.nl/analyse/verwarde-personen-of-verwarde-cijfers-meldingenpiek-politiedata-anp/"},
-    {"bron": "Tweakers", "categorie": "ICT en technologie", "titel": "Videoland gaat ook podcasts aanbieden", "link": "https://tweakers.net/nieuws/252764/videoland-gaat-ook-podcasts-aanbieden.html"},
-    {"bron": "NCSC", "categorie": "ICT en cybersecurity", "titel": "Kwetsbaarheden in Citrix NetScaler ADC en NetScaler Gateway: update nu", "link": "https://www.ncsc.nl/alerts/kwetsbaarheden-in-citrix-netscaler-adc-en-netscaler-gateway-update-nu"},
-    {"bron": "Mediacourant", "categorie": "Entertainment en televisie", "titel": "Story-Guido basht Angela de Jong: ‘Stolsels als vuist? Hou voor jezelf!’", "link": "https://www.mediacourant.nl/2026/09/story-guido-basht-angela-de-jong-stolsels-als-vuist-hou-voor-jezelf/"},
-    {"bron": "AutoWeek", "categorie": "Auto", "titel": "Net toen Frits zijn Mazda 6 wilde opgeven voor Klokje Rond kwam zijn 6 met 6 ton niet door apk", "link": "https://www.autoweek.nl/autonieuws/artikel/net-toen-frits-zijn-mazda-6-wilde-opgeven-voor-klokje-rond-kwam-zijn-6-met-6-ton-niet-door-apk/"},
-    {"bron": "Autoblog", "categorie": "Auto en mobiliteit", "titel": "Wanneer verdient een thuislaadpaal zich terug?", "link": "https://www.autoblog.nl/nieuws/vanaf-wanneer-is-een-thuislaadpaal-goedkoper-dan-publiek-laden"},
-    {"bron": "De Stentor Deventer", "categorie": "Regio", "titel": "Waarom moet Go Ahead Eagles voor 26 minuten terug naar Utrecht, terwijl Utrechtfans het verpestten?", "link": "https://www.destentor.nl/ga-eagles/waarom-moet-go-ahead-eagles-voor-26-minuten-terug-naar-utrecht-terwijl-utrechtfans-het-verpestten~a8681f6ab/"},
-    {"bron": "MOZOM", "categorie": "Alternatief en duiding", "titel": "Sociale media zijn nieuwsbron zonder volledig vertrouwen", "link": "https://mozom.nl/analyse/sociale-media-wel-gebruikt-niet-vertrouwd-als-nieuwsbron/"},
-    {"bron": "Tweakers", "categorie": "ICT en technologie", "titel": "GTA VI krijgt orkanen en twee keer grotere kaart dan GTA V", "link": "https://tweakers.net/nieuws/252762/gta-vi-krijgt-orkanen-en-twee-keer-grotere-kaart-dan-gta-v.html"},
-    {"bron": "NCSC", "categorie": "ICT en cybersecurity", "titel": "Kwetsbaarheid in WordPress wordt actief misbruikt: update nu", "link": "https://www.ncsc.nl/alerts/kwetsbaarheid-in-wordpress-wordt-actief-misbruikt-update-nu"},
-    {"bron": "Mediacourant", "categorie": "Entertainment en televisie", "titel": "André Hazes jr. laat balzak zien op televisie: ‘Ik ben gewoon gek’", "link": "https://www.mediacourant.nl/2026/09/andre-hazes-jr-laat-balzak-zien-op-televisie-ik-ben-gewoon-gek/"}
+    {
+      "bron": "AutoWeek",
+      "categorie": "Auto",
+      "titel": "Dit is de tweede nieuwe BMW 3-serie: ook met brandstofmotoren!",
+      "link": "https://www.autoweek.nl/autonieuws/artikel/dit-is-de-tweede-nieuwe-bmw-3-serie-ook-met-brandstofmotoren/"
+    },
+    {
+      "bron": "Autoblog",
+      "categorie": "Auto en mobiliteit",
+      "titel": "BMW i3 40 xDrive – wordt dit de leasetopper?",
+      "link": "https://www.autoblog.nl/nieuws/nieuwe-instapper-bmw-i3-40-xdrive-voor-60-mille"
+    },
+    {
+      "bron": "De Stentor Deventer",
+      "categorie": "Regio",
+      "titel": "Die Grenze gaat de strijd aan met Action & politie ontdekt drugslab in Tubbergen",
+      "link": "https://www.destentor.nl/enschede/die-grenze-gaat-de-strijd-aan-met-action-en-politie-ontdekt-drugslab-in-tubbergen~a76b7370/"
+    },
+    {
+      "bron": "NCSC",
+      "categorie": "ICT en cybersecurity",
+      "titel": "Kwetsbaarheden in Citrix NetScaler ADC en NetScaler Gateway: update nu",
+      "link": "https://www.ncsc.nl/alerts/kwetsbaarheden-in-citrix-netscaler-adc-en-netscaler-gateway-update-nu"
+    },
+    {
+      "bron": "Mediacourant",
+      "categorie": "Entertainment en televisie",
+      "titel": "Story-Guido basht Angela de Jong: ‘Stolsels als vuist? Hou voor jezelf!’",
+      "link": "https://www.mediacourant.nl/2026/09/story-guido-basht-angela-de-jong-stolsels-als-vuist-hou-voor-jezelf/"
+    },
+    {
+      "bron": "AutoWeek",
+      "categorie": "Auto",
+      "titel": "Deze Renault Dauphine is al bizar lang bij dezelfde eigenaar - In het wild",
+      "link": "https://www.autoweek.nl/autonieuws/artikel/deze-renault-dauphine-is-al-bizar-lang-bij-dezelfde-eigenaar-in-het-wild/"
+    },
+    {
+      "bron": "Autoblog",
+      "categorie": "Auto en mobiliteit",
+      "titel": "BMW 3 Serie (G50): zes-in-lijn én een elektrische i3",
+      "link": "https://www.autoblog.nl/video/bmw-3-serie-g50-zes-in-lijn-en-een-elektrische-i3"
+    },
+    {
+      "bron": "De Stentor Deventer",
+      "categorie": "Regio",
+      "titel": "Hoe ‘verhuisangst’ van haar oma Lyanna haar eigen bedrijf oplevert (en ouderen helpt)",
+      "link": "https://www.destentor.nl/deventer/hoe-verhuisangst-van-haar-oma-lyanna-haar-eigen-bedrijf-oplevert-en-ouderen-helpt~aa07732e/"
+    },
+    {
+      "bron": "NCSC",
+      "categorie": "ICT en cybersecurity",
+      "titel": "Kwetsbaarheid in WordPress wordt actief misbruikt: update nu",
+      "link": "https://www.ncsc.nl/alerts/kwetsbaarheid-in-wordpress-wordt-actief-misbruikt-update-nu"
+    },
+    {
+      "bron": "Mediacourant",
+      "categorie": "Entertainment en televisie",
+      "titel": "André Hazes jr. laat balzak zien op televisie: ‘Ik ben gewoon gek’",
+      "link": "https://www.mediacourant.nl/2026/09/andre-hazes-jr-laat-balzak-zien-op-televisie-ik-ben-gewoon-gek/"
+    }
   ]
 }
