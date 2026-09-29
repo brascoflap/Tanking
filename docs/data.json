@@ -313,7 +313,7 @@
       "besparing_liter": 0.0
     }
   ],
-  "bijgewerkt": "2026-09-29T23:33:22.950196+00:00",
+  "bijgewerkt": "2026-09-29T23:44:34.586234+00:00",
   "_meta": {
     "merk": "FHJ Brasser · Brasco Holding",
     "bron": "https://www.oliehandel.nl/tankstations",
@@ -324,7 +324,7 @@
         "regios_met_data": 5,
         "regios_totaal": 5,
         "bron": "https://www.oliehandel.nl/tankstations",
-        "gecontroleerd_op": "2026-09-29T23:33:22.950196+00:00"
+        "gecontroleerd_op": "2026-09-29T23:44:34.586234+00:00"
       },
       "DIESEL": {
         "status": "live",
@@ -332,7 +332,7 @@
         "regios_met_data": 5,
         "regios_totaal": 5,
         "bron": "https://www.oliehandel.nl/tankstations",
-        "gecontroleerd_op": "2026-09-29T23:33:22.950196+00:00"
+        "gecontroleerd_op": "2026-09-29T23:44:34.586234+00:00"
       },
       "SUPER98": {
         "status": "live",
@@ -340,7 +340,7 @@
         "regios_met_data": 5,
         "regios_totaal": 5,
         "bron": "https://www.oliehandel.nl/tankstations",
-        "gecontroleerd_op": "2026-09-29T23:33:22.950196+00:00"
+        "gecontroleerd_op": "2026-09-29T23:44:34.586234+00:00"
       }
     }
   }
