@@ -1,9 +1,9 @@
 {
-  "temperatuur": 22,
-  "gevoelstemperatuur": 22,
+  "temperatuur": 21,
+  "gevoelstemperatuur": 21,
   "omschrijving": "Zwaar bewolkt",
   "icoon": "https://cdn.buienradar.nl/resources/images/icons/weather/96x96/C.png",
   "windkracht_bft": 2,
-  "winddichting": "WZW",
-  "tijdstip": "2026-09-28T12:50:00"
+  "winddichting": "O",
+  "tijdstip": "2026-09-29T12:30:00"
 }
