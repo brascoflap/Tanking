@@ -5,6 +5,12 @@ concurrency:
   cancel-in-progress: false
 
 on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'docs/data.json'
+      - 'docs/news.json'
+      - 'docs/weer.json'
   schedule:
     # Elke ochtend om 06:30 Nederlandse tijd (04:30 UTC in de zomer, 05:30 in de winter)
     - cron: '30 4 * * *'

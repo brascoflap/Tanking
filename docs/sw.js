@@ -1,4 +1,4 @@
-const CACHE = 'tankkompas-v5';
+const CACHE = 'tankkompas-v6';
 const BASISBESTANDEN = [
   './', './index.html', './manifest.json',
   './icon-192.png', './icon-512.png', './apple-touch-icon.png', './favicon-32.png'
