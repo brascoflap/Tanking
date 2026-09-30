@@ -273,7 +273,12 @@
     .app > #potje {
       min-height: min(76svh, 620px);
     }
-    .menu-tab { left: 10px; top: 50%; border: 1px solid #657477; border-radius: 14px; padding: 13px 8px; transform: translateY(-50%); }
+    .menu-tab {
+      left: 12px; top: 50%; width: 46px; min-height: 112px;
+      display: grid; place-items: center;
+      border: 1px solid #657477; border-radius: 16px; padding: 10px 6px;
+      transform: translateY(-50%);
+    }
     .menu-backdrop { position: fixed; inset: 0; }
     .side-menu { position: fixed; left: 0; top: 0; bottom: 0; min-height: 100vh; }
   }
