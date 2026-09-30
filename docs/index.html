@@ -220,7 +220,7 @@
   .schatting { color: var(--accent-green); line-height: 1.5; margin: 14px 0 0; }
   .pdf-bon { display: none; }
   .menu-tab {
-    position: fixed; left: max(calc(50% - 240px), 0px); top: 42%; z-index: 70;
+    position: absolute; left: 0; top: 190px; z-index: 70;
     background: #344554; color: #E5E8E8; border: 1px solid #657477;
     border-left: none; border-radius: 0 14px 14px 0; padding: 14px 8px;
     cursor: pointer; box-shadow: 0 8px 22px rgba(27, 39, 49, .24);
@@ -274,10 +274,10 @@
       min-height: min(76svh, 620px);
     }
     .menu-tab {
-      left: 12px; top: 50%; width: 46px; min-height: 112px;
+      left: 12px; top: 190px; width: 46px; min-height: 112px;
       display: grid; place-items: center;
       border: 1px solid #657477; border-radius: 16px; padding: 10px 6px;
-      transform: translateY(-50%);
+      transform: none;
     }
     .menu-backdrop { position: fixed; inset: 0; }
     .side-menu { position: fixed; left: 0; top: 0; bottom: 0; min-height: 100vh; }
