@@ -3,20 +3,50 @@
     {
       "bron": "AutoWeek",
       "categorie": "Auto",
-      "titel": "Fiat Grande Panda: andere naam en minder verwijzingen naar Panda",
-      "link": "https://www.autoweek.nl/autonieuws/artikel/nieuwe-fiat-argo-x-fiat-grande-panda-maar-dan-anders/"
+      "titel": "Mazda CX-60 en CX-80 vernieuwd, verbeterd en goedkoper",
+      "link": "https://www.autoweek.nl/autonieuws/artikel/mazda-cx-60-en-cx-80-vernieuwd-verbeterd-en-goedkoper/"
     },
     {
       "bron": "Autoblog",
       "categorie": "Auto en mobiliteit",
-      "titel": "Occasion lease: de gulden middenweg tussen kopen en private lease?",
-      "link": "https://www.autoblog.nl/nieuws/occasion-lease-de-gulden-middenweg-tussen-kopen-en-private-lease"
+      "titel": "Hier in Nederland geldt binnenkort een maximumsnelheid van 20 km/u",
+      "link": "https://www.autoblog.nl/nieuws/amsterdam-test-20-km-u-als-maximumsnelheid-maar-niet-voor-auto-s"
     },
     {
       "bron": "De Stentor Deventer",
       "categorie": "Regio",
-      "titel": "Opluchting in Twentse topkeukens: Bloemenbeek houdt ster in feestjaar, Joann opnieuw beloond",
-      "link": "https://www.destentor.nl/enschede/opluchting-in-twentse-topkeukens-bloemenbeek-houdt-ster-in-feestjaar-joann-opnieuw-beloond~aa1e61912/"
+      "titel": "Kinderen vertellen in het stadhuis over meedoen en erbij horen: ‘Begint met iets kleins’",
+      "link": "https://www.destentor.nl/deventer/kinderen-vertellen-in-het-stadhuis-over-meedoen-en-erbij-horen-begint-met-iets-kleins~a05f8e39/"
+    },
+    {
+      "bron": "NCSC",
+      "categorie": "ICT en cybersecurity",
+      "titel": "Kwetsbaarheid in Microsoft Exchange Server met risico op misbruik",
+      "link": "https://www.ncsc.nl/alerts/kwetsbaarheid-in-microsoft-exchange-server-met-risico-op-misbruik"
+    },
+    {
+      "bron": "Mediacourant",
+      "categorie": "Entertainment en televisie",
+      "titel": "André van Duin op tweede rij bij Pauw & De Wit: ‘Echt respectloos’",
+      "link": "https://www.mediacourant.nl/2026/10/andre-van-duin-op-tweede-rij-bij-pauw-de-wit-echt-respectloos/"
+    },
+    {
+      "bron": "AutoWeek",
+      "categorie": "Auto",
+      "titel": "ANWB en Consumentenbond: ernstige gebreken bij twee autostoeltjes",
+      "link": "https://www.autoweek.nl/autonieuws/artikel/anwb-en-consumentenbond-ernstige-gebreken-bij-twee-autostoeltjes/"
+    },
+    {
+      "bron": "Autoblog",
+      "categorie": "Auto en mobiliteit",
+      "titel": "Renault Twingo krijgt een opvallende nieuwe optie",
+      "link": "https://www.autoblog.nl/nieuws/renault-twingo-krijgt-een-opvallende-nieuwe-optie"
+    },
+    {
+      "bron": "De Stentor Deventer",
+      "categorie": "Regio",
+      "titel": "Dit is de nieuwe voetbalpodcast van de Stentor: ‘Alsof je met voetbalvrienden aan de stamtafel zit’",
+      "link": "https://www.destentor.nl/sport/dit-is-de-nieuwe-voetbalpodcast-van-de-stentor-alsof-je-met-voetbalvrienden-aan-de-stamtafel-zit~a4a0ac67/"
     },
     {
       "bron": "NCSC",
@@ -27,38 +57,8 @@
     {
       "bron": "Mediacourant",
       "categorie": "Entertainment en televisie",
-      "titel": "Na tien jaar: Jan Versteegh ziet zijn ontdekker Rutger Castricum",
-      "link": "https://www.mediacourant.nl/2026/10/na-tien-jaar-jan-versteegh-ziet-zijn-ontdekker-rutger-castricum/"
-    },
-    {
-      "bron": "AutoWeek",
-      "categorie": "Auto",
-      "titel": "Op naar de elektrische BMW M3!",
-      "link": "https://www.autoweek.nl/autonieuws/artikel/op-naar-de-eerste-elektrische-bmw-m3/"
-    },
-    {
-      "bron": "Autoblog",
-      "categorie": "Auto en mobiliteit",
-      "titel": "Vasthouden aan de brandstofmotor maakt EV's duurder",
-      "link": "https://www.autoblog.nl/nieuws/vasthouden-aan-de-brandstofmotor-maakt-ev-s-duurder"
-    },
-    {
-      "bron": "De Stentor Deventer",
-      "categorie": "Regio",
-      "titel": "De een was beter binnen de lijnen, de ander erbuiten: bij de gebroeders Veldman zijn de rollen nu precies omgedraaid",
-      "link": "https://www.destentor.nl/regio-deventer/de-een-was-beter-binnen-de-lijnen-de-ander-erbuiten-bij-de-gebroeders-veldman-zijn-de-rollen-nu-precies-omgedraaid~a651fce2/"
-    },
-    {
-      "bron": "NCSC",
-      "categorie": "ICT en cybersecurity",
-      "titel": "Actief misbruik van zeroday-kwetsbaarheden in Zammad: update nu",
-      "link": "https://www.ncsc.nl/alerts/actief-misbruik-van-zeroday-kwetsbaarheden-in-zammad-update-nu"
-    },
-    {
-      "bron": "Mediacourant",
-      "categorie": "Entertainment en televisie",
-      "titel": "Bizar: Thomas van Groningen cremeert per ongeluk verkeerde kat",
-      "link": "https://www.mediacourant.nl/2026/10/bizar-thomas-van-groningen-cremeert-per-ongeluk-verkeerde-kat/"
+      "titel": "Na Frank Visser ook Bert van Leeuwen naar SBS 6? ‘Sluit het niet uit’",
+      "link": "https://www.mediacourant.nl/2026/10/na-frank-visser-ook-bert-van-leeuwen-naar-sbs-6-sluit-het-niet-uit/"
     }
   ]
 }
