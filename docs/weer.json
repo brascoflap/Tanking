@@ -1,9 +1,9 @@
 {
-  "temperatuur": 18,
-  "gevoelstemperatuur": 18,
-  "omschrijving": "Zwaar bewolkt",
-  "icoon": "https://cdn.buienradar.nl/resources/images/icons/weather/96x96/C.png",
-  "windkracht_bft": 1,
-  "winddichting": "Z",
-  "tijdstip": "2026-10-06T13:10:00"
+  "temperatuur": 20,
+  "gevoelstemperatuur": 20,
+  "omschrijving": "Vrijwel onbewolkt (zonnig/helder)",
+  "icoon": "https://cdn.buienradar.nl/resources/images/icons/weather/96x96/A.png",
+  "windkracht_bft": 2,
+  "winddichting": "O",
+  "tijdstip": "2026-10-07T13:00:00"
 }

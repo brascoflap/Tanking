@@ -3,20 +3,50 @@
     {
       "bron": "AutoWeek",
       "categorie": "Auto",
-      "titel": "Mazda CX-60 en CX-80 vernieuwd, verbeterd en goedkoper",
-      "link": "https://www.autoweek.nl/autonieuws/artikel/mazda-cx-60-en-cx-80-vernieuwd-verbeterd-en-goedkoper/"
+      "titel": "Audi RS5 populairder dan ooit tevoren",
+      "link": "https://www.autoweek.nl/autonieuws/artikel/audi-rs5-populairder-dan-ooit-tevoren/"
     },
     {
       "bron": "Autoblog",
       "categorie": "Auto en mobiliteit",
-      "titel": "Hier in Nederland geldt binnenkort een maximumsnelheid van 20 km/u",
-      "link": "https://www.autoblog.nl/nieuws/amsterdam-test-20-km-u-als-maximumsnelheid-maar-niet-voor-auto-s"
+      "titel": "30 km/u-borden in Amsterdam blijken een dure miskoop",
+      "link": "https://www.autoblog.nl/nieuws/duurzame-verkeersborden-amsterdam-blijken-een-wassen-neus"
     },
     {
       "bron": "De Stentor Deventer",
       "categorie": "Regio",
-      "titel": "Kinderen vertellen in het stadhuis over meedoen en erbij horen: ‘Begint met iets kleins’",
-      "link": "https://www.destentor.nl/deventer/kinderen-vertellen-in-het-stadhuis-over-meedoen-en-erbij-horen-begint-met-iets-kleins~a05f8e39/"
+      "titel": "‘Geen incidenten maar een duidelijk patroon’: zo raakt Deventer stuk voor stuk haar kunstwerken kwijt",
+      "link": "https://www.destentor.nl/deventer/geen-incidenten-maar-een-duidelijk-patroon-zo-raakt-deventer-stuk-voor-stuk-haar-kunstwerken-kwijt~abce9a1a/"
+    },
+    {
+      "bron": "NCSC",
+      "categorie": "ICT en cybersecurity",
+      "titel": "Veiligheidsdiensten verwachten toename Chinese cyberaanvallen",
+      "link": "https://www.ncsc.nl/nieuws/veiligheidsdiensten-verwachten-toename-chinese-cyberaanvallen"
+    },
+    {
+      "bron": "Mediacourant",
+      "categorie": "Entertainment en televisie",
+      "titel": "Chantal Janzen krijgt kritiek op ‘goedkope’ jurk van 1.500 euro",
+      "link": "https://www.mediacourant.nl/2026/10/chantal-janzen-krijgt-kritiek-op-goedkope-jurk-van-1-500-euro/"
+    },
+    {
+      "bron": "AutoWeek",
+      "categorie": "Auto",
+      "titel": "Tesla Cybercab maakt oversteek naar Europa",
+      "link": "https://www.autoweek.nl/autonieuws/artikel/tesla-cybercab-maakt-oversteek-naar-europa/"
+    },
+    {
+      "bron": "Autoblog",
+      "categorie": "Auto en mobiliteit",
+      "titel": "Je kunt de Jaguar Type 01 al samenstellen, soort van",
+      "link": "https://www.autoblog.nl/nieuws/jaguar-doet-het-net-iets-anders-met-de-configurator-van-de-type-01"
+    },
+    {
+      "bron": "De Stentor Deventer",
+      "categorie": "Regio",
+      "titel": "Afgelopen week 46 meldingen van de gemeente over sloop, bomenkap en verkeer in Deventer",
+      "link": "https://www.destentor.nl/deventer/afgelopen-week-46-meldingen-van-de-gemeente-over-sloop-bomenkap-en-verkeer-in-deventer~a2d9424f/"
     },
     {
       "bron": "NCSC",
@@ -27,38 +57,8 @@
     {
       "bron": "Mediacourant",
       "categorie": "Entertainment en televisie",
-      "titel": "André van Duin op tweede rij bij Pauw & De Wit: ‘Echt respectloos’",
-      "link": "https://www.mediacourant.nl/2026/10/andre-van-duin-op-tweede-rij-bij-pauw-de-wit-echt-respectloos/"
-    },
-    {
-      "bron": "AutoWeek",
-      "categorie": "Auto",
-      "titel": "ANWB en Consumentenbond: ernstige gebreken bij twee autostoeltjes",
-      "link": "https://www.autoweek.nl/autonieuws/artikel/anwb-en-consumentenbond-ernstige-gebreken-bij-twee-autostoeltjes/"
-    },
-    {
-      "bron": "Autoblog",
-      "categorie": "Auto en mobiliteit",
-      "titel": "Renault Twingo krijgt een opvallende nieuwe optie",
-      "link": "https://www.autoblog.nl/nieuws/renault-twingo-krijgt-een-opvallende-nieuwe-optie"
-    },
-    {
-      "bron": "De Stentor Deventer",
-      "categorie": "Regio",
-      "titel": "Dit is de nieuwe voetbalpodcast van de Stentor: ‘Alsof je met voetbalvrienden aan de stamtafel zit’",
-      "link": "https://www.destentor.nl/sport/dit-is-de-nieuwe-voetbalpodcast-van-de-stentor-alsof-je-met-voetbalvrienden-aan-de-stamtafel-zit~a4a0ac67/"
-    },
-    {
-      "bron": "NCSC",
-      "categorie": "ICT en cybersecurity",
-      "titel": "Cyberveilig gedrag van werknemers blijft achter",
-      "link": "https://www.ncsc.nl/nieuws/cyberveilig-gedrag-van-werknemers-blijft-achter"
-    },
-    {
-      "bron": "Mediacourant",
-      "categorie": "Entertainment en televisie",
-      "titel": "Na Frank Visser ook Bert van Leeuwen naar SBS 6? ‘Sluit het niet uit’",
-      "link": "https://www.mediacourant.nl/2026/10/na-frank-visser-ook-bert-van-leeuwen-naar-sbs-6-sluit-het-niet-uit/"
+      "titel": "Prinses Laurentien nu zelfs in Kruidvat-folder: ‘Turks of Arabisch?!’",
+      "link": "https://www.mediacourant.nl/2026/10/prinses-laurentien-nu-zelfs-in-kruidvat-folder-turks-of-arabisch/"
     }
   ]
 }
