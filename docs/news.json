@@ -3,20 +3,50 @@
     {
       "bron": "AutoWeek",
       "categorie": "Auto",
-      "titel": "Avatr: nieuw automerk voor Europa vindt luxe naar eigen zeggen opnieuw uit",
-      "link": "https://www.autoweek.nl/autonieuws/artikel/nieuw-automerk-voor-europa-avtr-het-maakt-precies-wat-je-denkt/"
+      "titel": "Chinese huurauto’s filmden militaire activiteiten in Noorwegen",
+      "link": "https://www.autoweek.nl/autonieuws/artikel/chinese-huurautos-filmden-militaire-activiteiten-in-noorwegen/"
     },
     {
       "bron": "Autoblog",
       "categorie": "Auto en mobiliteit",
-      "titel": "Alpina laat V8-liefhebbers weer lachen",
-      "link": "https://www.autoblog.nl/nieuws/alpina-laat-v8-liefhebbers-weer-lachen"
+      "titel": "De Lynk & Co 07 GT is alles behalve een brave Volvo-station",
+      "link": "https://www.autoblog.nl/nieuws/de-lynk-co-07-gt-is-alles-behalve-een-brave-volvo-station"
     },
     {
       "bron": "De Stentor Deventer",
       "categorie": "Regio",
-      "titel": "Regels aangescherpt: zondag geen alcohol tijdens IJsselderby • Uitvak zonder sfeerartikelen en met meer beveiligers",
-      "link": "https://www.destentor.nl/voetbal/regels-aangescherpt-zondag-geen-alcohol-tijdens-ijsselderby-uitvak-zonder-sfeerartikelen-en-met-meer-beveiligers~a1c1c8be/"
+      "titel": "Dit kan een van de laatste zonneparken op land worden: alleen de rechter kan het nog tegenhouden",
+      "link": "https://www.destentor.nl/lochem/dit-kan-een-van-de-laatste-zonneparken-op-land-worden-alleen-de-rechter-kan-het-nog-tegenhouden~a566ccbb/"
+    },
+    {
+      "bron": "NCSC",
+      "categorie": "ICT en cybersecurity",
+      "titel": "Kwetsbaarheden in HPE Networking AOS-Switch met hoog risico",
+      "link": "https://www.ncsc.nl/alerts/kwetsbaarheden-in-hpe-networking-aos-switch-met-hoog-risico"
+    },
+    {
+      "bron": "Mediacourant",
+      "categorie": "Entertainment en televisie",
+      "titel": "Peter Pannekoek eens met kritiek op ‘nutteloze’ co-host Jan Smit?",
+      "link": "https://www.mediacourant.nl/2026/10/peter-pannekoek-eens-met-kritiek-op-nutteloze-co-host-jan-smit/"
+    },
+    {
+      "bron": "AutoWeek",
+      "categorie": "Auto",
+      "titel": "EV9-concurrent uit China: dit is de BYD Atto 8!",
+      "link": "https://www.autoweek.nl/autonieuws/artikel/ev9-concurrent-uit-china-dit-is-de-byd-atto-8/"
+    },
+    {
+      "bron": "Autoblog",
+      "categorie": "Auto en mobiliteit",
+      "titel": "Formule 1 bevestigt: gaat in Afrika racen, maar er is geen circuit",
+      "link": "https://www.autoblog.nl/nieuws/formule-1-bevestigt-gaat-in-afrika-racen-maar-er-is-geen-circuit"
+    },
+    {
+      "bron": "De Stentor Deventer",
+      "categorie": "Regio",
+      "titel": "Rodin (12) mag dammen op wereldtoneel: ‘Oudere tegenstanders willen niet van mij verliezen’",
+      "link": "https://www.destentor.nl/lochem/rodin-12-mag-dammen-op-wereldtoneel-oudere-tegenstanders-willen-niet-van-mij-verliezen~a0ba020f/"
     },
     {
       "bron": "NCSC",
@@ -27,38 +57,8 @@
     {
       "bron": "Mediacourant",
       "categorie": "Entertainment en televisie",
-      "titel": "Wil Raymond Mens op plek Wilfred Genee als hij vertrekt naar RTL?",
-      "link": "https://www.mediacourant.nl/2026/10/wil-raymond-mens-op-plek-wilfred-genee-als-hij-vertrekt-naar-rtl/"
-    },
-    {
-      "bron": "AutoWeek",
-      "categorie": "Auto",
-      "titel": "Leapmotor B03: groter dan ID Polo voor de prijs van een Twingo",
-      "link": "https://www.autoweek.nl/autonieuws/artikel/leapmotor-b03-groter-dan-id-polo-voor-de-prijs-van-een-twingo/"
-    },
-    {
-      "bron": "Autoblog",
-      "categorie": "Auto en mobiliteit",
-      "titel": "Officieel: de kleinste smart krijgt een elektrische comeback",
-      "link": "https://www.autoblog.nl/nieuws/officieel-de-meest-iconische-stadsauto-is-eindelijk-terug"
-    },
-    {
-      "bron": "De Stentor Deventer",
-      "categorie": "Regio",
-      "titel": "Te oud voor de speeltuin, te jong voor de kroeg: dat gat vullen ze in Deventer zo",
-      "link": "https://www.destentor.nl/deventer/te-oud-voor-de-speeltuin-te-jong-voor-de-kroeg-dat-gat-vullen-ze-in-deventer-zo~a66f62e5/"
-    },
-    {
-      "bron": "NCSC",
-      "categorie": "ICT en cybersecurity",
-      "titel": "NCSC en toezichthouders maken afspraken over samenwerking bij Cyberbeveiligingswet",
-      "link": "https://www.ncsc.nl/nieuws/ncsc-en-toezichthouders-maken-afspraken-over-samenwerking-bij-cyberbeveiligingswet"
-    },
-    {
-      "bron": "Mediacourant",
-      "categorie": "Entertainment en televisie",
-      "titel": "Hélène Hendriks-gast heeft bobbel op keel, Frans Bauer helpt haar",
-      "link": "https://www.mediacourant.nl/2026/10/helene-hendriks-gast-heeft-bobbel-op-keel-frans-bauer-helpt-haar/"
+      "titel": "Talpa verbood Maxime Meiland deelname aan Expeditie Robinson",
+      "link": "https://www.mediacourant.nl/2026/10/talpa-verbood-maxime-meiland-deelname-aan-expeditie-robinson/"
     }
   ]
 }
