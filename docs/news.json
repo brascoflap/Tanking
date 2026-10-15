@@ -3,20 +3,50 @@
     {
       "bron": "AutoWeek",
       "categorie": "Auto",
-      "titel": "Nieuwe Smart #2 is bijna de goedkoopste nieuwe elektrische auto",
-      "link": "https://www.autoweek.nl/autonieuws/artikel/nieuwe-smart-2-is-bijna-de-goedkoopste-nieuwe-elektrische-auto/"
+      "titel": "Renault: 'Europese regels maken een nieuwe auto €6.000 duurder'",
+      "link": "https://www.autoweek.nl/autonieuws/artikel/renault-europese-regels-maken-een-nieuwe-auto-e6-000-duurder/"
     },
     {
       "bron": "Autoblog",
       "categorie": "Auto en mobiliteit",
-      "titel": "Ontsnappen van de politie doe je niet zo",
-      "link": "https://www.autoblog.nl/video/ontsnappen-van-de-politie-doe-je-niet-zo"
+      "titel": "Horner verklapt: Verstappens hielden Alonso-transfer naar Red Bull tegen",
+      "link": "https://www.autoblog.nl/nieuws/horner-verklapt-deze-topcoureurs-hadden-teamgenoten-van-verstappen-kunnen-zijn"
     },
     {
       "bron": "De Stentor Deventer",
       "categorie": "Regio",
-      "titel": "Stelling | Na de cybercrisis bij Albert Heijn bestel ik mijn boodschappen bij een andere winkel",
-      "link": "https://www.destentor.nl/enschede/stelling-na-de-cybercrisis-bij-albert-heijn-bestel-ik-mijn-boodschappen-bij-een-andere-winkel~ab5b71ac/"
+      "titel": "PEC Zwolle en Go Ahead Eagles spelen zondag weer de IJsselderby: test hier je kennis!",
+      "link": "https://www.destentor.nl/pec-zwolle/pec-zwolle-en-go-ahead-eagles-spelen-zondag-weer-de-ijsselderby-test-hier-je-kennis~ad7f0404/"
+    },
+    {
+      "bron": "NCSC",
+      "categorie": "ICT en cybersecurity",
+      "titel": "Kwetsbaarheid in Cisco Secure Email Gateway met actief misbruik: update nu",
+      "link": "https://www.ncsc.nl/alerts/kwetsbaarheid-in-cisco-secure-email-gateway-met-actief-misbruik-update-nu"
+    },
+    {
+      "bron": "Mediacourant",
+      "categorie": "Entertainment en televisie",
+      "titel": "RTL 4 wanhopig, zet advertenties in krant voor Renze: ‘Episch slecht’",
+      "link": "https://www.mediacourant.nl/2026/10/rtl-4-wanhopig-zet-advertenties-in-krant-voor-renze-episch-slecht/"
+    },
+    {
+      "bron": "AutoWeek",
+      "categorie": "Auto",
+      "titel": "Changan verdubbelt Europese aanbod met Nevo Q05 en Nevo Q06",
+      "link": "https://www.autoweek.nl/autonieuws/artikel/changan-verdubbelt-europese-aanbod-met-nevo-q05-en-nevo-q06/"
+    },
+    {
+      "bron": "Autoblog",
+      "categorie": "Auto en mobiliteit",
+      "titel": "Gelekt: dit is de Porsche Mission S, mét uitlaten!",
+      "link": "https://www.autoblog.nl/nieuws/gelekt-dit-is-de-porsche-mission-s-met-uitlaten"
+    },
+    {
+      "bron": "De Stentor Deventer",
+      "categorie": "Regio",
+      "titel": "Is het zo gek om te accepteren dat vrouwen anders werken dan mannen?",
+      "link": "https://www.destentor.nl/columns/is-het-zo-gek-om-te-accepteren-dat-vrouwen-anders-werken-dan-mannen~af20b131/"
     },
     {
       "bron": "NCSC",
@@ -27,38 +57,8 @@
     {
       "bron": "Mediacourant",
       "categorie": "Entertainment en televisie",
-      "titel": "Harry Mens verklaart horrorcijfers: ‘Mijn kijkers hebben geen kastje’",
-      "link": "https://www.mediacourant.nl/2026/10/harry-mens-verklaart-horrorcijfers-mijn-kijkers-hebben-geen-kastje/"
-    },
-    {
-      "bron": "AutoWeek",
-      "categorie": "Auto",
-      "titel": "De ultra-luxe Xpeng G9L is in Nederland niet eens zo duur",
-      "link": "https://www.autoweek.nl/autonieuws/artikel/de-ultra-luxe-xpeng-g9l-is-in-nederland-niet-eens-zo-duur/"
-    },
-    {
-      "bron": "Autoblog",
-      "categorie": "Auto en mobiliteit",
-      "titel": "BMW stopt vroegtijdig met de i4, want iedereen wil de nieuwe i3 en 3 Serie",
-      "link": "https://www.autoblog.nl/nieuws/bmw-stopt-met-de-i4-want-iedereen-wil-de-nieuwe-i3-en-3-serie"
-    },
-    {
-      "bron": "De Stentor Deventer",
-      "categorie": "Regio",
-      "titel": "Afgelopen week 59 meldingen van de gemeente over sloop, bomenkap en verkeer in Deventer",
-      "link": "https://www.destentor.nl/deventer/afgelopen-week-59-meldingen-van-de-gemeente-over-sloop-bomenkap-en-verkeer-in-deventer~a6a4d1f3/"
-    },
-    {
-      "bron": "NCSC",
-      "categorie": "ICT en cybersecurity",
-      "titel": "Kwetsbaarheden in GitLab CE en EE: update nu",
-      "link": "https://www.ncsc.nl/alerts/kwetsbaarheden-in-gitlab-ce-en-ee-update-nu"
-    },
-    {
-      "bron": "Mediacourant",
-      "categorie": "Entertainment en televisie",
-      "titel": "Ondanks Gordon-eis: Angela de Jong zegt geen sorry tegen Jan",
-      "link": "https://www.mediacourant.nl/2026/10/ondanks-gordon-eis-angela-de-jong-zegt-geen-sorry-tegen-jan/"
+      "titel": "Wierd Duk vindt nieuwe VI-collega Lisette Wellens beetje ‘te linksig’",
+      "link": "https://www.mediacourant.nl/2026/10/wierd-duk-vindt-nieuwe-vi-collega-lisette-wellens-beetje-te-linksig/"
     }
   ]
 }
