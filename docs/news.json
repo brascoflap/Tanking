@@ -3,20 +3,50 @@
     {
       "bron": "AutoWeek",
       "categorie": "Auto",
-      "titel": "De Tesla Model Y en Tesla Model 3 waren de populairste auto’s van Europa in september",
-      "link": "https://www.autoweek.nl/autonieuws/artikel/de-tesla-model-y-en-tesla-model-3-waren-de-populairste-autos-van-europa-in-september/"
+      "titel": "BYD Han: groot, gladjes en in chaotisch gamma",
+      "link": "https://www.autoweek.nl/autonieuws/artikel/byd-han-groot-gladjes-en-in-chaotisch-gamma/"
     },
     {
       "bron": "Autoblog",
       "categorie": "Auto en mobiliteit",
-      "titel": "Chauffeur ziet billboard aan voor echte weg",
-      "link": "https://www.autoblog.nl/video/chauffeur-ziet-billboard-aan-voor-echte-weg"
+      "titel": "Formule 1 trekt nieuwe regel alweer in die races korter en leuker moest maken",
+      "link": "https://www.autoblog.nl/nieuws/officieel-formule-1-weet-ook-niet-meer-wat-het-aanmoet-met-de-nieuwe-f1-bolides"
     },
     {
       "bron": "De Stentor Deventer",
       "categorie": "Regio",
-      "titel": "Ik ben heel blij met mijn nieuwe bagagespaghetti",
-      "link": "https://www.destentor.nl/columns/ik-ben-heel-blij-met-mijn-nieuwe-bagagespaghetti~a7108fd3/"
+      "titel": "Een bekerstunt én de eerste prijs in de competitie voor Excelsior’31? Het is allebei mogelijk",
+      "link": "https://www.destentor.nl/rijssen-holten/een-bekerstunt-en-de-eerste-prijs-in-de-competitie-voor-excelsior31-het-is-allebei-mogelijk~a2e6f2bf/"
+    },
+    {
+      "bron": "NCSC",
+      "categorie": "ICT en cybersecurity",
+      "titel": "Het NCSC blijft CSIRT voor gemeenten",
+      "link": "https://www.ncsc.nl/nieuws/het-ncsc-blijft-csirt-voor-gemeenten"
+    },
+    {
+      "bron": "Mediacourant",
+      "categorie": "Entertainment en televisie",
+      "titel": "‘Gerard Joling begint eigen variant Toppers, gastoptreden Gordon’",
+      "link": "https://www.mediacourant.nl/2026/10/gerard-joling-begint-eigen-variant-toppers-gastoptreden-gordon/"
+    },
+    {
+      "bron": "AutoWeek",
+      "categorie": "Auto",
+      "titel": "Peugeot legt nieuwe modelnamen vast: van 1008 tot 6008",
+      "link": "https://www.autoweek.nl/autonieuws/artikel/peugeot-legt-nieuwe-modelnamen-vast-van-1008-tot-6008/"
+    },
+    {
+      "bron": "Autoblog",
+      "categorie": "Auto en mobiliteit",
+      "titel": "Zo weinig tijd heeft BMW nodig om honderden kilometers bij te laden",
+      "link": "https://www.autoblog.nl/nieuws/zo-weinig-tijd-heeft-de-bmw-ix5-nodig-om-honderden-kilometers-bij-te-laden"
+    },
+    {
+      "bron": "De Stentor Deventer",
+      "categorie": "Regio",
+      "titel": "Stroomnet in Twente zit muurvast: honderden bedrijven wachten op extra elektriciteit",
+      "link": "https://www.destentor.nl/enschede/stroomnet-in-twente-zit-muurvast-honderden-bedrijven-wachten-op-extra-elektriciteit~a91dafac/"
     },
     {
       "bron": "NCSC",
@@ -27,38 +57,8 @@
     {
       "bron": "Mediacourant",
       "categorie": "Entertainment en televisie",
-      "titel": "Klein mens woest, staat open voor bezoek aan Vandaag Inside: ‘Ja’",
-      "link": "https://www.mediacourant.nl/2026/10/klein-mens-woest-staat-open-voor-bezoek-aan-vandaag-inside-ja/"
-    },
-    {
-      "bron": "AutoWeek",
-      "categorie": "Auto",
-      "titel": "Benzineprijs blijft hard dalen: zelfde niveau als twee maanden geleden",
-      "link": "https://www.autoweek.nl/autonieuws/artikel/benzineprijs-blijft-stevig-dalen-zelfde-niveau-als-twee-maanden-geleden/"
-    },
-    {
-      "bron": "Autoblog",
-      "categorie": "Auto en mobiliteit",
-      "titel": "Formule 1 gaat van Viaplay naar Videoland",
-      "link": "https://www.autoblog.nl/nieuws/formule-1-gaat-van-viaplay-naar-videoland"
-    },
-    {
-      "bron": "De Stentor Deventer",
-      "categorie": "Regio",
-      "titel": "Samen stilstaan: hier is binnenkort Lichtjesdag in Deventer",
-      "link": "https://www.destentor.nl/deventer/samen-stilstaan-hier-is-binnenkort-lichtjesdag-in-deventer~a76803c2/"
-    },
-    {
-      "bron": "NCSC",
-      "categorie": "ICT en cybersecurity",
-      "titel": "Kwetsbaarheden in Drupal Core en modules door Drupal: update nu",
-      "link": "https://www.ncsc.nl/alerts/kwetsbaarheden-in-drupal-core-en-modules-door-drupal-update-nu"
-    },
-    {
-      "bron": "Mediacourant",
-      "categorie": "Entertainment en televisie",
-      "titel": "Vlamingen slachten Soundos El Ahmadi af na lelijke miskraamgrap",
-      "link": "https://www.mediacourant.nl/2026/10/vlamingen-slachten-soundos-el-ahmadi-af-na-lelijke-miskraamgrap/"
+      "titel": "Mike Hansler in mega-tv-ruzie tegen Mo: ‘Je bent een pleurisnarcist!’",
+      "link": "https://www.mediacourant.nl/2026/10/mike-hansler-in-mega-tv-ruzie-tegen-mo-je-bent-een-pleurisnarcist/"
     }
   ]
 }
