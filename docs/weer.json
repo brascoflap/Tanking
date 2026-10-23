@@ -1,9 +1,9 @@
 {
-  "temperatuur": 9,
-  "gevoelstemperatuur": 6,
-  "omschrijving": "Zwaar bewolkt",
-  "icoon": "https://cdn.buienradar.nl/resources/images/icons/weather/96x96/C.png",
+  "temperatuur": 11,
+  "gevoelstemperatuur": 8,
+  "omschrijving": "Zwaar bewolkt en regen",
+  "icoon": "https://cdn.buienradar.nl/resources/images/icons/weather/96x96/Q.png",
   "windkracht_bft": 4,
-  "winddichting": "ZZW",
-  "tijdstip": "2026-10-22T11:20:00"
+  "winddichting": "ZO",
+  "tijdstip": "2026-10-23T11:20:00"
 }
