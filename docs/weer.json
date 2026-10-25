@@ -1,9 +1,9 @@
 {
-  "temperatuur": 10,
-  "gevoelstemperatuur": 6,
+  "temperatuur": 12,
+  "gevoelstemperatuur": 9,
   "omschrijving": "Vrijwel onbewolkt (zonnig/helder)",
   "icoon": "https://cdn.buienradar.nl/resources/images/icons/weather/96x96/A.png",
   "windkracht_bft": 4,
   "winddichting": "ZW",
-  "tijdstip": "2026-10-24T10:50:00"
+  "tijdstip": "2026-10-25T10:00:00"
 }
