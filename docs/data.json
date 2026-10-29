@@ -12,7 +12,7 @@
       "plaats": "Diepenveen",
       "bron": "live",
       "bron_detail": "tinq",
-      "bron_gecontroleerd_op": "2026-10-28T09:07:15Z",
+      "bron_gecontroleerd_op": "2026-10-29T09:07:13Z",
       "bron_url": "https://www.tinq.nl/tankstations/twello-rijksstraatweg",
       "besparing_liter": 0.17
     },
@@ -23,7 +23,7 @@
       "plaats": "Diepenveen",
       "bron": "live",
       "bron_detail": "tinq",
-      "bron_gecontroleerd_op": "2026-10-28T09:12:45Z",
+      "bron_gecontroleerd_op": "2026-10-29T09:12:43Z",
       "bron_url": "https://www.tinq.nl/tankstations/wijhe-industrieweg",
       "besparing_liter": 0.12
     },
@@ -34,7 +34,7 @@
       "plaats": "Diepenveen",
       "bron": "live",
       "bron_detail": "tinq",
-      "bron_gecontroleerd_op": "2026-10-28T08:39:04Z",
+      "bron_gecontroleerd_op": "2026-10-29T08:39:03Z",
       "bron_url": "https://www.tinq.nl/tankstations/deventer-diepenveenseweg",
       "besparing_liter": 0.11
     },
@@ -45,7 +45,7 @@
       "plaats": "Diepenveen",
       "bron": "live",
       "bron_detail": "tinq",
-      "bron_gecontroleerd_op": "2026-10-28T09:30:45Z",
+      "bron_gecontroleerd_op": "2026-10-29T09:30:44Z",
       "bron_url": "https://www.tinq.nl/tankstations/epse-lochemseweg",
       "besparing_liter": 0.11
     },
@@ -56,7 +56,7 @@
       "plaats": "Deventer",
       "bron": "live",
       "bron_detail": "tango",
-      "bron_gecontroleerd_op": "2026-10-28T06:50:53Z",
+      "bron_gecontroleerd_op": "2026-10-29T06:50:53Z",
       "bron_url": "https://www.tango.nl/stations/tango-voorst",
       "besparing_liter": 0.11
     },
@@ -67,7 +67,7 @@
       "plaats": "Bathmen",
       "bron": "live",
       "bron_detail": "tango",
-      "bron_gecontroleerd_op": "2026-10-28T06:46:23Z",
+      "bron_gecontroleerd_op": "2026-10-29T06:46:24Z",
       "bron_url": "https://www.tango.nl/stations/tango-holten",
       "besparing_liter": 0.11
     },
@@ -78,7 +78,7 @@
       "plaats": "Diepenveen",
       "bron": "live",
       "bron_detail": "tango",
-      "bron_gecontroleerd_op": "2026-10-28T06:36:03Z",
+      "bron_gecontroleerd_op": "2026-10-29T06:36:03Z",
       "bron_url": "https://www.tango.nl/stations/tango-deventer-piet-van-donkplein",
       "besparing_liter": 0.1
     },
@@ -89,7 +89,7 @@
       "plaats": "Diepenveen",
       "bron": "live",
       "bron_detail": "tango",
-      "bron_gecontroleerd_op": "2026-10-28T06:31:04Z",
+      "bron_gecontroleerd_op": "2026-10-29T06:31:03Z",
       "bron_url": "https://www.tango.nl/stations/tango-deventer-siemelinksweg",
       "besparing_liter": 0.1
     },
@@ -100,7 +100,7 @@
       "plaats": "Diepenveen",
       "bron": "live",
       "bron_detail": "tango",
-      "bron_gecontroleerd_op": "2026-10-28T06:44:23Z",
+      "bron_gecontroleerd_op": "2026-10-29T06:44:23Z",
       "bron_url": "https://www.tango.nl/stations/tango-wilp",
       "besparing_liter": 0.0
     }
@@ -218,7 +218,7 @@
       "plaats": "Diepenveen",
       "bron": "live",
       "bron_detail": "tinq",
-      "bron_gecontroleerd_op": "2026-10-28T09:07:15Z",
+      "bron_gecontroleerd_op": "2026-10-29T09:07:13Z",
       "bron_url": "https://www.tinq.nl/tankstations/twello-rijksstraatweg",
       "besparing_liter": 0.08
     },
@@ -229,7 +229,7 @@
       "plaats": "Diepenveen",
       "bron": "live",
       "bron_detail": "tinq",
-      "bron_gecontroleerd_op": "2026-10-28T09:12:45Z",
+      "bron_gecontroleerd_op": "2026-10-29T09:12:43Z",
       "bron_url": "https://www.tinq.nl/tankstations/wijhe-industrieweg",
       "besparing_liter": 0.02
     },
@@ -240,7 +240,7 @@
       "plaats": "Diepenveen",
       "bron": "live",
       "bron_detail": "tinq",
-      "bron_gecontroleerd_op": "2026-10-28T09:30:45Z",
+      "bron_gecontroleerd_op": "2026-10-29T09:30:44Z",
       "bron_url": "https://www.tinq.nl/tankstations/epse-lochemseweg",
       "besparing_liter": 0.01
     },
@@ -251,7 +251,7 @@
       "plaats": "Diepenveen",
       "bron": "live",
       "bron_detail": "tinq",
-      "bron_gecontroleerd_op": "2026-10-28T08:39:04Z",
+      "bron_gecontroleerd_op": "2026-10-29T08:39:03Z",
       "bron_url": "https://www.tinq.nl/tankstations/deventer-diepenveenseweg",
       "besparing_liter": 0.0
     }
@@ -264,7 +264,7 @@
       "plaats": "Deventer",
       "bron": "live",
       "bron_detail": "tango",
-      "bron_gecontroleerd_op": "2026-10-28T06:50:53Z",
+      "bron_gecontroleerd_op": "2026-10-29T06:50:53Z",
       "bron_url": "https://www.tango.nl/stations/tango-voorst",
       "besparing_liter": 0.13
     },
@@ -275,7 +275,7 @@
       "plaats": "Diepenveen",
       "bron": "live",
       "bron_detail": "tinq",
-      "bron_gecontroleerd_op": "2026-10-28T08:39:04Z",
+      "bron_gecontroleerd_op": "2026-10-29T08:39:03Z",
       "bron_url": "https://www.tinq.nl/tankstations/deventer-diepenveenseweg",
       "besparing_liter": 0.05
     },
@@ -286,7 +286,7 @@
       "plaats": "Diepenveen",
       "bron": "live",
       "bron_detail": "tango",
-      "bron_gecontroleerd_op": "2026-10-28T06:36:03Z",
+      "bron_gecontroleerd_op": "2026-10-29T06:36:03Z",
       "bron_url": "https://www.tango.nl/stations/tango-deventer-piet-van-donkplein",
       "besparing_liter": 0.05
     },
@@ -297,7 +297,7 @@
       "plaats": "Diepenveen",
       "bron": "live",
       "bron_detail": "tango",
-      "bron_gecontroleerd_op": "2026-10-28T06:31:04Z",
+      "bron_gecontroleerd_op": "2026-10-29T06:31:03Z",
       "bron_url": "https://www.tango.nl/stations/tango-deventer-siemelinksweg",
       "besparing_liter": 0.05
     },
@@ -308,12 +308,12 @@
       "plaats": "Diepenveen",
       "bron": "live",
       "bron_detail": "tango",
-      "bron_gecontroleerd_op": "2026-10-28T06:44:23Z",
+      "bron_gecontroleerd_op": "2026-10-29T06:44:23Z",
       "bron_url": "https://www.tango.nl/stations/tango-wilp",
       "besparing_liter": 0.0
     }
   ],
-  "bijgewerkt": "2026-10-28T10:42:24.846633+00:00",
+  "bijgewerkt": "2026-10-29T10:59:20.971032+00:00",
   "_meta": {
     "merk": "FHJ Brasser · Brasco Holding",
     "bron": "https://www.oliehandel.nl/tankstations",
@@ -324,7 +324,7 @@
         "regios_met_data": 5,
         "regios_totaal": 5,
         "bron": "https://www.oliehandel.nl/tankstations",
-        "gecontroleerd_op": "2026-10-28T10:42:24.846633+00:00"
+        "gecontroleerd_op": "2026-10-29T10:59:20.971032+00:00"
       },
       "DIESEL": {
         "status": "live",
@@ -332,7 +332,7 @@
         "regios_met_data": 5,
         "regios_totaal": 5,
         "bron": "https://www.oliehandel.nl/tankstations",
-        "gecontroleerd_op": "2026-10-28T10:42:24.846633+00:00"
+        "gecontroleerd_op": "2026-10-29T10:59:20.971032+00:00"
       },
       "SUPER98": {
         "status": "live",
@@ -340,7 +340,7 @@
         "regios_met_data": 5,
         "regios_totaal": 5,
         "bron": "https://www.oliehandel.nl/tankstations",
-        "gecontroleerd_op": "2026-10-28T10:42:24.846633+00:00"
+        "gecontroleerd_op": "2026-10-29T10:59:20.971032+00:00"
       }
     }
   }
