@@ -3,20 +3,50 @@
     {
       "bron": "AutoWeek",
       "categorie": "Auto",
-      "titel": "Het doek valt voor de belangrijkste Polestar van Nederland: Polestar 2 uit productie",
-      "link": "https://www.autoweek.nl/autonieuws/artikel/het-doek-valt-voor-de-belangrijkste-polestar-van-nederland-polestar-2-uit-productie/"
+      "titel": "11.000 Opels krijgen per direct rijverbod: Stellantis breidt stop-drive maatregel uit",
+      "link": "https://www.autoweek.nl/autonieuws/artikel/11-000-opels-krijgen-per-direct-rijverbod-stellantis-breidt-stop-drive-maatregel-uit/"
     },
     {
       "bron": "Autoblog",
       "categorie": "Auto en mobiliteit",
-      "titel": "Dit zijn de verborgen gebreken en minpunten van de populairste lease-EV's",
-      "link": "https://www.autoblog.nl/nieuws/dit-zijn-de-verborgen-gebreken-en-minpunten-van-de-populairste-lease-ev-s"
+      "titel": "Dit wordt de eerste Alpina onder BMW-vlag, met veelspaaks velgen én V8!",
+      "link": "https://www.autoblog.nl/nieuws/bmw-teast-eerste-alpina-onder-bmw-vlag"
     },
     {
       "bron": "De Stentor Deventer",
       "categorie": "Regio",
-      "titel": "Twee mannen van 21 opgepakt voor rotzooi trappen bij voetbalwedstrijd Cambuur-Go Ahead Eagles",
-      "link": "https://www.destentor.nl/deventer/twee-mannen-van-21-opgepakt-voor-rotzooi-trappen-bij-voetbalwedstrijd-cambuur-go-ahead-eagles~a21da557/"
+      "titel": "Johan (69) uit Deventer vreest niet de drones in Oekraïne, wel de ellende op straat: ‘Probleem alleen maar groter’",
+      "link": "https://www.destentor.nl/deventer/johan-69-uit-deventer-vreest-niet-de-drones-in-oekraine-wel-de-ellende-op-straat-probleem-alleen-maar-groter~a8a64032/"
+    },
+    {
+      "bron": "NCSC",
+      "categorie": "ICT en cybersecurity",
+      "titel": "In het nieuws: cyberaanvallen op koelinstallaties in Europa",
+      "link": "https://www.ncsc.nl/nieuws/in-het-nieuws-cyberaanvallen-op-koelinstallaties-in-europa"
+    },
+    {
+      "bron": "Mediacourant",
+      "categorie": "Entertainment en televisie",
+      "titel": "Donny Roelvink boycot Shownieuws: ‘Ze zijn heel negatief over mij’",
+      "link": "https://www.mediacourant.nl/2026/11/donny-roelvink-boycot-shownieuws-ze-zijn-heel-negatief-over-mij/"
+    },
+    {
+      "bron": "AutoWeek",
+      "categorie": "Auto",
+      "titel": "Dankzij BMW Alpina krijgt de vernieuwde 7-serie wél een V8",
+      "link": "https://www.autoweek.nl/autonieuws/artikel/dankzij-bmw-alpina-krijgt-de-vernieuwde-7-serie-wel-een-v8/"
+    },
+    {
+      "bron": "Autoblog",
+      "categorie": "Auto en mobiliteit",
+      "titel": "Lichtpuntje voor Volkswagen: ID. Polo is Duitse Auto van het Jaar",
+      "link": "https://www.autoblog.nl/nieuws/lichtpuntje-voor-volkswagen-id-polo-is-duitse-auto-van-het-jaar"
+    },
+    {
+      "bron": "De Stentor Deventer",
+      "categorie": "Regio",
+      "titel": "Aanschuiven maar! Deze Deventer restaurants staan in de nieuwe Lekker500",
+      "link": "https://www.destentor.nl/eten-en-drinken-deventer/aanschuiven-maar-deze-deventer-restaurants-staan-in-de-nieuwe-lekker500~a17e9b2a/"
     },
     {
       "bron": "NCSC",
@@ -27,38 +57,8 @@
     {
       "bron": "Mediacourant",
       "categorie": "Entertainment en televisie",
-      "titel": "Pijnlijk: Linda de Mol zwemt in geld, Tjitske Reidinga moet afwassen",
-      "link": "https://www.mediacourant.nl/2026/11/pijnlijk-linda-de-mol-zwemt-in-geld-tjitske-reidinga-moet-afwassen/"
-    },
-    {
-      "bron": "AutoWeek",
-      "categorie": "Auto",
-      "titel": "Ook de nieuwe designbaas van Citroën en DS heeft ervaring bij Renault",
-      "link": "https://www.autoweek.nl/autonieuws/artikel/ook-de-nieuwe-designbaas-van-citroen-en-ds-heeft-ervaring-bij-renault/"
-    },
-    {
-      "bron": "Autoblog",
-      "categorie": "Auto en mobiliteit",
-      "titel": "Waarom je misschien nog even wil wachten met de BMW i3",
-      "link": "https://www.autoblog.nl/nieuws/bmw-heeft-alvast-goed-nieuws-over-de-nieuwe-i4-coupe"
-    },
-    {
-      "bron": "De Stentor Deventer",
-      "categorie": "Regio",
-      "titel": "Dood dochter extra pijnlijk, veroorzaker ongeval reed veel vaker asociaal: ‘Had rijverbod voor altijd moeten hebben’",
-      "link": "https://www.destentor.nl/dalfsen/dood-dochter-extra-pijnlijk-veroorzaker-ongeval-reed-veel-vaker-asociaal-had-rijverbod-voor-altijd-moeten-hebben~afbb6780/"
-    },
-    {
-      "bron": "NCSC",
-      "categorie": "ICT en cybersecurity",
-      "titel": "Kwetsbaarheden in Apple MacOS: update nu",
-      "link": "https://www.ncsc.nl/alerts/kwetsbaarheden-in-apple-macos-update-nu"
-    },
-    {
-      "bron": "Mediacourant",
-      "categorie": "Entertainment en televisie",
-      "titel": "Mark Koster heeft spijt van bashen Victor Vlam: ‘Dit was onaardig’",
-      "link": "https://www.mediacourant.nl/2026/11/mark-koster-heeft-spijt-van-bashen-victor-vlam-dit-was-onaardig/"
+      "titel": "Gooische Vrouwen stelt teleur, maar Linda de Mol blijft uitmelken",
+      "link": "https://www.mediacourant.nl/2026/11/gooische-vrouwen-stelt-teleur-maar-linda-de-mol-blijft-uitmelken/"
     }
   ]
 }
