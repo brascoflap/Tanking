@@ -3,20 +3,50 @@
     {
       "bron": "AutoWeek",
       "categorie": "Auto",
-      "titel": "11.000 Opels krijgen per direct rijverbod: Stellantis breidt stop-drive maatregel uit",
-      "link": "https://www.autoweek.nl/autonieuws/artikel/11-000-opels-krijgen-per-direct-rijverbod-stellantis-breidt-stop-drive-maatregel-uit/"
+      "titel": "Mazda stopt in Nederland niet met innovatieve SkyActiv-X motoren",
+      "link": "https://www.autoweek.nl/autonieuws/artikel/mazda-stopt-in-nederland-niet-met-innovatieve-skyactiv-x-motoren/"
     },
     {
       "bron": "Autoblog",
       "categorie": "Auto en mobiliteit",
-      "titel": "Dit wordt de eerste Alpina onder BMW-vlag, met veelspaaks velgen én V8!",
-      "link": "https://www.autoblog.nl/nieuws/bmw-teast-eerste-alpina-onder-bmw-vlag"
+      "titel": "Er zit een addertje onder het gras bij deze Mercedes CLK GTR",
+      "link": "https://www.autoblog.nl/nieuws/er-zit-een-addertje-onder-het-gras-bij-deze-mercedes-clk-gtr"
     },
     {
       "bron": "De Stentor Deventer",
       "categorie": "Regio",
-      "titel": "Johan (69) uit Deventer vreest niet de drones in Oekraïne, wel de ellende op straat: ‘Probleem alleen maar groter’",
-      "link": "https://www.destentor.nl/deventer/johan-69-uit-deventer-vreest-niet-de-drones-in-oekraine-wel-de-ellende-op-straat-probleem-alleen-maar-groter~a8a64032/"
+      "titel": "Nog even terug naar de 4-0 in Leeuwarden: wie was de minst slechte speler van Go Ahead Eagles?",
+      "link": "https://www.destentor.nl/ga-eagles/nog-even-terug-naar-de-4-0-in-leeuwarden-wie-was-de-minst-slechte-speler-van-go-ahead-eagles~acf1eaf8/"
+    },
+    {
+      "bron": "NCSC",
+      "categorie": "ICT en cybersecurity",
+      "titel": "Zero-day kwetsbaarheid in Ivanti Connect Secure: update direct",
+      "link": "https://www.ncsc.nl/alerts/zero-day-kwetsbaarheid-in-ivanti-connect-secure-update-direct"
+    },
+    {
+      "bron": "Mediacourant",
+      "categorie": "Entertainment en televisie",
+      "titel": "Waarom was ‘foute’ liefje Linda de Mol niet bij Johnny’s première?",
+      "link": "https://www.mediacourant.nl/2026/11/waarom-was-foute-liefje-linda-de-mol-niet-bij-johnnys-premiere/"
+    },
+    {
+      "bron": "AutoWeek",
+      "categorie": "Auto",
+      "titel": "Honda Alpha is nieuwe elektrische SUV met opvallend uiterlijk",
+      "link": "https://www.autoweek.nl/autonieuws/artikel/honda-alpha-is-nieuwe-elektrische-suv-met-opvallend-uiterlijk-en-een-grote-maar/"
+    },
+    {
+      "bron": "Autoblog",
+      "categorie": "Auto en mobiliteit",
+      "titel": "België maakt rijden in een diesel nog aantrekkelijker!",
+      "link": "https://www.autoblog.nl/nieuws/vlaanderen-verlaagt-verkeersbelasting-diesel-goedkoper"
+    },
+    {
+      "bron": "De Stentor Deventer",
+      "categorie": "Regio",
+      "titel": "Aula in Rijssen stap dichterbij: raad legt ruim 600.000 euro opzij voor koop deel pand",
+      "link": "https://www.destentor.nl/rijssen-holten/aula-in-rijssen-stap-dichterbij-raad-legt-ruim-600-000-euro-opzij-voor-koop-deel-pand~a8b5e6f8/"
     },
     {
       "bron": "NCSC",
@@ -27,38 +57,8 @@
     {
       "bron": "Mediacourant",
       "categorie": "Entertainment en televisie",
-      "titel": "Donny Roelvink boycot Shownieuws: ‘Ze zijn heel negatief over mij’",
-      "link": "https://www.mediacourant.nl/2026/11/donny-roelvink-boycot-shownieuws-ze-zijn-heel-negatief-over-mij/"
-    },
-    {
-      "bron": "AutoWeek",
-      "categorie": "Auto",
-      "titel": "Dankzij BMW Alpina krijgt de vernieuwde 7-serie wél een V8",
-      "link": "https://www.autoweek.nl/autonieuws/artikel/dankzij-bmw-alpina-krijgt-de-vernieuwde-7-serie-wel-een-v8/"
-    },
-    {
-      "bron": "Autoblog",
-      "categorie": "Auto en mobiliteit",
-      "titel": "Lichtpuntje voor Volkswagen: ID. Polo is Duitse Auto van het Jaar",
-      "link": "https://www.autoblog.nl/nieuws/lichtpuntje-voor-volkswagen-id-polo-is-duitse-auto-van-het-jaar"
-    },
-    {
-      "bron": "De Stentor Deventer",
-      "categorie": "Regio",
-      "titel": "Aanschuiven maar! Deze Deventer restaurants staan in de nieuwe Lekker500",
-      "link": "https://www.destentor.nl/eten-en-drinken-deventer/aanschuiven-maar-deze-deventer-restaurants-staan-in-de-nieuwe-lekker500~a17e9b2a/"
-    },
-    {
-      "bron": "NCSC",
-      "categorie": "ICT en cybersecurity",
-      "titel": "Kwetsbaarheid in Cisco Secure Firewall ASA en FTD Software",
-      "link": "https://www.ncsc.nl/alerts/kwetsbaarheid-in-cisco-secure-firewall-asa-en-ftd-software"
-    },
-    {
-      "bron": "Mediacourant",
-      "categorie": "Entertainment en televisie",
-      "titel": "Gooische Vrouwen stelt teleur, maar Linda de Mol blijft uitmelken",
-      "link": "https://www.mediacourant.nl/2026/11/gooische-vrouwen-stelt-teleur-maar-linda-de-mol-blijft-uitmelken/"
+      "titel": "Geen Angela, Britt of Catherine: ‘Vandaag Inside erg voorspelbaar’",
+      "link": "https://www.mediacourant.nl/2026/11/geen-angela-britt-of-catherine-vandaag-inside-erg-voorspelbaar/"
     }
   ]
 }
