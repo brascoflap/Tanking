@@ -3,20 +3,50 @@
     {
       "bron": "AutoWeek",
       "categorie": "Auto",
-      "titel": "Deze grote Toyota is vernieuwd en breekt aan één kant met alles wat je van Toyota kent",
-      "link": "https://www.autoweek.nl/autonieuws/artikel/deze-grote-toyota-is-vernieuwd-en-breekt-aan-een-kant-met-alles-wat-je-van-toyota-kent/"
+      "titel": "Dit is waarom deze restomod-911's 2 miljoen dollar kosten en je er ook nog 2 jaar op moet wachten",
+      "link": "https://www.autoweek.nl/autonieuws/artikel/dit-is-waarom-deze-restomod-911s-2-miljoen-dollar-kosten-en-je-er-ook-nog-2-jaar-op-moet-wachten/"
     },
     {
       "bron": "Autoblog",
       "categorie": "Auto en mobiliteit",
-      "titel": "Eindelijk groen licht voor 150 km/u op de snelweg!",
-      "link": "https://www.autoblog.nl/nieuws/eindelijk-groen-licht-voor-150-km-u-op-de-snelweg"
+      "titel": "Zware EV's slopen het wegdek, aldus bouwer van zware EV's",
+      "link": "https://www.autoblog.nl/nieuws/20-procent-zwaardere-ev-s-zorgen-voor-twee-keer-zoveel-schade-aan-wegdek"
     },
     {
       "bron": "De Stentor Deventer",
       "categorie": "Regio",
-      "titel": "Buurman van glazen huis in het bos filmt gasten en strijdt door tot de hoogste rechter, maar die geeft hem ongelijk",
-      "link": "https://www.destentor.nl/lochem/buurman-van-glazen-huis-in-het-bos-filmt-gasten-en-strijdt-door-tot-de-hoogste-rechter-maar-die-geeft-hem-ongelijk~ae140117/"
+      "titel": "Dit is voor André Vis het kantelpunt: spreek je uit tegen extremisten, voordat de democratie breekt",
+      "link": "https://www.destentor.nl/rijssen-holten/dit-is-voor-andre-vis-het-kantelpunt-spreek-je-uit-tegen-extremisten-voordat-de-democratie-breekt~a36e46021/"
+    },
+    {
+      "bron": "NCSC",
+      "categorie": "ICT en cybersecurity",
+      "titel": "Cybersecuritybeeld 2026: AI versnelt en vergroot de dreiging",
+      "link": "https://www.ncsc.nl/nieuws/cybersecuritybeeld-2026-ai-versnelt-en-vergroot-de-dreiging"
+    },
+    {
+      "bron": "Mediacourant",
+      "categorie": "Entertainment en televisie",
+      "titel": "Jan Smit zorgt voor sensatie: tóch toenadering tot zus Monique",
+      "link": "https://www.mediacourant.nl/2026/11/jan-smit-zorgt-voor-sensatie-toch-toenadering-tot-zus-monique/"
+    },
+    {
+      "bron": "AutoWeek",
+      "categorie": "Auto",
+      "titel": "De Mitsubishi Eclipse Cross is nu echt een koopje – Back to basics",
+      "link": "https://www.autoweek.nl/autonieuws/artikel/de-mitsubishi-eclipse-cross-is-nu-echt-een-koopje-back-to-basics/"
+    },
+    {
+      "bron": "Autoblog",
+      "categorie": "Auto en mobiliteit",
+      "titel": "U parkeert op een treinovergang, mag dat?",
+      "link": "https://www.autoblog.nl/video/u-parkeert-op-een-treinovergang-mag-dat"
+    },
+    {
+      "bron": "De Stentor Deventer",
+      "categorie": "Regio",
+      "titel": "In de laatste minuut voor de klap raakte hij zeventien keer zijn telefoon aan",
+      "link": "https://www.destentor.nl/olst-wijhe/in-de-laatste-minuut-voor-de-klap-raakte-hij-zeventien-keer-zijn-telefoon-aan~a1ac1175/"
     },
     {
       "bron": "NCSC",
@@ -27,38 +57,8 @@
     {
       "bron": "Mediacourant",
       "categorie": "Entertainment en televisie",
-      "titel": "Catherine Keyl spuugt op Annemarie van Gaal: ‘Komt nooit goed’",
-      "link": "https://www.mediacourant.nl/2026/11/catherine-keyl-spuugt-op-annemarie-van-gaal-komt-nooit-goed/"
-    },
-    {
-      "bron": "AutoWeek",
-      "categorie": "Auto",
-      "titel": "Op honderden parkeerplekken kun je gratis parkeren omdat het stroomnet vol is",
-      "link": "https://www.autoweek.nl/autonieuws/artikel/op-honderden-parkeerplekken-kun-je-gratis-parkeren-omdat-het-stroomnet-vol-is/"
-    },
-    {
-      "bron": "Autoblog",
-      "categorie": "Auto en mobiliteit",
-      "titel": "Trailer met BMW M2 heeft eigen wil",
-      "link": "https://www.autoblog.nl/video/trailer-met-bmw-m2-heeft-eigen-wil"
-    },
-    {
-      "bron": "De Stentor Deventer",
-      "categorie": "Regio",
-      "titel": "Dit is het meest bijzondere gebouw in Deventer van de afgelopen tijd",
-      "link": "https://www.destentor.nl/deventer/dit-is-het-meest-bijzondere-gebouw-in-deventer-van-de-afgelopen-tijd~a52d86b8/"
-    },
-    {
-      "bron": "NCSC",
-      "categorie": "ICT en cybersecurity",
-      "titel": "Kwetsbaarheden in Google Android en Samsung Mobile",
-      "link": "https://www.ncsc.nl/alerts/kwetsbaarheden-in-google-android-en-samsung-mobile"
-    },
-    {
-      "bron": "Mediacourant",
-      "categorie": "Entertainment en televisie",
-      "titel": "Marijke Helwegen wil SBS 6-trio vormen met Raymond en Thomas",
-      "link": "https://www.mediacourant.nl/2026/11/marijke-helwegen-wil-sbs-6-trio-vormen-met-raymond-en-thomas/"
+      "titel": "Hélène Hendriks tekent na half jaar alsnog megalang Talpa-contract",
+      "link": "https://www.mediacourant.nl/2026/11/helene-hendriks-tekent-na-half-jaar-alsnog-megalang-talpa-contract/"
     }
   ]
 }
