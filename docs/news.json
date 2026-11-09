@@ -3,20 +3,50 @@
     {
       "bron": "AutoWeek",
       "categorie": "Auto",
-      "titel": "Omdat de echte Lancia Gamma 50 jaar bestaat staan we graag nog eens stil bij het origineel",
-      "link": "https://www.autoweek.nl/autonieuws/artikel/omdat-de-echte-lancia-gamma-50-jaar-bestaat-staan-we-graag-nog-eens-stil-bij-het-origineel/"
+      "titel": "‘Zero Emission’ zonder EV: misschien kan het toch in 2035",
+      "link": "https://www.autoweek.nl/autonieuws/artikel/zero-emission-zonder-ev-misschien-kan-het-toch-in-2035/"
     },
     {
       "bron": "Autoblog",
       "categorie": "Auto en mobiliteit",
-      "titel": "VW verkort de laadtijden van jouw EV zonder dat je er iets voor hoeft te doen",
-      "link": "https://www.autoblog.nl/nieuws/vw-verkort-de-laadtijden-van-jouw-ev-zonder-dat-je-er-iets-voor-hoeft-te-doen"
+      "titel": "Brabus doet de hybride 911 Turbo en het kon beter",
+      "link": "https://www.autoblog.nl/nieuws/brabus-800-hybride-porsche-911-turbo-s-cabriolet-met-800-pk"
     },
     {
       "bron": "De Stentor Deventer",
       "categorie": "Regio",
-      "titel": "Even was het de vraag of hij wel kon spelen, maar opnieuw maakt Søren Tengstedt het verschil",
-      "link": "https://www.destentor.nl/ga-eagles/even-was-het-de-vraag-of-hij-wel-kon-spelen-maar-opnieuw-maakt-soren-tengstedt-het-verschil~ab671c64/"
+      "titel": "Geen treinen tussen Zwolle en Deventer: truck rijdt tegen brug",
+      "link": "https://www.destentor.nl/deventer/geen-treinen-tussen-zwolle-en-deventer-truck-rijdt-tegen-brug~a211328b/"
+    },
+    {
+      "bron": "NCSC",
+      "categorie": "ICT en cybersecurity",
+      "titel": "Kwetsbaarheden in SonicOS van SonicWall met actief misbruik: update nu",
+      "link": "https://www.ncsc.nl/alerts/kwetsbaarheden-in-sonicos-van-sonicwall-met-actief-misbruik-update-nu"
+    },
+    {
+      "bron": "Mediacourant",
+      "categorie": "Entertainment en televisie",
+      "titel": "Catherine Keyl in paniek op Sri Lanka: ‘Geen puntenslijper te koop’",
+      "link": "https://www.mediacourant.nl/2026/11/catherine-keyl-in-paniek-op-sri-lanka-geen-puntenslijper-te-koop/"
+    },
+    {
+      "bron": "AutoWeek",
+      "categorie": "Auto",
+      "titel": "Staking wegenwacht: laat je vroege Laguna II vandaag maar even staan",
+      "link": "https://www.autoweek.nl/autonieuws/artikel/staking-wegenwacht-laat-je-vroege-laguna-ii-vandaag-maar-even-staan/"
+    },
+    {
+      "bron": "Autoblog",
+      "categorie": "Auto en mobiliteit",
+      "titel": "Jeremy Clarkson bestelde deze Ferrari nieuw, nu kan jij 'm kopen",
+      "link": "https://www.autoblog.nl/nieuws/ferrari-f355-gts-van-jeremy-clarkson-te-koop"
+    },
+    {
+      "bron": "De Stentor Deventer",
+      "categorie": "Regio",
+      "titel": "Heb jij Coco, Mauw mauw of Bertus gezien? Deze drie huisdieren worden in Deventer vermist",
+      "link": "https://www.destentor.nl/deventer/heb-jij-coco-mauw-mauw-of-bertus-gezien-deze-drie-huisdieren-worden-in-deventer-vermist~a082ebd4/"
     },
     {
       "bron": "NCSC",
@@ -27,38 +57,8 @@
     {
       "bron": "Mediacourant",
       "categorie": "Entertainment en televisie",
-      "titel": "Shownieuws blunderde met geblindeerde busjes bij René Froger",
-      "link": "https://www.mediacourant.nl/2026/11/shownieuws-blunderde-met-geblindeerde-busjes-bij-rene-froger/"
-    },
-    {
-      "bron": "AutoWeek",
-      "categorie": "Auto",
-      "titel": "Jefs eerste auto moest en zou een Mercedes worden, in 1985 kocht hij deze 280 SE voor 1.900 gulden",
-      "link": "https://www.autoweek.nl/autonieuws/artikel/jefs-eerste-auto-moest-en-zou-een-mercedes-worden-in-85-kocht-hij-deze-s-klasse-uit-1970-voor-1-900-gulden/"
-    },
-    {
-      "bron": "Autoblog",
-      "categorie": "Auto en mobiliteit",
-      "titel": "Motorrijder probeert een wheelie en faalt",
-      "link": "https://www.autoblog.nl/video/motorrijder-probeert-een-wheelie-en-faalt"
-    },
-    {
-      "bron": "De Stentor Deventer",
-      "categorie": "Regio",
-      "titel": "Midden in de nacht bonkt de berggids op Dewi’s (46) deur: ‘Run for your life!’",
-      "link": "https://www.destentor.nl/lochem/midden-in-de-nacht-bonkt-de-berggids-op-dewis-46-deur-run-for-your-life~a7f65e75/"
-    },
-    {
-      "bron": "NCSC",
-      "categorie": "ICT en cybersecurity",
-      "titel": "Kwetsbaarheid in Microsoft Windows Paint met risico op misbruik",
-      "link": "https://www.ncsc.nl/alerts/kwetsbaarheid-in-microsoft-windows-paint-met-risico-op-misbruik"
-    },
-    {
-      "bron": "Mediacourant",
-      "categorie": "Entertainment en televisie",
-      "titel": "‘Laat Marco Borsato weer zingen, maar hou hem weg bij je dochter’",
-      "link": "https://www.mediacourant.nl/2026/11/laat-marco-borsato-weer-zingen-maar-hou-hem-weg-bij-je-dochter/"
+      "titel": "Rachel Hazes geeft Dré en Rox trap na, verpatst al papa’s muziek",
+      "link": "https://www.mediacourant.nl/2026/11/rachel-hazes-geeft-dre-en-rox-trap-na-verpatst-al-papas-muziek/"
     }
   ]
 }
