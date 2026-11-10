@@ -8,68 +8,57 @@
     {
       "naam": "TinQ",
       "adres": "Rijksstraatweg 63, 7391MH Twello",
-      "prijs": 2.069,
+      "prijs": 2.059,
       "plaats": "Diepenveen",
       "bron": "live",
       "bron_detail": "tinq",
-      "bron_gecontroleerd_op": "2026-11-09T09:07:13Z",
+      "bron_gecontroleerd_op": "2026-11-10T09:07:13Z",
       "bron_url": "https://www.tinq.nl/tankstations/twello-rijksstraatweg",
-      "besparing_liter": 0.15
-    },
-    {
-      "naam": "Tango Deventer",
-      "adres": "Siemelinksweg 25, 7421ZZ Deventer",
-      "prijs": 2.109,
-      "plaats": "Diepenveen",
-      "bron": "live",
-      "bron_detail": "tango",
-      "bron_gecontroleerd_op": "2026-11-09T06:31:03Z",
-      "bron_url": "https://www.tango.nl/stations/tango-deventer-siemelinksweg",
-      "besparing_liter": 0.11
-    },
-    {
-      "naam": "Tango Holten",
-      "adres": "Handelsweg 2, 7451PJ Holten",
-      "prijs": 2.109,
-      "plaats": "Bathmen",
-      "bron": "live",
-      "bron_detail": "tango",
-      "bron_gecontroleerd_op": "2026-11-09T06:46:23Z",
-      "bron_url": "https://www.tango.nl/stations/tango-holten",
-      "besparing_liter": 0.11
-    },
-    {
-      "naam": "Tango Deventer",
-      "adres": "Piet van Donkplein 3, 7422LW Deventer",
-      "prijs": 2.119,
-      "plaats": "Diepenveen",
-      "bron": "live",
-      "bron_detail": "tango",
-      "bron_gecontroleerd_op": "2026-11-09T06:36:03Z",
-      "bron_url": "https://www.tango.nl/stations/tango-deventer-piet-van-donkplein",
-      "besparing_liter": 0.1
+      "besparing_liter": 0.19
     },
     {
       "naam": "TinQ",
       "adres": "Industrieweg 1d, 8131VZ Wijhe",
-      "prijs": 2.119,
+      "prijs": 2.099,
       "plaats": "Diepenveen",
       "bron": "live",
       "bron_detail": "tinq",
-      "bron_gecontroleerd_op": "2026-11-09T09:12:44Z",
+      "bron_gecontroleerd_op": "2026-11-10T09:12:42Z",
       "bron_url": "https://www.tinq.nl/tankstations/wijhe-industrieweg",
-      "besparing_liter": 0.1
+      "besparing_liter": 0.15
     },
     {
       "naam": "TinQ",
       "adres": "Diepenveenseweg 1a, Deventer",
+      "prijs": 2.109,
+      "plaats": "Diepenveen",
+      "bron": "live",
+      "bron_detail": "tinq",
+      "bron_gecontroleerd_op": "2026-11-10T08:39:03Z",
+      "bron_url": "https://www.tinq.nl/tankstations/deventer-diepenveenseweg",
+      "besparing_liter": 0.14
+    },
+    {
+      "naam": "TinQ",
+      "adres": "Lochemseweg 4, 7214RH Epse",
       "prijs": 2.129,
       "plaats": "Diepenveen",
       "bron": "live",
       "bron_detail": "tinq",
-      "bron_gecontroleerd_op": "2026-11-09T08:39:04Z",
-      "bron_url": "https://www.tinq.nl/tankstations/deventer-diepenveenseweg",
-      "besparing_liter": 0.09
+      "bron_gecontroleerd_op": "2026-11-10T09:30:43Z",
+      "bron_url": "https://www.tinq.nl/tankstations/epse-lochemseweg",
+      "besparing_liter": 0.12
+    },
+    {
+      "naam": "Tango Deventer",
+      "adres": "Siemelinksweg 25, 7421ZZ Deventer",
+      "prijs": 2.139,
+      "plaats": "Diepenveen",
+      "bron": "live",
+      "bron_detail": "tango",
+      "bron_gecontroleerd_op": "2026-11-10T06:31:04Z",
+      "bron_url": "https://www.tango.nl/stations/tango-deventer-siemelinksweg",
+      "besparing_liter": 0.11
     },
     {
       "naam": "Tango Voorst",
@@ -78,29 +67,40 @@
       "plaats": "Deventer",
       "bron": "live",
       "bron_detail": "tango",
-      "bron_gecontroleerd_op": "2026-11-09T06:50:54Z",
+      "bron_gecontroleerd_op": "2026-11-10T06:50:53Z",
       "bron_url": "https://www.tango.nl/stations/tango-voorst",
-      "besparing_liter": 0.08
+      "besparing_liter": 0.11
     },
     {
-      "naam": "TinQ",
-      "adres": "Lochemseweg 4, 7214RH Epse",
+      "naam": "Tango Holten",
+      "adres": "Handelsweg 2, 7451PJ Holten",
+      "prijs": 2.139,
+      "plaats": "Bathmen",
+      "bron": "live",
+      "bron_detail": "tango",
+      "bron_gecontroleerd_op": "2026-11-10T06:46:23Z",
+      "bron_url": "https://www.tango.nl/stations/tango-holten",
+      "besparing_liter": 0.11
+    },
+    {
+      "naam": "Tango Deventer",
+      "adres": "Piet van Donkplein 3, 7422LW Deventer",
       "prijs": 2.149,
       "plaats": "Diepenveen",
       "bron": "live",
-      "bron_detail": "tinq",
-      "bron_gecontroleerd_op": "2026-11-09T09:30:45Z",
-      "bron_url": "https://www.tinq.nl/tankstations/epse-lochemseweg",
-      "besparing_liter": 0.07
+      "bron_detail": "tango",
+      "bron_gecontroleerd_op": "2026-11-10T06:36:03Z",
+      "bron_url": "https://www.tango.nl/stations/tango-deventer-piet-van-donkplein",
+      "besparing_liter": 0.1
     },
     {
       "naam": "Tango Wilp",
       "adres": "Rijksweg A1 De Paal 931, 7384DZ Wilp",
-      "prijs": 2.219,
+      "prijs": 2.249,
       "plaats": "Diepenveen",
       "bron": "live",
       "bron_detail": "tango",
-      "bron_gecontroleerd_op": "2026-11-09T06:44:24Z",
+      "bron_gecontroleerd_op": "2026-11-10T06:44:24Z",
       "bron_url": "https://www.tango.nl/stations/tango-wilp",
       "besparing_liter": 0.0
     }
@@ -214,44 +214,44 @@
     {
       "naam": "TinQ",
       "adres": "Rijksstraatweg 63, 7391MH Twello",
-      "prijs": 2.197,
+      "prijs": 2.177,
       "plaats": "Diepenveen",
       "bron": "live",
       "bron_detail": "tinq",
-      "bron_gecontroleerd_op": "2026-11-09T09:07:13Z",
+      "bron_gecontroleerd_op": "2026-11-10T09:07:13Z",
       "bron_url": "https://www.tinq.nl/tankstations/twello-rijksstraatweg",
-      "besparing_liter": 0.122
+      "besparing_liter": 0.112
     },
     {
       "naam": "TinQ",
       "adres": "Industrieweg 1d, 8131VZ Wijhe",
-      "prijs": 2.299,
+      "prijs": 2.269,
       "plaats": "Diepenveen",
       "bron": "live",
       "bron_detail": "tinq",
-      "bron_gecontroleerd_op": "2026-11-09T09:12:44Z",
+      "bron_gecontroleerd_op": "2026-11-10T09:12:42Z",
       "bron_url": "https://www.tinq.nl/tankstations/wijhe-industrieweg",
       "besparing_liter": 0.02
     },
     {
       "naam": "TinQ",
       "adres": "Diepenveenseweg 1a, Deventer",
-      "prijs": 2.319,
+      "prijs": 2.289,
       "plaats": "Diepenveen",
       "bron": "live",
       "bron_detail": "tinq",
-      "bron_gecontroleerd_op": "2026-11-09T08:39:04Z",
+      "bron_gecontroleerd_op": "2026-11-10T08:39:03Z",
       "bron_url": "https://www.tinq.nl/tankstations/deventer-diepenveenseweg",
       "besparing_liter": 0.0
     },
     {
       "naam": "TinQ",
       "adres": "Lochemseweg 4, 7214RH Epse",
-      "prijs": 2.319,
+      "prijs": 2.289,
       "plaats": "Diepenveen",
       "bron": "live",
       "bron_detail": "tinq",
-      "bron_gecontroleerd_op": "2026-11-09T09:30:45Z",
+      "bron_gecontroleerd_op": "2026-11-10T09:30:43Z",
       "bron_url": "https://www.tinq.nl/tankstations/epse-lochemseweg",
       "besparing_liter": 0.0
     }
@@ -260,60 +260,60 @@
     {
       "naam": "Tango Voorst",
       "adres": "Rijksstraatweg 147, 7383AN Voorst",
-      "prijs": 2.349,
+      "prijs": 2.369,
       "plaats": "Deventer",
       "bron": "live",
       "bron_detail": "tango",
-      "bron_gecontroleerd_op": "2026-11-09T06:50:54Z",
+      "bron_gecontroleerd_op": "2026-11-10T06:50:53Z",
       "bron_url": "https://www.tango.nl/stations/tango-voorst",
       "besparing_liter": 0.13
     },
     {
       "naam": "Tango Deventer",
       "adres": "Piet van Donkplein 3, 7422LW Deventer",
-      "prijs": 2.399,
+      "prijs": 2.419,
       "plaats": "Diepenveen",
       "bron": "live",
       "bron_detail": "tango",
-      "bron_gecontroleerd_op": "2026-11-09T06:36:03Z",
+      "bron_gecontroleerd_op": "2026-11-10T06:36:03Z",
       "bron_url": "https://www.tango.nl/stations/tango-deventer-piet-van-donkplein",
       "besparing_liter": 0.08
     },
     {
       "naam": "Tango Deventer",
       "adres": "Siemelinksweg 25, 7421ZZ Deventer",
-      "prijs": 2.399,
+      "prijs": 2.419,
       "plaats": "Diepenveen",
       "bron": "live",
       "bron_detail": "tango",
-      "bron_gecontroleerd_op": "2026-11-09T06:31:03Z",
+      "bron_gecontroleerd_op": "2026-11-10T06:31:04Z",
       "bron_url": "https://www.tango.nl/stations/tango-deventer-siemelinksweg",
       "besparing_liter": 0.08
     },
     {
       "naam": "TinQ",
       "adres": "Diepenveenseweg 1a, Deventer",
-      "prijs": 2.459,
+      "prijs": 2.439,
       "plaats": "Diepenveen",
       "bron": "live",
       "bron_detail": "tinq",
-      "bron_gecontroleerd_op": "2026-11-09T08:39:04Z",
+      "bron_gecontroleerd_op": "2026-11-10T08:39:03Z",
       "bron_url": "https://www.tinq.nl/tankstations/deventer-diepenveenseweg",
-      "besparing_liter": 0.02
+      "besparing_liter": 0.06
     },
     {
       "naam": "Tango Wilp",
       "adres": "Rijksweg A1 De Paal 931, 7384DZ Wilp",
-      "prijs": 2.479,
+      "prijs": 2.499,
       "plaats": "Diepenveen",
       "bron": "live",
       "bron_detail": "tango",
-      "bron_gecontroleerd_op": "2026-11-09T06:44:24Z",
+      "bron_gecontroleerd_op": "2026-11-10T06:44:24Z",
       "bron_url": "https://www.tango.nl/stations/tango-wilp",
       "besparing_liter": 0.0
     }
   ],
-  "bijgewerkt": "2026-11-09T13:08:32.702011+00:00",
+  "bijgewerkt": "2026-11-10T12:50:00.196134+00:00",
   "_meta": {
     "merk": "FHJ Brasser · Brasco Holding",
     "bron": "https://www.oliehandel.nl/tankstations",
@@ -324,7 +324,7 @@
         "regios_met_data": 5,
         "regios_totaal": 5,
         "bron": "https://www.oliehandel.nl/tankstations",
-        "gecontroleerd_op": "2026-11-09T13:08:32.702011+00:00"
+        "gecontroleerd_op": "2026-11-10T12:50:00.196134+00:00"
       },
       "DIESEL": {
         "status": "live",
@@ -332,7 +332,7 @@
         "regios_met_data": 5,
         "regios_totaal": 5,
         "bron": "https://www.oliehandel.nl/tankstations",
-        "gecontroleerd_op": "2026-11-09T13:08:32.702011+00:00"
+        "gecontroleerd_op": "2026-11-10T12:50:00.196134+00:00"
       },
       "SUPER98": {
         "status": "live",
@@ -340,7 +340,7 @@
         "regios_met_data": 5,
         "regios_totaal": 5,
         "bron": "https://www.oliehandel.nl/tankstations",
-        "gecontroleerd_op": "2026-11-09T13:08:32.702011+00:00"
+        "gecontroleerd_op": "2026-11-10T12:50:00.196134+00:00"
       }
     }
   }
