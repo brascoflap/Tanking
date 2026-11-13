@@ -3,50 +3,62 @@
     {
       "bron": "AutoWeek",
       "categorie": "Auto",
-      "titel": "Wereldwijde verkoop van EV’s en PHEV’s groeit weer, ondanks flinke min in China",
-      "link": "https://www.autoweek.nl/autonieuws/artikel/wereldwijde-verkoop-van-evs-en-phevs-groeit-weer-ondanks-flinke-min-in-china/"
+      "titel": "Toyota dacht ooit aan een superzuinig klein dieseltje dat zelfs de Lupo 3L moest verslaan: 1 op 37!",
+      "link": "https://www.autoweek.nl/autonieuws/artikel/toyota-dacht-ooit-aan-een-superzuinig-klein-dieseltje-dat-zelfs-de-lupo-3l-moest-verslaan-1-op-37/"
     },
     {
       "bron": "Autoblog",
       "categorie": "Auto en mobiliteit",
-      "titel": "Ferrari 499P Modificata breekt record op de veiling",
-      "link": "https://www.autoblog.nl/nieuws/ferrari-499p-modificata-breekt-record-op-de-veiling"
+      "titel": "Terwijl Land Rover rechtszaak uitvecht komen Chinezen met nóg ergere kloon",
+      "link": "https://www.autoblog.nl/nieuws/terwijl-land-rover-rechtszaak-uitvecht-komen-chinezen-met-nog-ergere-kloon"
     },
     {
       "bron": "De Stentor Deventer",
       "categorie": "Regio",
-      "titel": "Popband Gruppo Sportivo neemt na 50 jaar afscheid: ‘Puntige songs met humor en zelfreflectie’",
-      "link": "https://www.destentor.nl/enschede/popband-gruppo-sportivo-neemt-na-50-jaar-afscheid-puntige-songs-met-humor-en-zelfreflectie~af061e01/"
+      "titel": "Styled by Jess verlaat na 10 jaar de Broederenstraat: ‘We hadden al jaren ruimtegebrek’",
+      "link": "https://www.destentor.nl/deventer/styled-by-jess-verlaat-na-10-jaar-de-broederenstraat-we-hadden-al-jaren-ruimtegebrek~af30d8c3/"
+    },
+    {
+      "bron": "NCSC",
+      "categorie": "ICT en cybersecurity",
+      "titel": "Kwetsbaarheid in Apache HTTP Server-modules mod_http2 en mod_h2",
+      "link": "https://www.ncsc.nl/alerts/kwetsbaarheid-in-apache-http-server-modhttp2-en-modh2"
     },
     {
       "bron": "Mediacourant",
       "categorie": "Entertainment en televisie",
-      "titel": "Victor Vlam opent aanval op Angela de Jong: ‘Echt niks te melden!’",
-      "link": "https://www.mediacourant.nl/2026/11/victor-vlam-opent-aanval-op-angela-de-jong-echt-niks-te-melden/"
+      "titel": "Youp voor twee minuutjes naar Eva: ‘Dan mis je de spotlights écht’",
+      "link": "https://www.mediacourant.nl/2026/11/youp-voor-twee-minuutjes-naar-eva-dan-mis-je-de-spotlights-echt/"
     },
     {
       "bron": "AutoWeek",
       "categorie": "Auto",
-      "titel": "Dit is waarom de BMW i3 40xDrive op papier minder zuinig is dan de ‘50’",
-      "link": "https://www.autoweek.nl/autonieuws/artikel/dit-is-waarom-de-bmw-i3-40xdrive-op-papier-minder-zuinig-is-dan-de-50/"
+      "titel": "Youngtimerregeling verder bijgeschaafd: redding voor auto’s uit 2008 en 2009",
+      "link": "https://www.autoweek.nl/autonieuws/artikel/youngtimerregeling-verder-bijgeschaafd-redding-voor-autos-uit-2008-en-2009/"
     },
     {
       "bron": "Autoblog",
       "categorie": "Auto en mobiliteit",
-      "titel": "Elon Musk krijgt een sneertje uit onverwachte hoek",
-      "link": "https://www.autoblog.nl/nieuws/porsche-baas-laat-weten-wat-hij-van-de-tesla-roadster-show-vindt"
+      "titel": "Voor 25 euro heb je een schermloze GPS in je auto",
+      "link": "https://www.autoblog.nl/nieuws/voor-25-euro-heb-je-een-schermloze-gps-in-je-auto"
     },
     {
       "bron": "De Stentor Deventer",
       "categorie": "Regio",
-      "titel": "Hoogste houten woontoren van Nederland komt in Deventer",
-      "link": "https://www.destentor.nl/deventer/hoogste-houten-woontoren-van-nederland-komt-in-deventer~a69ca8f4/"
+      "titel": "Auto brandt uit langs A1 bij Bathmen, twee rijstroken dicht",
+      "link": "https://www.destentor.nl/deventer/auto-brandt-uit-langs-a1-bij-bathmen-twee-rijstroken-dicht~aa71e729/"
+    },
+    {
+      "bron": "NCSC",
+      "categorie": "ICT en cybersecurity",
+      "titel": "Kwetsbaarheden in Barracuda Email Security Gateway en andere producten: update nu",
+      "link": "https://www.ncsc.nl/alerts/kwetsbaarheden-in-barracuda-email-security-gateway-en-andere-producten-update-nu"
     },
     {
       "bron": "Mediacourant",
       "categorie": "Entertainment en televisie",
-      "titel": "Hélène Hendriks reageert op aanval Johan Derksen: ‘Koffietijd hier!’",
-      "link": "https://www.mediacourant.nl/2026/11/helene-hendriks-reageert-op-aanval-johan-derksen-koffietijd-hier/"
+      "titel": "Arjen Lubach briest aan tafel bij Renze: ‘Tina Nijkamp frustreert mij’",
+      "link": "https://www.mediacourant.nl/2026/11/arjen-lubach-briest-aan-tafel-bij-renze-tina-nijkamp-frustreert-mij/"
     }
   ]
 }
