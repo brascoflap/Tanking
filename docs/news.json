@@ -3,50 +3,62 @@
     {
       "bron": "AutoWeek",
       "categorie": "Auto",
-      "titel": "Waymo haalt zelfrijdende taxi van Amerikaanse snelweg",
-      "link": "https://www.autoweek.nl/autonieuws/artikel/waymo-haalt-zelfrijdende-taxi-van-amerikaanse-snelweg/"
+      "titel": "Meer ongevallen in de avond dan in andere dagdelen: vrijdagavond springt eruit",
+      "link": "https://www.autoweek.nl/autonieuws/artikel/meer-ongevallen-in-de-avond-dan-andere-dagdelen-vrijdagavond-springt-eruit/"
     },
     {
       "bron": "Autoblog",
       "categorie": "Auto en mobiliteit",
-      "titel": "Het doek dreigt te vallen voor een bekend automerk",
-      "link": "https://www.autoblog.nl/nieuws/het-doek-dreigt-te-vallen-voor-een-bekend-automerk"
+      "titel": "Tesla gaat cruciaal onderdeel uit Model Y verwijderen",
+      "link": "https://www.autoblog.nl/nieuws/tesla-gaat-cruciaal-onderdeel-uit-model-y-verwijderen"
+    },
+    {
+      "bron": "De Stentor Deventer",
+      "categorie": "Regio",
+      "titel": "Deze nieuwe woontoren in Deventer is  nu echt klaar (en er komen nog meer woningen rond het centrum)",
+      "link": "https://www.destentor.nl/deventer/deze-nieuwe-woontoren-in-deventer-is-nu-echt-klaar-en-er-komen-nog-meer-woningen-rond-het-centrum~a968aae7/"
     },
     {
       "bron": "NCSC",
       "categorie": "ICT en cybersecurity",
-      "titel": "Webinar terugkijken: Recente aanvallen met AI - Lessons learned en wat te doen",
-      "link": "https://www.ncsc.nl/nieuws/webinar-terugkijken-recente-aanvallen-met-ai-lessons-learned-en-wat-te-doen"
+      "titel": "Kwetsbaarheden in Drupal core: update direct",
+      "link": "https://www.ncsc.nl/alerts/kwetsbaarheden-in-drupal-core-update-direct"
     },
     {
       "bron": "Mediacourant",
       "categorie": "Entertainment en televisie",
-      "titel": "Natasja Froger wekt ergernis met rol in soap: ‘Weg met je pannetje!’",
-      "link": "https://www.mediacourant.nl/2026/11/natasja-froger-wekt-ergernis-met-rol-in-soap-weg-met-je-pannetje/"
+      "titel": "‘Gordon heeft het in zich om de nieuwe Robert Jensen te worden’",
+      "link": "https://www.mediacourant.nl/2026/11/gordon-heeft-het-in-zich-om-de-nieuwe-robert-jensen-te-worden/"
     },
     {
       "bron": "AutoWeek",
       "categorie": "Auto",
-      "titel": "De Bentley Torcal heeft hetzelfde probleem als de ID Polo",
-      "link": "https://www.autoweek.nl/autonieuws/artikel/de-bentley-torcal-heeft-hetzelfde-probleem-als-de-id-polo/"
+      "titel": "Dit is waarom er op de achterbumper van de Jeep Compass een 'S' staat",
+      "link": "https://www.autoweek.nl/autonieuws/artikel/wat-doet-die-s-op-de-achterbumper-van-een-jeep-compass/"
     },
     {
       "bron": "Autoblog",
       "categorie": "Auto en mobiliteit",
-      "titel": "Deze speciale Ford eert per ongeluk een grote blunder",
-      "link": "https://www.autoblog.nl/nieuws/oeps-speciale-mustang-eert-per-ongeluk-ford-faillisement"
+      "titel": "Bentley gebruikt 's werelds meest gehate materiaal in de speciale Torcal FRGMT",
+      "link": "https://www.autoblog.nl/nieuws/er-gaat-iets-vreemds-schuil-in-deze-gemlimiteerde-zwarte-bentley-torcal-frgmt"
+    },
+    {
+      "bron": "De Stentor Deventer",
+      "categorie": "Regio",
+      "titel": "Verkeer tussen Deventer en Zwolle in de knel: niet alleen dijk ligt er uit, ook N35 gaat ’s nachts dicht",
+      "link": "https://www.destentor.nl/olst-wijhe/verkeer-tussen-deventer-en-zwolle-in-de-knel-niet-alleen-dijk-ligt-er-uit-ook-n35-gaat-s-nachts-dicht~adb2f807/"
     },
     {
       "bron": "NCSC",
       "categorie": "ICT en cybersecurity",
-      "titel": "‘Goede cyberhygiëne is voor elke ondernemer belangrijk’",
-      "link": "https://www.ncsc.nl/interviews/goede-cyberhygiene-is-voor-elke-ondernemer-belangrijk"
+      "titel": "Kwetsbaarheden in F5 Networks NGINX: update nu",
+      "link": "https://www.ncsc.nl/alerts/kwetsbaarheden-in-f5-networks-nginx-update-nu"
     },
     {
       "bron": "Mediacourant",
       "categorie": "Entertainment en televisie",
-      "titel": "‘Linda de Mol, soms moet je ook weten wanneer je moet stoppen!’",
-      "link": "https://www.mediacourant.nl/2026/11/linda-de-mol-soms-moet-je-ook-weten-wanneer-je-moet-stoppen/"
+      "titel": "Wilfred Genee vindt dat Wierd Duk te ver gaat: ‘Ga zelf naar Gaza!’",
+      "link": "https://www.mediacourant.nl/2026/11/wilfred-genee-vindt-dat-wierd-duk-te-ver-gaat-ga-zelf-naar-gaza/"
     }
   ]
 }
