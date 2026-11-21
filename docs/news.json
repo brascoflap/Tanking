@@ -3,20 +3,50 @@
     {
       "bron": "AutoWeek",
       "categorie": "Auto",
-      "titel": "Ga je bij een tweedehands hybride SUV voor de verleidelijke Mazda CX-5 of toch voor de alternatieven",
-      "link": "https://www.autoweek.nl/autonieuws/artikel/ga-je-bij-een-tweedehands-hybride-suv-voor-de-verleidelijke-mazda-cx-5-of-toch-voor-de-alternatieven-die-we-geven/"
+      "titel": "Het vernieuwende zag je er bij de eerste Mercedes C-klasse in eerste instantie niet aan af",
+      "link": "https://www.autoweek.nl/autonieuws/artikel/het-vernieuwende-zag-je-er-bij-de-eerste-mercedes-c-klasse-in-eerste-instantie-niet-aan-af/"
     },
     {
       "bron": "Autoblog",
       "categorie": "Auto en mobiliteit",
-      "titel": "Nieuwe elektrische SUV van Opel wordt voor de helft Chinees",
-      "link": "https://www.autoblog.nl/nieuws/nieuwe-elektrische-suv-van-opel-krijgt-chinese-genen"
+      "titel": "Zo wordt de prijs aan een EV-laadpaal bepaald",
+      "link": "https://www.autoblog.nl/nieuws/zo-wordt-de-prijs-aan-een-ev-laadpaal-bepaald"
     },
     {
       "bron": "De Stentor Deventer",
       "categorie": "Regio",
-      "titel": "Jan (60) voelt bij zijn winnende dames hetzelfde als op zijn trouwdag: ‘Daar krijg ik kippenvel van’",
-      "link": "https://www.destentor.nl/deventer/jan-60-voelt-bij-zijn-winnende-dames-hetzelfde-als-op-zijn-trouwdag-daar-krijg-ik-kippenvel-van~a184c7a6/"
+      "titel": "De Deventer favorieten van Anna: ‘Hier voel ik mij thuis’",
+      "link": "https://www.destentor.nl/deventer/de-deventer-favorieten-van-anna-hier-voel-ik-mij-thuis~a5397fce/"
+    },
+    {
+      "bron": "NCSC",
+      "categorie": "ICT en cybersecurity",
+      "titel": "Kwetsbaarheid in IBM Aspera Faspex 5.0.x met hoog risico: update nu",
+      "link": "https://www.ncsc.nl/alerts/kwetsbaarheid-in-ibm-aspera-faspex-50x-met-hoog-risico-update-nu"
+    },
+    {
+      "bron": "Mediacourant",
+      "categorie": "Entertainment en televisie",
+      "titel": "Ook Montana Meiland gaat volledig van RTL-geld leven: ‘Zien wel’",
+      "link": "https://www.mediacourant.nl/2026/11/ook-montana-meiland-gaat-volledig-van-rtl-geld-leven-zien-wel/"
+    },
+    {
+      "bron": "AutoWeek",
+      "categorie": "Auto",
+      "titel": "Dit waren supercars in de sixties, en die vragen om spierballen",
+      "link": "https://www.autoweek.nl/autotests/artikel/dit-waren-supercars-in-de-sixties-en-die-vragen-om-spierballen/"
+    },
+    {
+      "bron": "Autoblog",
+      "categorie": "Auto en mobiliteit",
+      "titel": "Verstappen heeft schijt aan FIA: “Ik zou liever thuisblijven”",
+      "link": "https://www.autoblog.nl/nieuws/verstappen-over-races-in-het-midden-oosten-ik-zou-liever-thuisblijven"
+    },
+    {
+      "bron": "De Stentor Deventer",
+      "categorie": "Regio",
+      "titel": "IJskoude Winterfair in Rijssen trekt veel bezoekers",
+      "link": "https://www.destentor.nl/rijssen-holten/ijskoude-winterfair-in-rijssen-trekt-veel-bezoekers~a199c76f/"
     },
     {
       "bron": "NCSC",
@@ -27,38 +57,8 @@
     {
       "bron": "Mediacourant",
       "categorie": "Entertainment en televisie",
-      "titel": "Vlaamse polyamorist Ruben Van Gucht niet meer welkom bij VI",
-      "link": "https://www.mediacourant.nl/2026/11/vlaamse-polyamorist-ruben-van-gucht-niet-meer-welkom-bij-vi/"
-    },
-    {
-      "bron": "AutoWeek",
-      "categorie": "Auto",
-      "titel": "Deze Mercedes bestaat al 57 jaar, maar Mercedes verkoopt 'm nu voor het eerst",
-      "link": "https://www.autoweek.nl/autonieuws/artikel/deze-mercedes-bestaat-al-57-jaar-maar-mercedes-verkoopt-m-nu-voor-het-eerst/"
-    },
-    {
-      "bron": "Autoblog",
-      "categorie": "Auto en mobiliteit",
-      "titel": "Het glazen dak dat je wist dat ging komen is eindelijk daar! En heeft een prijs",
-      "link": "https://www.autoblog.nl/nieuws/het-glazen-dak-dat-je-wist-dat-ging-komen-is-eindelijk-daar-en-heeft-een-prijs"
-    },
-    {
-      "bron": "De Stentor Deventer",
-      "categorie": "Regio",
-      "titel": "Naast de brug: gedenkplek voor mannen die omkwamen bij hijsongeluk Lochem",
-      "link": "https://www.destentor.nl/lochem/naast-de-brug-gedenkplek-voor-mannen-die-omkwamen-bij-hijsongeluk-lochem~a7fe40d0/"
-    },
-    {
-      "bron": "NCSC",
-      "categorie": "ICT en cybersecurity",
-      "titel": "Kwetsbaarheden in F5 Networks NGINX: update nu",
-      "link": "https://www.ncsc.nl/alerts/kwetsbaarheden-in-f5-networks-nginx-update-nu"
-    },
-    {
-      "bron": "Mediacourant",
-      "categorie": "Entertainment en televisie",
-      "titel": "Mariska Bauer reageert op kritiek dat ze aandachtsbelust zou zijn",
-      "link": "https://www.mediacourant.nl/2026/11/mariska-bauer-reageert-op-kritiek-dat-ze-aandachtsbelust-zou-zijn/"
+      "titel": "Shelly Sterk straks net zo vaak als Tina Nijkamp in VI? ‘Wel kriebels’",
+      "link": "https://www.mediacourant.nl/2026/11/shelly-sterk-straks-net-zo-vaak-als-tina-nijkamp-in-vi-wel-kriebels/"
     }
   ]
 }
