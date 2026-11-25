@@ -3,20 +3,50 @@
     {
       "bron": "AutoWeek",
       "categorie": "Auto",
-      "titel": "Kia PV5 Cargo krijgt meer laadruimte en mag meer trekken",
-      "link": "https://www.autoweek.nl/autonieuws/artikel/kia-pv5-cargo-krijgt-meer-laadruimte-en-mag-meer-trekken/"
+      "titel": "Deskundigen: overheid moet beter op infrastructuur letten",
+      "link": "https://www.autoweek.nl/autonieuws/artikel/deskundigen-overheid-moet-beter-op-infrastructuur-letten/"
     },
     {
       "bron": "Autoblog",
       "categorie": "Auto en mobiliteit",
-      "titel": "De treitervlogger die Nederland gek maakte rijdt nu in deze auto",
-      "link": "https://www.autoblog.nl/nieuws/kennen-we-de-treitervlogger-nog-dit-is-zijn-nieuwe-auto"
+      "titel": "Euro 7-effect? Ook deze auto krijgt meer vermogen door de nieuwe milieuregels",
+      "link": "https://www.autoblog.nl/nieuws/euro-7-effect-ook-deze-auto-krijgt-meer-vermogen-door-de-nieuwe-milieuregels"
     },
     {
       "bron": "De Stentor Deventer",
       "categorie": "Regio",
-      "titel": "Gewonde (36) bij schietincident in Deventer, dader is op de vlucht: dit weten we tot nu toe",
-      "link": "https://www.destentor.nl/deventer/gewonde-36-bij-schietincident-in-deventer-dader-is-op-de-vlucht-dit-weten-we-tot-nu-toe~a6b064d4/"
+      "titel": "Donkere tunnels, schoolpleinen en het hertenkamp: dit doet Rijssen-Holten tegen onveilige plekken",
+      "link": "https://www.destentor.nl/rijssen-holten/donkere-tunnels-schoolpleinen-en-het-hertenkamp-dit-doet-rijssen-holten-tegen-onveilige-plekken~a115624f/"
+    },
+    {
+      "bron": "NCSC",
+      "categorie": "ICT en cybersecurity",
+      "titel": "Kwetsbaarheid in OTRS Survey endpoint: update nodig",
+      "link": "https://www.ncsc.nl/alerts/kwetsbaarheid-in-otrs-survey-endpoint-update-nodig"
+    },
+    {
+      "bron": "Mediacourant",
+      "categorie": "Entertainment en televisie",
+      "titel": "Splinter Chabot wegbezuinigd bij AvroTros: ‘Echt geldverspilling!’",
+      "link": "https://www.mediacourant.nl/2026/11/splinter-chabot-wegbezuinigd-bij-avrotros-echt-geldverspilling/"
+    },
+    {
+      "bron": "AutoWeek",
+      "categorie": "Auto",
+      "titel": "Amazon gaat ook in Europa auto's online verkopen",
+      "link": "https://www.autoweek.nl/autonieuws/artikel/amazon-gaat-ook-in-europa-autos-online-verkopen/"
+    },
+    {
+      "bron": "Autoblog",
+      "categorie": "Auto en mobiliteit",
+      "titel": "De Formule 1 in Qatar gaat door, maar niet iedereen durft mee",
+      "link": "https://www.autoblog.nl/nieuws/de-formule-1-gaat-door-in-qatar-maar-niet-iedereen-durft-mee"
+    },
+    {
+      "bron": "De Stentor Deventer",
+      "categorie": "Regio",
+      "titel": "De sinterklaas van Lettele: Erwin levert duizenden pakjes met zijn winkel",
+      "link": "https://www.destentor.nl/deventer/de-sinterklaas-van-lettele-erwin-levert-duizenden-pakjes-met-zijn-winkel~afeb3286/"
     },
     {
       "bron": "NCSC",
@@ -27,38 +57,8 @@
     {
       "bron": "Mediacourant",
       "categorie": "Entertainment en televisie",
-      "titel": "Douwe Bob wil Facebook volledig op zwart zetten in Nederland",
-      "link": "https://www.mediacourant.nl/2026/11/douwe-bob-wil-facebook-volledig-op-zwart-zetten-in-nederland/"
-    },
-    {
-      "bron": "AutoWeek",
-      "categorie": "Auto",
-      "titel": "Het wordt koud: hier moet je als automobilist rekening mee houden",
-      "link": "https://www.autoweek.nl/autonieuws/artikel/het-wordt-koud-hier-moet-je-als-automobilist-rekening-mee-houden/"
-    },
-    {
-      "bron": "Autoblog",
-      "categorie": "Auto en mobiliteit",
-      "titel": "Helaas: een rondje Nordschleife wordt duurder",
-      "link": "https://www.autoblog.nl/nieuws/helaas-een-rondje-nordschleife-wordt-duurder"
-    },
-    {
-      "bron": "De Stentor Deventer",
-      "categorie": "Regio",
-      "titel": "De dag na de schietpartij is het stil bij de Deventer flat, maar het is in het buurthuis het gesprek van de dag",
-      "link": "https://www.destentor.nl/deventer/de-dag-na-de-schietpartij-is-het-stil-bij-de-deventer-flat-maar-het-is-in-het-buurthuis-het-gesprek-van-de-dag~a17006ac/"
-    },
-    {
-      "bron": "NCSC",
-      "categorie": "ICT en cybersecurity",
-      "titel": "Kwetsbaarheden in Drupal core: update direct",
-      "link": "https://www.ncsc.nl/alerts/kwetsbaarheden-in-drupal-core-update-direct"
-    },
-    {
-      "bron": "Mediacourant",
-      "categorie": "Entertainment en televisie",
-      "titel": "Toppers stuurt Mart Hoogkamer op cursus Engels: ‘Is hoognodig’",
-      "link": "https://www.mediacourant.nl/2026/11/toppers-stuurt-mart-hoogkamer-op-cursus-engels-is-hoognodig/"
+      "titel": "Dit jaar geen NOS-jaaroverzicht op tv: ‘Voor het eerst sinds 1956’",
+      "link": "https://www.mediacourant.nl/2026/11/dit-jaar-geen-nos-jaaroverzicht-op-tv-voor-het-eerst-sinds-1956/"
     }
   ]
 }
