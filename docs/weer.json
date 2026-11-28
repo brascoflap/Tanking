@@ -1,9 +1,9 @@
 {
-  "temperatuur": 1,
-  "gevoelstemperatuur": -3,
+  "temperatuur": 2,
+  "gevoelstemperatuur": -2,
   "omschrijving": "Vrijwel onbewolkt (zonnig/helder)",
   "icoon": "https://cdn.buienradar.nl/resources/images/icons/weather/96x96/A.png",
-  "windkracht_bft": 2,
-  "winddichting": "OZO",
-  "tijdstip": "2026-11-27T14:50:00"
+  "windkracht_bft": 3,
+  "winddichting": "ZO",
+  "tijdstip": "2026-11-28T14:10:00"
 }
